@@ -19,5 +19,5 @@ while(1):
 		result = result * B
 		result = result%M
 
-	print(result)
+	print(result, end="")
 
