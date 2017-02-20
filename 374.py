@@ -1,4 +1,6 @@
-# Calculate R = B^p mod M
+# Big Mod:
+# Result: Time Limit Exceeded
+# Callculate R = B^p mod M
 # For large values of B, P and M
 # using an efficient algorithm
 
@@ -11,13 +13,14 @@ while(1):
 		B = int(input())
 		P = int(input())
 		M = int(input())
+		result = B%M
+		for i in range(0, P-1):
+			result = result * B
+			result = result%M
+		print(result, end="")
+
+		line = input()
 	except ValueError:
 		break
 
-	result = B%M
-	for i in range(0, P-1):
-		result = result * B
-		result = result%M
-
-	print(result, end="")
-
+	
