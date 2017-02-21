@@ -7,6 +7,35 @@
 import sys
 import math
 
+def load():
+	while(1):
+		B = int(next(sys.stdin))
+		P = int(next(sys.stdin))
+		M = int(next(sys.stdin))
+		
+		yield(B, P, M)
+
+		next(sys.stdin)
+
+for a, b, m in load():
+	ans = 1
+	pow2 = a
+	while (b):
+		if (b&1):
+			ans = (ans*pow2) %m
+		pow2 = (pow2*pow2) %m
+		b >>=1
+	print(ans)
+	
+
+
+def bigmod(B, P, M):
+	result = B%M
+	for i in range(0, P-1):
+		result = result * B
+		result = result%M
+	return(result)
+
 	
 def fmodexp(a, b, m):
 	ans = 1
@@ -16,25 +45,5 @@ def fmodexp(a, b, m):
 			ans = (ans*pow2) %m
 		pow2 = (pow2*pow2) %m
 		b >>=1
-	return ans
+	print(ans)
 
-
-
-while(1):
-	try:
-		B = int(input())
-		P = int(input())
-		M = int(input())
-		result = fmodexp(B, P, M)
-		print(result, end="")
-		line = input()
-	except ValueError:
-		break
-
-
-def bigmod(B, P, M):
-	result = B%M
-	for i in range(0, P-1):
-		result = result * B
-		result = result%M
-	return(result)

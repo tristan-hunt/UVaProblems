@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 	int a;
 	int b;
 	int m;
-	char* newline = "";
+	char string[256];
 
 	while (1){
 		printf("Enter a: ");
@@ -47,8 +47,9 @@ int main(int argc, char** argv){
 
 		printf("%d\n", fmodexp(a, b, m));
 
-		printf("Enter newline: ");
-		scanf("%s", newline);
-		printf("we got so far!\n");
+		fgets(string, 256, stdin);
+		fflush(stdin);
+
+		//scanf("%s", string);
 	}
 }
