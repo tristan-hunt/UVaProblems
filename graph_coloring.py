@@ -44,24 +44,36 @@ class Node:
 		return self.__str__()
 
 num_graphs = int(sys.stdin.readline())
-black = set()
-white = set()
-nodes = set()
+black = set() # of integers
+white = set() # of integers
+nodes = list() #list of Node Objects
 for i in range(0, num_graphs):
 	info = sys.stdin.readline().split(' ')
 	num_edges = int(info[1])
 	num_nodes = int(info[0])
 
 	for j in range(1, num_nodes+1):
-		nodes.add(Node(j))
-		white.add(j)
-		black.add(j)
+		nodes.append(Node(j))
+		black.add(j) 
 
 	for j in range(0, num_edges):
 		edge = sys.stdin.readline().split(' ')
 		n1 = int(edge[0])
 		n2 = int(edge[1])
+		
+		nodes[n1].add_neighbour(nodes[n2])
+		nodes[n2].add_neighbour(nodes[n1])
+
+
 		if n1 in black and n2 in black:
 			black.remove(n1)
 			white.add(n1)
-print(black)
+
+print(len(black))
+print(" ".join(str(x) for x in black))
+
+for node in nodes:
+	print("Neighbours of node %d", str(node), end = '')
+	for neighbour in node.neighbours():
+		print(neighbour, end = '')
+	print("")

@@ -1,8 +1,26 @@
-# Big Mod:
-# Result: Time Limit Exceeded
-# Callculate R = B^p mod M
-# For large values of B, P and M
-# using an efficient algorithm
+# /* UVa problem: 374
+#  *
+#  * Topic: Number Theory
+#  *
+#  * Level: easy
+#  * 
+#  * Brief problem description: 
+#  *
+#  *   Big Mod: Given b, p, and m, efficiently compute b^p mod m
+#  *
+#  * Solution Summary:
+#  *
+#  *	Algorithmic idea, data structures ...
+#  *
+#  * Used Resources:
+#  *
+#  * 	Slides from Number Theory presentation
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  * --------------------- Tristan Hunt
+#  */
 
 import sys
 import math
@@ -26,24 +44,3 @@ for a, b, m in load():
 		pow2 = (pow2*pow2) %m
 		b >>=1
 	print(ans)
-	
-
-
-def bigmod(B, P, M):
-	result = B%M
-	for i in range(0, P-1):
-		result = result * B
-		result = result%M
-	return(result)
-
-	
-def fmodexp(a, b, m):
-	ans = 1
-	pow2 = a
-	while (b):
-		if (b&1):
-			ans = (ans*pow2) %m
-		pow2 = (pow2*pow2) %m
-		b >>=1
-	print(ans)
-
