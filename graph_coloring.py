@@ -69,12 +69,19 @@ class Node:
 		return self.__repr__()
 
 def add_edge(n1, n2):
-	nodes[n1-1].add_neighbour(nodes[n2-1])
-	nodes[n2-1].add_neighbour(nodes[n1-1])
+	if n1 in black and n2 in white:
+		return len(black) 
+	if n2 in black and n1 in white:
+		return len(black)
+	if n1 in white and n2 in white:
+		return len(black)
 
 	if n1 in black and n2 in black:
 		white.add(n1)
 		black.remove(n1)
+
+		# Return max of these two situations:
+		max(len(blacks1), len(black2))
 
 
 
@@ -100,6 +107,8 @@ for i in range(0, num_graphs):
 		n1 = int(edge[0])
 		n2 = int(edge[1])
 
+		nodes[n1-1].add_neighbour(nodes[n2-1])
+		nodes[n2-1].add_neighbour(nodes[n1-1])
 		add_edge(n1, n2)
 		
 	print(len(black))
