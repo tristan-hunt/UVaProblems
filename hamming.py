@@ -10,8 +10,8 @@ while(num_cases):
 	n = int(nh[0])
 	h = int(nh[1])
 
-	x = [x for x in range(0, n)]
-	for p in itertools.combinations(x, h):
+	x = [n-x for x in range(1, n+1)]
+	for p in reversed(list(itertools.combinations(x, h))):
 		total = 0 
 		for i in p:
 			bit = 1 << i 
@@ -19,7 +19,6 @@ while(num_cases):
 		string = '{0:0' + str(n) + 'b}'
 		sys.stdout.write((string.format(total))+"\n")
 		
-
 	num_cases = num_cases-1
 	if (num_cases):
 		sys.stdout.write("\n")
