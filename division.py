@@ -22,13 +22,13 @@ def digits_are_unique(numer, denom, n):
 	if len(set(string)) != len(string):
 		return False
 	else:	
-		msg = numer + " / " + denom + " = " + str(n)
-		print(msg)
+		msg = numer + " / " + denom + " = " + str(n) +"\n"
+		sys.stdout.write(msg)
 		return True
 
 def print_no_solution(n):
-	message = "There are no solutions for " + str(n) + "."
-	print(message)
+	message = "There are no solutions for " + str(n) + ".\n"
+	sys.stdout.write(message)
 
 def find_pairs(n):
 	solution_found = False
@@ -40,7 +40,6 @@ def find_pairs(n):
 	if (solution_found == False):
 		print_no_solution(n)
 
-
 # Each line of input is a valid integer N
 # Input of 0 terminates the program.
 n = int(next(sys.stdin))
@@ -49,6 +48,6 @@ while (n!= 0):
 		print_no_solution(n)
 	else:
 		pairs = find_pairs(n)
-	print("")
+	sys.stdout.write("\n")
 	n = int(next(sys.stdin))
 
