@@ -1,26 +1,30 @@
 # 8 Queens Chess Problem */
-#include <iostream>
-#include <string.h>
-#include <math.h>
-#using namespace std;
 
 
-int x[9], TC, a, b, lineCounter; # it is ok to use global variables in competitive programming
-bool place(int queen, int
-for (int prev = 1; prev <= queen - 1; prev++): # check previously placed queens
-	if (x[prev] == row || (abs(x[prev] - row) == abs(prev - queen)))
-		return false; # an infeasible solution if share same row or same diagonal
-	return true;
-void NQueens(int queen) {
-	for (int row = 1; row <= 8; row++)
-		if (place(queen, row)) { # if can place this queen at this row?
-			x[queen] = row; # put this queen in this row
-			if (queen == 8 && x[b] == a) { # a candidate solution & (a, b) has 1 queen
-				printf("%2d %d", ++lineCounter, x[1]);
-				for (int j = 2; j <= 8; j++) printf(" %d", x[j]);
-				printf("\n");
-			}
-			else
-				NQueens(queen + 1); # recursively try next position
-		}
-}
+import sys
+
+x = [None]*9
+
+def place(queen, row):
+	for prev in range(1, queen+1): #check previously placed queens
+		if (x[prev] == row or (abs(x[prev]-row) == abs(prev-queen))):
+			return False
+	return True
+
+def NQueens(queen):
+	for row in range(1, 9):
+		if(place(queen, row)):
+			x[queen] = row
+			if (queen == 8 and x[b] == a):
+				print("something")
+				for j in range(2, 9):
+					print("something else")
+			else:
+				NQueens(queen + 1) # recursively try next position
+
+def main()
+	
+
+main()
+
+
