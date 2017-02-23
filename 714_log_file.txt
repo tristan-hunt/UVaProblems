@@ -1,0 +1,1705 @@
+2017-02-23 13:30:39,963 - DEBUG - This is a log message.
+2017-02-23 13:30:53,461 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:35:50,965 - DEBUG - This is a log message.
+2017-02-23 13:36:00,879 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:36:00,880 - DEBUG - Entering while loop with min_max: 4501, lo: 900, hi: 100
+
+2017-02-23 13:37:14,313 - DEBUG - This is a log message.
+2017-02-23 13:37:20,885 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:37:20,886 - DEBUG - Entering while loop with min_max: 4501, lo: 900, hi: 100
+2017-02-23 13:37:20,886 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:37:20,886 - DEBUG - Estimate too high...
+2017-02-23 13:37:20,886 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:37:20,886 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:37:20,886 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:37:20,887 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:37:20,887 - DEBUG - Estimate too high...
+2017-02-23 13:37:20,887 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:37:20,887 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:37:20,887 - DEBUG - Entering while loop with min_max: 46, lo: 9, hi: 1
+2017-02-23 13:37:20,887 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:37:20,888 - DEBUG - Estimate too high...
+2017-02-23 13:37:20,888 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:42:43,898 - DEBUG - This is a log message.
+2017-02-23 13:43:03,469 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:43:03,469 - DEBUG - Entering while loop with min_max: 4501, lo: 900, hi: 100
+2017-02-23 13:43:03,469 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:43:03,469 - DEBUG - Estimate too high...
+2017-02-23 13:43:03,469 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:43:03,469 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:43:03,469 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:43:03,469 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:43:03,470 - DEBUG - Estimate too high...
+2017-02-23 13:43:03,470 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:43:03,470 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:43:03,470 - DEBUG - Entering while loop with min_max: 46, lo: 9, hi: 1
+2017-02-23 13:43:03,470 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:43:03,470 - DEBUG - Estimate too high...
+2017-02-23 13:43:03,470 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:44:29,438 - DEBUG - ----------------------------------------------------
+2017-02-23 13:44:29,438 - DEBUG - Starting computation................................
+2017-02-23 13:44:45,797 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:44:45,797 - DEBUG - Entering while loop with min_max: 4501, lo: 900, hi: 100
+2017-02-23 13:44:45,798 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:44:45,798 - DEBUG - Estimate too high...
+2017-02-23 13:44:45,798 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:44:45,798 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:44:45,799 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:44:45,799 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:44:45,799 - DEBUG - Estimate too high...
+2017-02-23 13:44:45,799 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:44:45,800 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:44:45,800 - DEBUG - Entering while loop with min_max: 46, lo: 9, hi: 1
+2017-02-23 13:44:45,800 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:44:45,800 - DEBUG - Estimate too high...
+2017-02-23 13:44:45,800 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:45:21,080 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:45:21,080 - DEBUG - Starting computation ...............................
+2017-02-23 13:45:23,648 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:45:23,649 - DEBUG - Entering while loop with min_max: 4501, lo: 900, hi: 100
+2017-02-23 13:45:23,649 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:45:23,649 - DEBUG - Estimate too high...
+2017-02-23 13:45:23,649 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:45:23,649 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:45:23,650 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:45:23,650 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:45:23,650 - DEBUG - Estimate too high...
+2017-02-23 13:45:23,650 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:45:23,650 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:45:23,650 - DEBUG - Entering while loop with min_max: 46, lo: 9, hi: 1
+2017-02-23 13:45:23,650 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:45:23,650 - DEBUG - Estimate too high...
+2017-02-23 13:45:23,651 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:46:09,917 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:46:09,917 - DEBUG - Starting computation ...............................
+2017-02-23 13:46:12,334 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:46:12,334 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 13:46:12,334 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:46:12,334 - DEBUG - Estimate too high...
+2017-02-23 13:46:12,335 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:46:12,335 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:46:12,335 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:46:12,335 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:46:12,335 - DEBUG - Estimate too high...
+2017-02-23 13:46:12,336 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:46:12,336 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:46:12,336 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 9
+2017-02-23 13:46:12,336 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:46:12,336 - DEBUG - Estimate too high...
+2017-02-23 13:46:12,336 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:51:45,563 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:51:45,563 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 13:51:58,797 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:51:58,797 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 13:51:58,797 - DEBUG - m 0 < M 9
+2017-02-23 13:51:58,797 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,797 - DEBUG - time = 0, k = 1
+2017-02-23 13:51:58,798 - DEBUG - m = 1
+2017-02-23 13:51:58,798 - DEBUG - m 1 < M 9
+2017-02-23 13:51:58,798 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,798 - DEBUG - time = 0, k = 2
+2017-02-23 13:51:58,798 - DEBUG - m = 2
+2017-02-23 13:51:58,798 - DEBUG - m 2 < M 9
+2017-02-23 13:51:58,798 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,798 - DEBUG - time = 0, k = 3
+2017-02-23 13:51:58,798 - DEBUG - m = 3
+2017-02-23 13:51:58,798 - DEBUG - m 3 < M 9
+2017-02-23 13:51:58,799 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,799 - DEBUG - time = 0, k = 4
+2017-02-23 13:51:58,799 - DEBUG - m = 4
+2017-02-23 13:51:58,799 - DEBUG - m 4 < M 9
+2017-02-23 13:51:58,799 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,799 - DEBUG - time = 0, k = 5
+2017-02-23 13:51:58,799 - DEBUG - m = 5
+2017-02-23 13:51:58,799 - DEBUG - m 5 < M 9
+2017-02-23 13:51:58,800 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,800 - DEBUG - time = 0, k = 6
+2017-02-23 13:51:58,800 - DEBUG - m = 6
+2017-02-23 13:51:58,800 - DEBUG - m 6 < M 9
+2017-02-23 13:51:58,800 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,800 - DEBUG - time = 0, k = 7
+2017-02-23 13:51:58,800 - DEBUG - m = 7
+2017-02-23 13:51:58,800 - DEBUG - m 7 < M 9
+2017-02-23 13:51:58,800 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,801 - DEBUG - time = 0, k = 8
+2017-02-23 13:51:58,801 - DEBUG - m = 8
+2017-02-23 13:51:58,801 - DEBUG - m 8 < M 9
+2017-02-23 13:51:58,801 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,801 - DEBUG - time = 0, k = 9
+2017-02-23 13:51:58,801 - DEBUG - m = 9
+2017-02-23 13:51:58,801 - DEBUG - returning 0
+2017-02-23 13:51:58,801 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:51:58,801 - DEBUG - Estimate too high...
+2017-02-23 13:51:58,802 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:51:58,802 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:51:58,802 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:51:58,802 - DEBUG - m 0 < M 5
+2017-02-23 13:51:58,802 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,802 - DEBUG - time = 0, k = 1
+2017-02-23 13:51:58,802 - DEBUG - m = 1
+2017-02-23 13:51:58,802 - DEBUG - m 1 < M 5
+2017-02-23 13:51:58,802 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,802 - DEBUG - time = 0, k = 2
+2017-02-23 13:51:58,802 - DEBUG - m = 2
+2017-02-23 13:51:58,802 - DEBUG - m 2 < M 5
+2017-02-23 13:51:58,803 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,803 - DEBUG - time = 0, k = 3
+2017-02-23 13:51:58,803 - DEBUG - m = 3
+2017-02-23 13:51:58,803 - DEBUG - m 3 < M 5
+2017-02-23 13:51:58,803 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,803 - DEBUG - time = 0, k = 4
+2017-02-23 13:51:58,803 - DEBUG - m = 4
+2017-02-23 13:51:58,803 - DEBUG - m 4 < M 5
+2017-02-23 13:51:58,803 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,803 - DEBUG - time = 0, k = 5
+2017-02-23 13:51:58,803 - DEBUG - m = 5
+2017-02-23 13:51:58,804 - DEBUG - returning 0
+2017-02-23 13:51:58,804 - DEBUG - Greedy found result 0 for estimate 100
+2017-02-23 13:51:58,804 - DEBUG - Estimate too high...
+2017-02-23 13:51:58,804 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:51:58,804 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:51:58,804 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 9
+2017-02-23 13:51:58,804 - DEBUG - m 0 < M 9
+2017-02-23 13:51:58,804 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,804 - DEBUG - time = 0, k = 1
+2017-02-23 13:51:58,804 - DEBUG - m = 1
+2017-02-23 13:51:58,804 - DEBUG - m 1 < M 9
+2017-02-23 13:51:58,804 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,804 - DEBUG - time = 0, k = 2
+2017-02-23 13:51:58,805 - DEBUG - m = 2
+2017-02-23 13:51:58,805 - DEBUG - m 2 < M 9
+2017-02-23 13:51:58,805 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,805 - DEBUG - time = 0, k = 3
+2017-02-23 13:51:58,805 - DEBUG - m = 3
+2017-02-23 13:51:58,805 - DEBUG - m 3 < M 9
+2017-02-23 13:51:58,805 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,805 - DEBUG - time = 0, k = 4
+2017-02-23 13:51:58,805 - DEBUG - m = 4
+2017-02-23 13:51:58,805 - DEBUG - m 4 < M 9
+2017-02-23 13:51:58,805 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,805 - DEBUG - time = 0, k = 5
+2017-02-23 13:51:58,805 - DEBUG - m = 5
+2017-02-23 13:51:58,806 - DEBUG - m 5 < M 9
+2017-02-23 13:51:58,806 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,806 - DEBUG - time = 0, k = 6
+2017-02-23 13:51:58,806 - DEBUG - m = 6
+2017-02-23 13:51:58,806 - DEBUG - m 6 < M 9
+2017-02-23 13:51:58,806 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,806 - DEBUG - time = 0, k = 7
+2017-02-23 13:51:58,806 - DEBUG - m = 7
+2017-02-23 13:51:58,806 - DEBUG - m 7 < M 9
+2017-02-23 13:51:58,806 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,806 - DEBUG - time = 0, k = 8
+2017-02-23 13:51:58,806 - DEBUG - m = 8
+2017-02-23 13:51:58,806 - DEBUG - m 8 < M 9
+2017-02-23 13:51:58,807 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:51:58,807 - DEBUG - time = 0, k = 9
+2017-02-23 13:51:58,807 - DEBUG - m = 9
+2017-02-23 13:51:58,807 - DEBUG - returning 0
+2017-02-23 13:51:58,807 - DEBUG - Greedy found result 0 for estimate 1
+2017-02-23 13:51:58,807 - DEBUG - Estimate too high...
+2017-02-23 13:51:58,807 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:53:25,895 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:53:25,895 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 13:53:28,505 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:53:28,505 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 13:53:28,505 - DEBUG - m 0 < M 9
+2017-02-23 13:53:28,505 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:53:28,505 - DEBUG - m = 1
+2017-02-23 13:53:28,505 - DEBUG - m 1 < M 9
+2017-02-23 13:53:28,506 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:53:28,506 - DEBUG - maxt = 100
+2017-02-23 13:53:28,506 - DEBUG - time = 0, k = 1
+2017-02-23 13:53:28,506 - DEBUG - m = 2
+2017-02-23 13:53:28,506 - DEBUG - m 2 < M 9
+2017-02-23 13:53:28,506 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,506 - DEBUG - time = 0, k = 2
+2017-02-23 13:53:28,506 - DEBUG - m = 3
+2017-02-23 13:53:28,506 - DEBUG - m 3 < M 9
+2017-02-23 13:53:28,506 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,506 - DEBUG - time = 0, k = 3
+2017-02-23 13:53:28,506 - DEBUG - m = 4
+2017-02-23 13:53:28,506 - DEBUG - m 4 < M 9
+2017-02-23 13:53:28,506 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,506 - DEBUG - time = 0, k = 4
+2017-02-23 13:53:28,507 - DEBUG - m = 5
+2017-02-23 13:53:28,507 - DEBUG - m 5 < M 9
+2017-02-23 13:53:28,507 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,507 - DEBUG - time = 0, k = 5
+2017-02-23 13:53:28,507 - DEBUG - m = 6
+2017-02-23 13:53:28,507 - DEBUG - m 6 < M 9
+2017-02-23 13:53:28,507 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,507 - DEBUG - time = 0, k = 6
+2017-02-23 13:53:28,507 - DEBUG - m = 7
+2017-02-23 13:53:28,507 - DEBUG - m 7 < M 9
+2017-02-23 13:53:28,507 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,507 - DEBUG - time = 0, k = 7
+2017-02-23 13:53:28,507 - DEBUG - m = 8
+2017-02-23 13:53:28,507 - DEBUG - m 8 < M 9
+2017-02-23 13:53:28,507 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:53:28,507 - DEBUG - time = 0, k = 8
+2017-02-23 13:53:28,507 - DEBUG - m = 9
+2017-02-23 13:53:28,508 - DEBUG - returning 100
+2017-02-23 13:53:28,508 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:53:28,508 - DEBUG - Estimate too high...
+2017-02-23 13:53:28,508 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:53:28,508 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:53:28,508 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:53:28,508 - DEBUG - m 0 < M 5
+2017-02-23 13:53:28,508 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:53:28,508 - DEBUG - m = 1
+2017-02-23 13:53:28,508 - DEBUG - m 1 < M 5
+2017-02-23 13:53:28,508 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:53:28,508 - DEBUG - maxt = 100
+2017-02-23 13:53:28,508 - DEBUG - time = 0, k = 1
+2017-02-23 13:53:28,508 - DEBUG - m = 2
+2017-02-23 13:53:28,508 - DEBUG - m 2 < M 5
+2017-02-23 13:53:28,509 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:53:28,509 - DEBUG - m = 3
+2017-02-23 13:53:28,509 - DEBUG - m 3 < M 5
+2017-02-23 13:53:28,509 - DEBUG - time = 100, maxt = 100
+2017-02-23 13:53:28,509 - DEBUG - time = 0, k = 2
+2017-02-23 13:53:28,509 - DEBUG - m = 4
+2017-02-23 13:53:28,509 - DEBUG - m 4 < M 5
+2017-02-23 13:53:28,509 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:53:28,509 - DEBUG - m = 5
+2017-02-23 13:53:28,509 - DEBUG - returning 100
+2017-02-23 13:53:28,509 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:53:28,509 - DEBUG - Estimate too high...
+2017-02-23 13:53:28,509 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:53:28,509 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:53:28,509 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 9
+2017-02-23 13:53:28,510 - DEBUG - m 0 < M 9
+2017-02-23 13:53:28,510 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:53:28,510 - DEBUG - time = 0, k = 1
+2017-02-23 13:53:28,510 - DEBUG - m = 1
+2017-02-23 13:53:28,510 - DEBUG - m 1 < M 9
+2017-02-23 13:53:28,510 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:53:28,510 - DEBUG - time = 0, k = 2
+2017-02-23 13:53:28,510 - DEBUG - m = 2
+2017-02-23 13:53:28,510 - DEBUG - m 2 < M 9
+2017-02-23 13:53:28,510 - DEBUG - time = 0, books[m] = 1, newtime = 1
+2017-02-23 13:53:28,510 - DEBUG - m = 3
+2017-02-23 13:53:28,510 - DEBUG - m 3 < M 9
+2017-02-23 13:53:28,510 - DEBUG - time = 1, maxt = 0
+2017-02-23 13:53:28,510 - DEBUG - maxt = 1
+2017-02-23 13:53:28,510 - DEBUG - time = 0, k = 3
+2017-02-23 13:53:28,510 - DEBUG - m = 4
+2017-02-23 13:53:28,510 - DEBUG - m 4 < M 9
+2017-02-23 13:53:28,511 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:53:28,511 - DEBUG - time = 0, k = 4
+2017-02-23 13:53:28,511 - DEBUG - m = 5
+2017-02-23 13:53:28,511 - DEBUG - m 5 < M 9
+2017-02-23 13:53:28,511 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:53:28,511 - DEBUG - time = 0, k = 5
+2017-02-23 13:53:28,511 - DEBUG - m = 6
+2017-02-23 13:53:28,511 - DEBUG - m 6 < M 9
+2017-02-23 13:53:28,511 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:53:28,511 - DEBUG - time = 0, k = 6
+2017-02-23 13:53:28,511 - DEBUG - m = 7
+2017-02-23 13:53:28,511 - DEBUG - m 7 < M 9
+2017-02-23 13:53:28,511 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:53:28,511 - DEBUG - time = 0, k = 7
+2017-02-23 13:53:28,512 - DEBUG - m = 8
+2017-02-23 13:53:28,512 - DEBUG - m 8 < M 9
+2017-02-23 13:53:28,512 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:53:28,512 - DEBUG - time = 0, k = 8
+2017-02-23 13:53:28,512 - DEBUG - m = 9
+2017-02-23 13:53:28,512 - DEBUG - returning 1
+2017-02-23 13:53:28,512 - DEBUG - Greedy found result 1 for estimate 1
+2017-02-23 13:53:28,512 - DEBUG - Estimate too high...
+2017-02-23 13:53:28,512 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:57:10,702 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:57:10,702 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 13:57:13,219 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:57:13,220 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 13:57:13,220 - DEBUG - m 0 < M 9
+2017-02-23 13:57:13,220 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:57:13,220 - DEBUG - m = 1
+2017-02-23 13:57:13,221 - DEBUG - m 1 < M 9
+2017-02-23 13:57:13,221 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:57:13,221 - DEBUG - maxt = 100
+2017-02-23 13:57:13,221 - DEBUG - time = 0, k = 1
+2017-02-23 13:57:13,221 - DEBUG - m = 2
+2017-02-23 13:57:13,221 - DEBUG - m 2 < M 9
+2017-02-23 13:57:13,221 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,222 - DEBUG - time = 0, k = 2
+2017-02-23 13:57:13,222 - DEBUG - m = 3
+2017-02-23 13:57:13,222 - DEBUG - m 3 < M 9
+2017-02-23 13:57:13,222 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,222 - DEBUG - time = 0, k = 3
+2017-02-23 13:57:13,222 - DEBUG - m = 4
+2017-02-23 13:57:13,222 - DEBUG - m 4 < M 9
+2017-02-23 13:57:13,222 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,223 - DEBUG - time = 0, k = 4
+2017-02-23 13:57:13,223 - DEBUG - m = 5
+2017-02-23 13:57:13,223 - DEBUG - m 5 < M 9
+2017-02-23 13:57:13,223 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,223 - DEBUG - time = 0, k = 5
+2017-02-23 13:57:13,223 - DEBUG - m = 6
+2017-02-23 13:57:13,223 - DEBUG - m 6 < M 9
+2017-02-23 13:57:13,223 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,224 - DEBUG - time = 0, k = 6
+2017-02-23 13:57:13,224 - DEBUG - m = 7
+2017-02-23 13:57:13,224 - DEBUG - m 7 < M 9
+2017-02-23 13:57:13,224 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,224 - DEBUG - time = 0, k = 7
+2017-02-23 13:57:13,224 - DEBUG - m = 8
+2017-02-23 13:57:13,224 - DEBUG - m 8 < M 9
+2017-02-23 13:57:13,224 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:57:13,225 - DEBUG - time = 0, k = 8
+2017-02-23 13:57:13,225 - DEBUG - m = 9
+2017-02-23 13:57:13,225 - DEBUG - returning 100
+2017-02-23 13:57:13,225 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:57:13,225 - DEBUG - Estimate too high...
+2017-02-23 13:57:13,225 - DEBUG - result = 100
+2017-02-23 13:57:13,225 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:57:13,225 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:57:13,226 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:57:13,226 - DEBUG - m 0 < M 5
+2017-02-23 13:57:13,226 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:57:13,226 - DEBUG - m = 1
+2017-02-23 13:57:13,226 - DEBUG - m 1 < M 5
+2017-02-23 13:57:13,226 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:57:13,226 - DEBUG - maxt = 100
+2017-02-23 13:57:13,227 - DEBUG - time = 0, k = 1
+2017-02-23 13:57:13,227 - DEBUG - m = 2
+2017-02-23 13:57:13,227 - DEBUG - m 2 < M 5
+2017-02-23 13:57:13,227 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:57:13,227 - DEBUG - m = 3
+2017-02-23 13:57:13,227 - DEBUG - m 3 < M 5
+2017-02-23 13:57:13,227 - DEBUG - time = 100, maxt = 100
+2017-02-23 13:57:13,227 - DEBUG - time = 0, k = 2
+2017-02-23 13:57:13,227 - DEBUG - m = 4
+2017-02-23 13:57:13,227 - DEBUG - m 4 < M 5
+2017-02-23 13:57:13,227 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:57:13,227 - DEBUG - m = 5
+2017-02-23 13:57:13,227 - DEBUG - returning 100
+2017-02-23 13:57:13,227 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:57:13,228 - DEBUG - Estimate too high...
+2017-02-23 13:57:13,228 - DEBUG - result = 100
+2017-02-23 13:57:13,228 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:57:13,228 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:57:13,228 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 9
+2017-02-23 13:57:13,228 - DEBUG - m 0 < M 9
+2017-02-23 13:57:13,228 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:57:13,228 - DEBUG - time = 0, k = 1
+2017-02-23 13:57:13,228 - DEBUG - m = 1
+2017-02-23 13:57:13,228 - DEBUG - m 1 < M 9
+2017-02-23 13:57:13,228 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:57:13,228 - DEBUG - time = 0, k = 2
+2017-02-23 13:57:13,228 - DEBUG - m = 2
+2017-02-23 13:57:13,228 - DEBUG - m 2 < M 9
+2017-02-23 13:57:13,228 - DEBUG - time = 0, books[m] = 1, newtime = 1
+2017-02-23 13:57:13,228 - DEBUG - m = 3
+2017-02-23 13:57:13,229 - DEBUG - m 3 < M 9
+2017-02-23 13:57:13,229 - DEBUG - time = 1, maxt = 0
+2017-02-23 13:57:13,229 - DEBUG - maxt = 1
+2017-02-23 13:57:13,229 - DEBUG - time = 0, k = 3
+2017-02-23 13:57:13,229 - DEBUG - m = 4
+2017-02-23 13:57:13,229 - DEBUG - m 4 < M 9
+2017-02-23 13:57:13,229 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:57:13,229 - DEBUG - time = 0, k = 4
+2017-02-23 13:57:13,229 - DEBUG - m = 5
+2017-02-23 13:57:13,229 - DEBUG - m 5 < M 9
+2017-02-23 13:57:13,229 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:57:13,229 - DEBUG - time = 0, k = 5
+2017-02-23 13:57:13,229 - DEBUG - m = 6
+2017-02-23 13:57:13,229 - DEBUG - m 6 < M 9
+2017-02-23 13:57:13,229 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:57:13,229 - DEBUG - time = 0, k = 6
+2017-02-23 13:57:13,230 - DEBUG - m = 7
+2017-02-23 13:57:13,230 - DEBUG - m 7 < M 9
+2017-02-23 13:57:13,230 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:57:13,230 - DEBUG - time = 0, k = 7
+2017-02-23 13:57:13,230 - DEBUG - m = 8
+2017-02-23 13:57:13,230 - DEBUG - m 8 < M 9
+2017-02-23 13:57:13,230 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:57:13,230 - DEBUG - time = 0, k = 8
+2017-02-23 13:57:13,230 - DEBUG - m = 9
+2017-02-23 13:57:13,230 - DEBUG - returning 1
+2017-02-23 13:57:13,230 - DEBUG - Greedy found result 1 for estimate 1
+2017-02-23 13:57:13,230 - DEBUG - Estimate too high...
+2017-02-23 13:57:13,230 - DEBUG - result = 1
+2017-02-23 13:57:13,230 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 13:59:27,197 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 13:59:27,197 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 13:59:39,871 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 13:59:39,872 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 13:59:39,872 - DEBUG - m 0 < M 9
+2017-02-23 13:59:39,872 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:59:39,872 - DEBUG - m = 1
+2017-02-23 13:59:39,872 - DEBUG - m 1 < M 9
+2017-02-23 13:59:39,872 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:59:39,873 - DEBUG - maxt = 100
+2017-02-23 13:59:39,873 - DEBUG - time = 0, k = 1
+2017-02-23 13:59:39,873 - DEBUG - m = 2
+2017-02-23 13:59:39,873 - DEBUG - m 2 < M 9
+2017-02-23 13:59:39,873 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,873 - DEBUG - time = 0, k = 2
+2017-02-23 13:59:39,873 - DEBUG - m = 3
+2017-02-23 13:59:39,873 - DEBUG - m 3 < M 9
+2017-02-23 13:59:39,874 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,874 - DEBUG - time = 0, k = 3
+2017-02-23 13:59:39,874 - DEBUG - m = 4
+2017-02-23 13:59:39,874 - DEBUG - m 4 < M 9
+2017-02-23 13:59:39,874 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,874 - DEBUG - time = 0, k = 4
+2017-02-23 13:59:39,874 - DEBUG - m = 5
+2017-02-23 13:59:39,875 - DEBUG - m 5 < M 9
+2017-02-23 13:59:39,875 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,875 - DEBUG - time = 0, k = 5
+2017-02-23 13:59:39,875 - DEBUG - m = 6
+2017-02-23 13:59:39,875 - DEBUG - m 6 < M 9
+2017-02-23 13:59:39,875 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,875 - DEBUG - time = 0, k = 6
+2017-02-23 13:59:39,875 - DEBUG - m = 7
+2017-02-23 13:59:39,875 - DEBUG - m 7 < M 9
+2017-02-23 13:59:39,876 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,876 - DEBUG - time = 0, k = 7
+2017-02-23 13:59:39,876 - DEBUG - m = 8
+2017-02-23 13:59:39,876 - DEBUG - m 8 < M 9
+2017-02-23 13:59:39,876 - DEBUG - time = 0, maxt = 100
+2017-02-23 13:59:39,876 - DEBUG - time = 0, k = 8
+2017-02-23 13:59:39,876 - DEBUG - m = 9
+2017-02-23 13:59:39,876 - DEBUG - returning 100
+2017-02-23 13:59:39,876 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:59:39,877 - DEBUG - Estimate too high...
+2017-02-23 13:59:39,877 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 13:59:39,877 - DEBUG - result = 100
+2017-02-23 13:59:39,877 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:59:39,877 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 13:59:39,877 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 100
+2017-02-23 13:59:39,877 - DEBUG - m 0 < M 5
+2017-02-23 13:59:39,877 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:59:39,877 - DEBUG - m = 1
+2017-02-23 13:59:39,878 - DEBUG - m 1 < M 5
+2017-02-23 13:59:39,878 - DEBUG - time = 100, maxt = 0
+2017-02-23 13:59:39,878 - DEBUG - maxt = 100
+2017-02-23 13:59:39,878 - DEBUG - time = 0, k = 1
+2017-02-23 13:59:39,878 - DEBUG - m = 2
+2017-02-23 13:59:39,878 - DEBUG - m 2 < M 5
+2017-02-23 13:59:39,878 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:59:39,878 - DEBUG - m = 3
+2017-02-23 13:59:39,878 - DEBUG - m 3 < M 5
+2017-02-23 13:59:39,878 - DEBUG - time = 100, maxt = 100
+2017-02-23 13:59:39,879 - DEBUG - time = 0, k = 2
+2017-02-23 13:59:39,879 - DEBUG - m = 4
+2017-02-23 13:59:39,879 - DEBUG - m 4 < M 5
+2017-02-23 13:59:39,879 - DEBUG - time = 0, books[m] = 100, newtime = 100
+2017-02-23 13:59:39,879 - DEBUG - m = 5
+2017-02-23 13:59:39,879 - DEBUG - returning 100
+2017-02-23 13:59:39,879 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 13:59:39,879 - DEBUG - Estimate too high...
+2017-02-23 13:59:39,879 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 13:59:39,880 - DEBUG - result = 100
+2017-02-23 13:59:39,880 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 13:59:39,880 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 13:59:39,880 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 9
+2017-02-23 13:59:39,880 - DEBUG - m 0 < M 9
+2017-02-23 13:59:39,880 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:59:39,880 - DEBUG - time = 0, k = 1
+2017-02-23 13:59:39,880 - DEBUG - m = 1
+2017-02-23 13:59:39,880 - DEBUG - m 1 < M 9
+2017-02-23 13:59:39,880 - DEBUG - time = 0, maxt = 0
+2017-02-23 13:59:39,881 - DEBUG - time = 0, k = 2
+2017-02-23 13:59:39,881 - DEBUG - m = 2
+2017-02-23 13:59:39,881 - DEBUG - m 2 < M 9
+2017-02-23 13:59:39,881 - DEBUG - time = 0, books[m] = 1, newtime = 1
+2017-02-23 13:59:39,881 - DEBUG - m = 3
+2017-02-23 13:59:39,881 - DEBUG - m 3 < M 9
+2017-02-23 13:59:39,881 - DEBUG - time = 1, maxt = 0
+2017-02-23 13:59:39,881 - DEBUG - maxt = 1
+2017-02-23 13:59:39,881 - DEBUG - time = 0, k = 3
+2017-02-23 13:59:39,881 - DEBUG - m = 4
+2017-02-23 13:59:39,881 - DEBUG - m 4 < M 9
+2017-02-23 13:59:39,881 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:59:39,882 - DEBUG - time = 0, k = 4
+2017-02-23 13:59:39,882 - DEBUG - m = 5
+2017-02-23 13:59:39,882 - DEBUG - m 5 < M 9
+2017-02-23 13:59:39,882 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:59:39,882 - DEBUG - time = 0, k = 5
+2017-02-23 13:59:39,882 - DEBUG - m = 6
+2017-02-23 13:59:39,882 - DEBUG - m 6 < M 9
+2017-02-23 13:59:39,882 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:59:39,882 - DEBUG - time = 0, k = 6
+2017-02-23 13:59:39,882 - DEBUG - m = 7
+2017-02-23 13:59:39,882 - DEBUG - m 7 < M 9
+2017-02-23 13:59:39,883 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:59:39,883 - DEBUG - time = 0, k = 7
+2017-02-23 13:59:39,883 - DEBUG - m = 8
+2017-02-23 13:59:39,883 - DEBUG - m 8 < M 9
+2017-02-23 13:59:39,883 - DEBUG - time = 0, maxt = 1
+2017-02-23 13:59:39,883 - DEBUG - time = 0, k = 8
+2017-02-23 13:59:39,883 - DEBUG - m = 9
+2017-02-23 13:59:39,883 - DEBUG - returning 1
+2017-02-23 13:59:39,883 - DEBUG - Greedy found result 1 for estimate 1
+2017-02-23 13:59:39,883 - DEBUG - Estimate too high...
+2017-02-23 13:59:39,883 - INFO - hi : 1, lo: 1, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 13:59:39,883 - DEBUG - result = 1
+2017-02-23 13:59:39,884 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 14:09:54,657 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:09:54,657 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:10:07,106 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:10:07,107 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 900
+2017-02-23 14:10:07,107 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:10:07,107 - DEBUG - Estimate too low
+2017-02-23 14:10:07,107 - DEBUG - Greedy found result -1 for estimate 500
+2017-02-23 14:10:07,107 - DEBUG - Estimate too low
+2017-02-23 14:10:07,107 - DEBUG - Greedy found result -1 for estimate 700
+2017-02-23 14:10:07,107 - DEBUG - Estimate too low
+2017-02-23 14:10:07,108 - DEBUG - Greedy found result -1 for estimate 800
+2017-02-23 14:10:07,108 - DEBUG - Estimate too low
+2017-02-23 14:10:07,108 - DEBUG - Greedy found result -1 for estimate 850
+2017-02-23 14:10:07,108 - DEBUG - Estimate too low
+2017-02-23 14:10:07,108 - DEBUG - Greedy found result -1 for estimate 875
+2017-02-23 14:10:07,108 - DEBUG - Estimate too low
+2017-02-23 14:10:07,108 - DEBUG - Greedy found result -1 for estimate 887
+2017-02-23 14:10:07,108 - DEBUG - Estimate too low
+2017-02-23 14:10:07,108 - DEBUG - Greedy found result -1 for estimate 893
+2017-02-23 14:10:07,109 - DEBUG - Estimate too low
+2017-02-23 14:10:07,109 - DEBUG - Greedy found result -1 for estimate 896
+2017-02-23 14:10:07,109 - DEBUG - Estimate too low
+2017-02-23 14:10:07,109 - DEBUG - Greedy found result -1 for estimate 898
+2017-02-23 14:10:07,109 - DEBUG - Estimate too low
+2017-02-23 14:10:07,109 - DEBUG - Greedy found result -1 for estimate 899
+2017-02-23 14:10:07,109 - DEBUG - Estimate too low
+2017-02-23 14:10:07,109 - INFO - hi : 900, lo: 899, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:10:07,109 - DEBUG - result = -1
+2017-02-23 14:10:07,109 - DEBUG - Oops! RuntimeError!
+2017-02-23 14:11:37,741 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:11:37,742 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:11:47,574 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:11:47,574 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:11:47,575 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:11:47,575 - DEBUG - Estimate too low
+2017-02-23 14:11:47,575 - DEBUG - returning 2100
+2017-02-23 14:11:47,575 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 14:11:47,575 - DEBUG - Estimate too high...
+2017-02-23 14:11:47,575 - DEBUG - returns -2
+2017-02-23 14:11:47,575 - DEBUG - Greedy found result -2 for estimate 1200
+2017-02-23 14:11:47,575 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,575 - DEBUG - Greedy found result -1 for estimate 650
+2017-02-23 14:11:47,576 - DEBUG - Estimate too low
+2017-02-23 14:11:47,576 - DEBUG - returns -2
+2017-02-23 14:11:47,576 - DEBUG - Greedy found result -2 for estimate 925
+2017-02-23 14:11:47,576 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,576 - DEBUG - Greedy found result -1 for estimate 788
+2017-02-23 14:11:47,576 - DEBUG - Estimate too low
+2017-02-23 14:11:47,576 - DEBUG - Greedy found result -1 for estimate 856
+2017-02-23 14:11:47,576 - DEBUG - Estimate too low
+2017-02-23 14:11:47,576 - DEBUG - Greedy found result -1 for estimate 890
+2017-02-23 14:11:47,576 - DEBUG - Estimate too low
+2017-02-23 14:11:47,577 - DEBUG - returns -2
+2017-02-23 14:11:47,577 - DEBUG - Greedy found result -2 for estimate 907
+2017-02-23 14:11:47,577 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,577 - DEBUG - Greedy found result -1 for estimate 899
+2017-02-23 14:11:47,577 - DEBUG - Estimate too low
+2017-02-23 14:11:47,577 - DEBUG - returns -2
+2017-02-23 14:11:47,577 - DEBUG - Greedy found result -2 for estimate 903
+2017-02-23 14:11:47,577 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,577 - DEBUG - returns -2
+2017-02-23 14:11:47,577 - DEBUG - Greedy found result -2 for estimate 901
+2017-02-23 14:11:47,578 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,578 - DEBUG - returns -2
+2017-02-23 14:11:47,578 - DEBUG - Greedy found result -2 for estimate 900
+2017-02-23 14:11:47,578 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,578 - INFO - hi : 900, lo: 899, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:11:47,578 - DEBUG - result = -2
+2017-02-23 14:11:47,578 - DEBUG - Returning best_estimate from greedy : 2300
+2017-02-23 14:11:47,578 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:11:47,578 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:11:47,579 - DEBUG - returning 100
+2017-02-23 14:11:47,579 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 14:11:47,579 - DEBUG - Estimate too high...
+2017-02-23 14:11:47,579 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 14:11:47,579 - DEBUG - result = 100
+2017-02-23 14:11:47,579 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 14:11:47,579 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 14:11:47,579 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 14:11:47,579 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 14:11:47,579 - DEBUG - Estimate too low
+2017-02-23 14:11:47,579 - DEBUG - returning 18
+2017-02-23 14:11:47,580 - DEBUG - Greedy found result 18 for estimate 23
+2017-02-23 14:11:47,580 - DEBUG - Estimate too high...
+2017-02-23 14:11:47,580 - DEBUG - returns -2
+2017-02-23 14:11:47,580 - DEBUG - Greedy found result -2 for estimate 12
+2017-02-23 14:11:47,580 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,580 - DEBUG - Greedy found result -1 for estimate 7
+2017-02-23 14:11:47,580 - DEBUG - Estimate too low
+2017-02-23 14:11:47,580 - DEBUG - returns -2
+2017-02-23 14:11:47,580 - DEBUG - Greedy found result -2 for estimate 9
+2017-02-23 14:11:47,580 - DEBUG - Estimate too hi
+2017-02-23 14:11:47,580 - DEBUG - Greedy found result -1 for estimate 8
+2017-02-23 14:11:47,580 - DEBUG - Estimate too low
+2017-02-23 14:11:47,580 - INFO - hi : 9, lo: 8, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:11:47,581 - DEBUG - result = -1
+2017-02-23 14:11:47,581 - DEBUG - Returning best_estimate from greedy : 23
+2017-02-23 14:16:24,692 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:16:24,692 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:16:34,679 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:16:34,680 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:16:34,680 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:16:34,680 - DEBUG - Estimate too low
+2017-02-23 14:16:34,680 - DEBUG - returns -2
+2017-02-23 14:16:34,680 - DEBUG - Greedy found result -2 for estimate 2300
+2017-02-23 14:16:34,680 - DEBUG - Estimate too hi
+2017-02-23 14:16:34,680 - DEBUG - returning MAXT: 1000
+2017-02-23 14:16:34,680 - DEBUG - Greedy found result 1000 for estimate 1200
+2017-02-23 14:16:34,680 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,680 - DEBUG - Greedy found result -1 for estimate 650
+2017-02-23 14:16:34,680 - DEBUG - Estimate too low
+2017-02-23 14:16:34,681 - DEBUG - returning MAXT: 700
+2017-02-23 14:16:34,681 - DEBUG - Greedy found result 700 for estimate 925
+2017-02-23 14:16:34,681 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,681 - DEBUG - Greedy found result -1 for estimate 788
+2017-02-23 14:16:34,681 - DEBUG - Estimate too low
+2017-02-23 14:16:34,681 - DEBUG - Greedy found result -1 for estimate 856
+2017-02-23 14:16:34,681 - DEBUG - Estimate too low
+2017-02-23 14:16:34,681 - DEBUG - Greedy found result -1 for estimate 890
+2017-02-23 14:16:34,681 - DEBUG - Estimate too low
+2017-02-23 14:16:34,681 - DEBUG - returning MAXT: 700
+2017-02-23 14:16:34,681 - DEBUG - Greedy found result 700 for estimate 907
+2017-02-23 14:16:34,682 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,682 - DEBUG - Greedy found result -1 for estimate 899
+2017-02-23 14:16:34,682 - DEBUG - Estimate too low
+2017-02-23 14:16:34,682 - DEBUG - returning MAXT: 700
+2017-02-23 14:16:34,682 - DEBUG - Greedy found result 700 for estimate 903
+2017-02-23 14:16:34,682 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,682 - DEBUG - returning MAXT: 700
+2017-02-23 14:16:34,682 - DEBUG - Greedy found result 700 for estimate 901
+2017-02-23 14:16:34,682 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,682 - DEBUG - returning MAXT: 700
+2017-02-23 14:16:34,682 - DEBUG - Greedy found result 700 for estimate 900
+2017-02-23 14:16:34,683 - DEBUG - Estimate too high...
+2017-02-23 14:16:34,683 - INFO - hi : 900, lo: 899, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:16:34,683 - DEBUG - result = 700
+2017-02-23 14:16:34,683 - DEBUG - Returning best_estimate from greedy : 925
+2017-02-23 14:16:34,683 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:16:34,683 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:16:34,683 - DEBUG - returns -2
+2017-02-23 14:16:34,683 - DEBUG - Greedy found result -2 for estimate 100
+2017-02-23 14:16:34,683 - DEBUG - Estimate too hi
+2017-02-23 14:16:34,683 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 14:16:34,683 - DEBUG - result = -2
+2017-02-23 14:16:34,684 - DEBUG - Oops! RuntimeError!
+2017-02-23 14:22:38,814 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:22:38,814 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:22:50,067 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:22:50,067 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:22:50,067 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:22:50,068 - DEBUG - Estimate too low
+2017-02-23 14:22:50,068 - DEBUG - returns -2
+2017-02-23 14:22:50,068 - DEBUG - Greedy found result -2 for estimate 2300
+2017-02-23 14:22:50,068 - DEBUG - Estimate too hi
+2017-02-23 14:22:50,068 - DEBUG - returns -1
+2017-02-23 14:22:50,068 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:22:50,068 - DEBUG - Estimate too low
+2017-02-23 14:22:50,069 - DEBUG - returns -2
+2017-02-23 14:22:50,069 - DEBUG - Greedy found result -2 for estimate 1750
+2017-02-23 14:22:50,069 - DEBUG - Estimate too hi
+2017-02-23 14:22:50,069 - DEBUG - returns -1
+2017-02-23 14:22:50,069 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:22:50,069 - DEBUG - Estimate too low
+2017-02-23 14:22:50,069 - DEBUG - returning MAXT: 1500
+2017-02-23 14:22:50,069 - DEBUG - Greedy found result 1500 for estimate 1612
+2017-02-23 14:22:50,070 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,070 - DEBUG - returning MAXT: 1500
+2017-02-23 14:22:50,070 - DEBUG - Greedy found result 1500 for estimate 1544
+2017-02-23 14:22:50,070 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,070 - DEBUG - returning MAXT: 1500
+2017-02-23 14:22:50,070 - DEBUG - Greedy found result 1500 for estimate 1510
+2017-02-23 14:22:50,070 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,071 - DEBUG - returns -1
+2017-02-23 14:22:50,071 - DEBUG - Greedy found result -1 for estimate 1493
+2017-02-23 14:22:50,071 - DEBUG - Estimate too low
+2017-02-23 14:22:50,071 - DEBUG - returning MAXT: 1500
+2017-02-23 14:22:50,071 - DEBUG - Greedy found result 1500 for estimate 1501
+2017-02-23 14:22:50,071 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,071 - DEBUG - returns -1
+2017-02-23 14:22:50,072 - DEBUG - Greedy found result -1 for estimate 1497
+2017-02-23 14:22:50,072 - DEBUG - Estimate too low
+2017-02-23 14:22:50,072 - DEBUG - returns -1
+2017-02-23 14:22:50,072 - DEBUG - Greedy found result -1 for estimate 1499
+2017-02-23 14:22:50,072 - DEBUG - Estimate too low
+2017-02-23 14:22:50,072 - DEBUG - returning MAXT: 1500
+2017-02-23 14:22:50,073 - DEBUG - Greedy found result 1500 for estimate 1500
+2017-02-23 14:22:50,073 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,073 - INFO - hi : 1500, lo: 1499, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:22:50,073 - DEBUG - result = 1500
+2017-02-23 14:22:50,073 - DEBUG - Returning best_estimate from greedy : 1612
+2017-02-23 14:22:50,073 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:22:50,073 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:22:50,074 - DEBUG - returning MAXT: 100
+2017-02-23 14:22:50,074 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 14:22:50,074 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,074 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 14:22:50,074 - DEBUG - result = 100
+2017-02-23 14:22:50,075 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 14:22:50,075 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 14:22:50,075 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 14:22:50,075 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 14:22:50,075 - DEBUG - Estimate too low
+2017-02-23 14:22:50,075 - DEBUG - returns -2
+2017-02-23 14:22:50,075 - DEBUG - Greedy found result -2 for estimate 23
+2017-02-23 14:22:50,075 - DEBUG - Estimate too hi
+2017-02-23 14:22:50,075 - DEBUG - returns -1
+2017-02-23 14:22:50,076 - DEBUG - Greedy found result -1 for estimate 12
+2017-02-23 14:22:50,076 - DEBUG - Estimate too low
+2017-02-23 14:22:50,076 - DEBUG - returns -2
+2017-02-23 14:22:50,076 - DEBUG - Greedy found result -2 for estimate 17
+2017-02-23 14:22:50,076 - DEBUG - Estimate too hi
+2017-02-23 14:22:50,076 - DEBUG - returning MAXT: 15
+2017-02-23 14:22:50,076 - DEBUG - Greedy found result 15 for estimate 15
+2017-02-23 14:22:50,076 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,076 - DEBUG - returning MAXT: 13
+2017-02-23 14:22:50,076 - DEBUG - Greedy found result 13 for estimate 14
+2017-02-23 14:22:50,076 - DEBUG - Estimate too high...
+2017-02-23 14:22:50,076 - DEBUG - returns -1
+2017-02-23 14:22:50,077 - DEBUG - Greedy found result -1 for estimate 13
+2017-02-23 14:22:50,077 - DEBUG - Estimate too low
+2017-02-23 14:22:50,077 - INFO - hi : 14, lo: 13, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:22:50,077 - DEBUG - result = -1
+2017-02-23 14:22:50,077 - DEBUG - Returning best_estimate from greedy : 14
+2017-02-23 14:27:23,806 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:27:23,806 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:27:31,870 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:27:31,870 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:27:31,871 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:27:31,871 - DEBUG - Estimate too low
+2017-02-23 14:27:31,871 - DEBUG - returns -2
+2017-02-23 14:27:31,871 - DEBUG - Greedy found result -2 for estimate 2300
+2017-02-23 14:27:31,871 - DEBUG - Estimate too hi
+2017-02-23 14:27:31,871 - DEBUG - returns -1
+2017-02-23 14:27:31,871 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:27:31,872 - DEBUG - Estimate too low
+2017-02-23 14:27:31,872 - DEBUG - returns -2
+2017-02-23 14:27:31,872 - DEBUG - Greedy found result -2 for estimate 1750
+2017-02-23 14:27:31,872 - DEBUG - Estimate too hi
+2017-02-23 14:27:31,872 - DEBUG - returns -1
+2017-02-23 14:27:31,872 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:27:31,872 - DEBUG - Estimate too low
+2017-02-23 14:27:31,872 - DEBUG - returning MAXT: 1500
+2017-02-23 14:27:31,872 - DEBUG - Greedy found result 1500 for estimate 1612
+2017-02-23 14:27:31,873 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,873 - DEBUG - returning MAXT: 1500
+2017-02-23 14:27:31,873 - DEBUG - Greedy found result 1500 for estimate 1544
+2017-02-23 14:27:31,873 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,873 - DEBUG - returning MAXT: 1500
+2017-02-23 14:27:31,873 - DEBUG - Greedy found result 1500 for estimate 1510
+2017-02-23 14:27:31,873 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,873 - DEBUG - returns -1
+2017-02-23 14:27:31,873 - DEBUG - Greedy found result -1 for estimate 1493
+2017-02-23 14:27:31,873 - DEBUG - Estimate too low
+2017-02-23 14:27:31,873 - DEBUG - returning MAXT: 1500
+2017-02-23 14:27:31,874 - DEBUG - Greedy found result 1500 for estimate 1501
+2017-02-23 14:27:31,874 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,874 - DEBUG - returns -1
+2017-02-23 14:27:31,874 - DEBUG - Greedy found result -1 for estimate 1497
+2017-02-23 14:27:31,874 - DEBUG - Estimate too low
+2017-02-23 14:27:31,874 - DEBUG - returns -1
+2017-02-23 14:27:31,874 - DEBUG - Greedy found result -1 for estimate 1499
+2017-02-23 14:27:31,874 - DEBUG - Estimate too low
+2017-02-23 14:27:31,874 - DEBUG - returning MAXT: 1500
+2017-02-23 14:27:31,874 - DEBUG - Greedy found result 1500 for estimate 1500
+2017-02-23 14:27:31,874 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,875 - INFO - hi : 1500, lo: 1499, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:27:31,875 - DEBUG - result = 1500
+2017-02-23 14:27:31,875 - DEBUG - Returning best_estimate from greedy : 1612
+2017-02-23 14:27:31,875 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:27:31,875 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:27:31,875 - DEBUG - returning MAXT: 100
+2017-02-23 14:27:31,875 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 14:27:31,876 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,876 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 14:27:31,876 - DEBUG - result = 100
+2017-02-23 14:27:31,876 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 14:27:31,876 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 14:27:31,876 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 14:27:31,876 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 14:27:31,876 - DEBUG - Estimate too low
+2017-02-23 14:27:31,876 - DEBUG - returns -2
+2017-02-23 14:27:31,876 - DEBUG - Greedy found result -2 for estimate 23
+2017-02-23 14:27:31,877 - DEBUG - Estimate too hi
+2017-02-23 14:27:31,877 - DEBUG - returns -1
+2017-02-23 14:27:31,877 - DEBUG - Greedy found result -1 for estimate 12
+2017-02-23 14:27:31,877 - DEBUG - Estimate too low
+2017-02-23 14:27:31,877 - DEBUG - returns -2
+2017-02-23 14:27:31,877 - DEBUG - Greedy found result -2 for estimate 17
+2017-02-23 14:27:31,877 - DEBUG - Estimate too hi
+2017-02-23 14:27:31,877 - DEBUG - returning MAXT: 15
+2017-02-23 14:27:31,877 - DEBUG - Greedy found result 15 for estimate 15
+2017-02-23 14:27:31,877 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,877 - DEBUG - returning MAXT: 14
+2017-02-23 14:27:31,877 - DEBUG - Greedy found result 14 for estimate 14
+2017-02-23 14:27:31,877 - DEBUG - Estimate too high...
+2017-02-23 14:27:31,878 - DEBUG - returns -1
+2017-02-23 14:27:31,878 - DEBUG - Greedy found result -1 for estimate 13
+2017-02-23 14:27:31,878 - DEBUG - Estimate too low
+2017-02-23 14:27:31,878 - INFO - hi : 14, lo: 13, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:27:31,878 - DEBUG - result = -1
+2017-02-23 14:27:31,878 - DEBUG - Returning best_estimate from greedy : 14
+2017-02-23 14:30:22,656 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:30:22,656 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:30:36,155 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:30:36,155 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:30:36,155 - DEBUG - returns -1
+2017-02-23 14:30:36,155 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:30:36,155 - DEBUG - Estimate too low
+2017-02-23 14:30:36,156 - DEBUG - returns -2
+2017-02-23 14:30:36,156 - DEBUG - Greedy found result -2 for estimate 2300
+2017-02-23 14:30:36,156 - DEBUG - Estimate too hi
+2017-02-23 14:30:36,156 - DEBUG - returns -1
+2017-02-23 14:30:36,156 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:30:36,156 - DEBUG - Estimate too low
+2017-02-23 14:30:36,156 - DEBUG - returns -2
+2017-02-23 14:30:36,156 - DEBUG - Greedy found result -2 for estimate 1750
+2017-02-23 14:30:36,156 - DEBUG - Estimate too hi
+2017-02-23 14:30:36,156 - DEBUG - returns -1
+2017-02-23 14:30:36,157 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:30:36,157 - DEBUG - Estimate too low
+2017-02-23 14:30:36,157 - DEBUG - returning MAXT: 1500
+2017-02-23 14:30:36,157 - DEBUG - Greedy found result 1500 for estimate 1612
+2017-02-23 14:30:36,157 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,157 - DEBUG - returning MAXT: 1500
+2017-02-23 14:30:36,157 - DEBUG - Greedy found result 1500 for estimate 1544
+2017-02-23 14:30:36,157 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,157 - DEBUG - returning MAXT: 1500
+2017-02-23 14:30:36,157 - DEBUG - Greedy found result 1500 for estimate 1510
+2017-02-23 14:30:36,158 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,158 - DEBUG - returns -1
+2017-02-23 14:30:36,158 - DEBUG - Greedy found result -1 for estimate 1493
+2017-02-23 14:30:36,158 - DEBUG - Estimate too low
+2017-02-23 14:30:36,158 - DEBUG - returning MAXT: 1500
+2017-02-23 14:30:36,158 - DEBUG - Greedy found result 1500 for estimate 1501
+2017-02-23 14:30:36,158 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,158 - DEBUG - returns -1
+2017-02-23 14:30:36,158 - DEBUG - Greedy found result -1 for estimate 1497
+2017-02-23 14:30:36,158 - DEBUG - Estimate too low
+2017-02-23 14:30:36,159 - DEBUG - returns -1
+2017-02-23 14:30:36,159 - DEBUG - Greedy found result -1 for estimate 1499
+2017-02-23 14:30:36,159 - DEBUG - Estimate too low
+2017-02-23 14:30:36,159 - DEBUG - returning MAXT: 1500
+2017-02-23 14:30:36,159 - DEBUG - Greedy found result 1500 for estimate 1500
+2017-02-23 14:30:36,159 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,159 - INFO - hi : 1500, lo: 1499, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:30:36,159 - DEBUG - result = 1500
+2017-02-23 14:30:36,159 - DEBUG - Returning best_estimate from greedy : 1612
+2017-02-23 14:30:36,160 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:30:36,160 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:30:36,160 - DEBUG - returning MAXT: 100
+2017-02-23 14:30:36,160 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 14:30:36,160 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,160 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 14:30:36,160 - DEBUG - result = 100
+2017-02-23 14:30:36,160 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 14:30:36,161 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 14:30:36,161 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 14:30:36,161 - DEBUG - returns -1
+2017-02-23 14:30:36,161 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 14:30:36,161 - DEBUG - Estimate too low
+2017-02-23 14:30:36,161 - DEBUG - returns -2
+2017-02-23 14:30:36,161 - DEBUG - Greedy found result -2 for estimate 23
+2017-02-23 14:30:36,161 - DEBUG - Estimate too hi
+2017-02-23 14:30:36,161 - DEBUG - returns -1
+2017-02-23 14:30:36,162 - DEBUG - Greedy found result -1 for estimate 12
+2017-02-23 14:30:36,162 - DEBUG - Estimate too low
+2017-02-23 14:30:36,162 - DEBUG - returns -2
+2017-02-23 14:30:36,162 - DEBUG - Greedy found result -2 for estimate 17
+2017-02-23 14:30:36,162 - DEBUG - Estimate too hi
+2017-02-23 14:30:36,162 - DEBUG - returning MAXT: 15
+2017-02-23 14:30:36,162 - DEBUG - Greedy found result 15 for estimate 15
+2017-02-23 14:30:36,162 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,162 - DEBUG - returning MAXT: 14
+2017-02-23 14:30:36,162 - DEBUG - Greedy found result 14 for estimate 14
+2017-02-23 14:30:36,163 - DEBUG - Estimate too high...
+2017-02-23 14:30:36,163 - DEBUG - returns -1
+2017-02-23 14:30:36,163 - DEBUG - Greedy found result -1 for estimate 13
+2017-02-23 14:30:36,163 - DEBUG - Estimate too low
+2017-02-23 14:30:36,163 - INFO - hi : 14, lo: 13, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:30:36,163 - DEBUG - result = -1
+2017-02-23 14:30:36,163 - DEBUG - Returning best_estimate from greedy : 14
+2017-02-23 14:36:35,215 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:36:35,215 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:36:46,260 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:36:46,260 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:36:46,261 - DEBUG - returns -1
+2017-02-23 14:36:46,261 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:36:46,261 - DEBUG - Estimate too low
+2017-02-23 14:36:46,261 - DEBUG - returning MAXT: 2100
+2017-02-23 14:36:46,261 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 14:36:46,261 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,261 - DEBUG - returns -1
+2017-02-23 14:36:46,261 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:36:46,261 - DEBUG - Estimate too low
+2017-02-23 14:36:46,262 - DEBUG - returning MAXT: 1700
+2017-02-23 14:36:46,262 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 14:36:46,262 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,262 - DEBUG - returns -1
+2017-02-23 14:36:46,262 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:36:46,262 - DEBUG - Estimate too low
+2017-02-23 14:36:46,262 - DEBUG - returns -1
+2017-02-23 14:36:46,262 - DEBUG - Greedy found result -1 for estimate 1612
+2017-02-23 14:36:46,262 - DEBUG - Estimate too low
+2017-02-23 14:36:46,263 - DEBUG - returns -1
+2017-02-23 14:36:46,263 - DEBUG - Greedy found result -1 for estimate 1681
+2017-02-23 14:36:46,263 - DEBUG - Estimate too low
+2017-02-23 14:36:46,263 - DEBUG - returning MAXT: 1700
+2017-02-23 14:36:46,263 - DEBUG - Greedy found result 1700 for estimate 1715
+2017-02-23 14:36:46,263 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,263 - DEBUG - returns -1
+2017-02-23 14:36:46,263 - DEBUG - Greedy found result -1 for estimate 1698
+2017-02-23 14:36:46,263 - DEBUG - Estimate too low
+2017-02-23 14:36:46,264 - DEBUG - returning MAXT: 1700
+2017-02-23 14:36:46,264 - DEBUG - Greedy found result 1700 for estimate 1706
+2017-02-23 14:36:46,264 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,264 - DEBUG - returning MAXT: 1700
+2017-02-23 14:36:46,264 - DEBUG - Greedy found result 1700 for estimate 1702
+2017-02-23 14:36:46,264 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,264 - DEBUG - returning MAXT: 1700
+2017-02-23 14:36:46,264 - DEBUG - Greedy found result 1700 for estimate 1700
+2017-02-23 14:36:46,264 - DEBUG - Estimate too high...
+2017-02-23 14:36:46,264 - DEBUG - returns -1
+2017-02-23 14:36:46,265 - DEBUG - Greedy found result -1 for estimate 1699
+2017-02-23 14:36:46,265 - DEBUG - Estimate too low
+2017-02-23 14:36:46,265 - INFO - hi : 1700, lo: 1699, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:36:46,265 - DEBUG - result = -1
+2017-02-23 14:36:46,265 - DEBUG - Returning best_estimate from greedy : 1750
+2017-02-23 14:36:46,265 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:36:46,265 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:36:46,265 - DEBUG - returns -1
+2017-02-23 14:36:46,265 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:36:46,266 - DEBUG - Estimate too low
+2017-02-23 14:36:46,266 - DEBUG - returns -2
+2017-02-23 14:36:46,266 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 14:36:46,266 - DEBUG - Estimate too hi
+2017-02-23 14:36:46,266 - DEBUG - returns -2
+2017-02-23 14:36:46,266 - DEBUG - Greedy found result -2 for estimate 200
+2017-02-23 14:36:46,266 - DEBUG - Estimate too hi
+2017-02-23 14:36:46,266 - DEBUG - returns -1
+2017-02-23 14:36:46,266 - DEBUG - Greedy found result -1 for estimate 150
+2017-02-23 14:36:46,266 - DEBUG - Estimate too low
+2017-02-23 14:36:46,266 - DEBUG - returns -1
+2017-02-23 14:36:46,267 - DEBUG - Greedy found result -1 for estimate 175
+2017-02-23 14:36:46,267 - DEBUG - Estimate too low
+2017-02-23 14:36:46,267 - DEBUG - returns -1
+2017-02-23 14:36:46,267 - DEBUG - Greedy found result -1 for estimate 187
+2017-02-23 14:36:46,267 - DEBUG - Estimate too low
+2017-02-23 14:36:46,267 - DEBUG - returns -1
+2017-02-23 14:36:46,267 - DEBUG - Greedy found result -1 for estimate 193
+2017-02-23 14:36:46,267 - DEBUG - Estimate too low
+2017-02-23 14:36:46,268 - DEBUG - returns -1
+2017-02-23 14:36:46,268 - DEBUG - Greedy found result -1 for estimate 196
+2017-02-23 14:36:46,268 - DEBUG - Estimate too low
+2017-02-23 14:36:46,268 - DEBUG - returns -1
+2017-02-23 14:36:46,268 - DEBUG - Greedy found result -1 for estimate 198
+2017-02-23 14:36:46,268 - DEBUG - Estimate too low
+2017-02-23 14:36:46,268 - DEBUG - returns -1
+2017-02-23 14:36:46,268 - DEBUG - Greedy found result -1 for estimate 199
+2017-02-23 14:36:46,268 - DEBUG - Estimate too low
+2017-02-23 14:36:46,268 - INFO - hi : 200, lo: 199, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:36:46,269 - DEBUG - result = -1
+2017-02-23 14:36:46,269 - DEBUG - Oops! RuntimeError!
+2017-02-23 14:41:58,953 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:41:58,954 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:42:07,680 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:42:07,680 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:42:07,681 - DEBUG - returns -1
+2017-02-23 14:42:07,681 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:42:07,681 - DEBUG - Estimate too low
+2017-02-23 14:42:07,681 - DEBUG - returning MAXT: 2100
+2017-02-23 14:42:07,681 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 14:42:07,681 - DEBUG - Estimate too high...
+2017-02-23 14:42:07,681 - DEBUG - returns -1
+2017-02-23 14:42:07,681 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:42:07,681 - DEBUG - Estimate too low
+2017-02-23 14:42:07,681 - DEBUG - returning MAXT: 1700
+2017-02-23 14:42:07,681 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 14:42:07,681 - DEBUG - Estimate too high...
+2017-02-23 14:42:07,682 - DEBUG - returns -1
+2017-02-23 14:42:07,682 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:42:07,682 - DEBUG - Estimate too low
+2017-02-23 14:42:07,682 - DEBUG - returns -1
+2017-02-23 14:42:07,682 - DEBUG - Greedy found result -1 for estimate 1612
+2017-02-23 14:42:07,682 - DEBUG - Estimate too low
+2017-02-23 14:42:07,682 - DEBUG - returns -1
+2017-02-23 14:42:07,682 - DEBUG - Greedy found result -1 for estimate 1681
+2017-02-23 14:42:07,682 - DEBUG - Estimate too low
+2017-02-23 14:42:07,682 - DEBUG - returning MAXT: 1700
+2017-02-23 14:42:07,682 - DEBUG - Greedy found result 1700 for estimate 1715
+2017-02-23 14:42:07,682 - DEBUG - Estimate too high...
+2017-02-23 14:42:07,682 - DEBUG - returns -1
+2017-02-23 14:42:07,682 - DEBUG - Greedy found result -1 for estimate 1698
+2017-02-23 14:42:07,682 - DEBUG - Estimate too low
+2017-02-23 14:42:07,683 - DEBUG - returning MAXT: 1700
+2017-02-23 14:42:07,683 - DEBUG - Greedy found result 1700 for estimate 1706
+2017-02-23 14:42:07,683 - DEBUG - Estimate too high...
+2017-02-23 14:42:07,683 - DEBUG - returning MAXT: 1700
+2017-02-23 14:42:07,683 - DEBUG - Greedy found result 1700 for estimate 1702
+2017-02-23 14:42:07,683 - DEBUG - Estimate too high...
+2017-02-23 14:42:07,683 - DEBUG - returning MAXT: 1700
+2017-02-23 14:42:07,683 - DEBUG - Greedy found result 1700 for estimate 1700
+2017-02-23 14:42:07,683 - DEBUG - Greedy found this estimate perfect! estimate: 1700 result: 1700
+2017-02-23 14:42:07,683 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:42:07,683 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:42:07,683 - DEBUG - returns -1
+2017-02-23 14:42:07,683 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:42:07,684 - DEBUG - Estimate too low
+2017-02-23 14:42:07,684 - DEBUG - returns -2
+2017-02-23 14:42:07,684 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 14:42:07,684 - DEBUG - Estimate too hi
+2017-02-23 14:42:07,684 - DEBUG - returns -2
+2017-02-23 14:42:07,684 - DEBUG - Greedy found result -2 for estimate 200
+2017-02-23 14:42:07,684 - DEBUG - Estimate too hi
+2017-02-23 14:42:07,684 - DEBUG - returns -1
+2017-02-23 14:42:07,684 - DEBUG - Greedy found result -1 for estimate 150
+2017-02-23 14:42:07,684 - DEBUG - Estimate too low
+2017-02-23 14:42:07,684 - DEBUG - returns -1
+2017-02-23 14:42:07,684 - DEBUG - Greedy found result -1 for estimate 175
+2017-02-23 14:42:07,684 - DEBUG - Estimate too low
+2017-02-23 14:42:07,685 - DEBUG - returns -1
+2017-02-23 14:42:07,685 - DEBUG - Greedy found result -1 for estimate 187
+2017-02-23 14:42:07,685 - DEBUG - Estimate too low
+2017-02-23 14:42:07,685 - DEBUG - returns -1
+2017-02-23 14:42:07,685 - DEBUG - Greedy found result -1 for estimate 193
+2017-02-23 14:42:07,685 - DEBUG - Estimate too low
+2017-02-23 14:42:07,685 - DEBUG - returns -1
+2017-02-23 14:42:07,685 - DEBUG - Greedy found result -1 for estimate 196
+2017-02-23 14:42:07,685 - DEBUG - Estimate too low
+2017-02-23 14:42:07,685 - DEBUG - returns -1
+2017-02-23 14:42:07,685 - DEBUG - Greedy found result -1 for estimate 198
+2017-02-23 14:42:07,685 - DEBUG - Estimate too low
+2017-02-23 14:42:07,685 - DEBUG - returns -1
+2017-02-23 14:42:07,686 - DEBUG - Greedy found result -1 for estimate 199
+2017-02-23 14:42:07,686 - DEBUG - Estimate too low
+2017-02-23 14:42:07,686 - INFO - hi : 200, lo: 199, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:42:07,686 - DEBUG - result = -1
+2017-02-23 14:42:07,686 - DEBUG - Oops! RuntimeError!
+2017-02-23 14:44:32,196 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:44:32,196 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:44:39,273 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:44:39,273 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:44:39,273 - DEBUG - returns -1
+2017-02-23 14:44:39,273 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:45:06,372 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:45:06,372 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:45:13,980 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:45:13,981 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:45:13,981 - DEBUG - returns -1
+2017-02-23 14:45:13,981 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:45:13,981 - DEBUG - Estimate too low
+2017-02-23 14:45:13,981 - DEBUG - returning MAXT: 2100
+2017-02-23 14:45:13,981 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 14:45:13,981 - DEBUG - Greedy found this estimate perfect! estimate: 2300 result: 2100
+2017-02-23 14:45:13,981 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:45:13,981 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:45:13,981 - DEBUG - returns -1
+2017-02-23 14:45:13,982 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:45:13,982 - DEBUG - Estimate too low
+2017-02-23 14:45:13,982 - DEBUG - returns -2
+2017-02-23 14:45:13,982 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 14:45:13,982 - DEBUG - Greedy found this estimate perfect! estimate: 300 result: -2
+2017-02-23 14:45:13,982 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 14:45:13,982 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 14:45:13,982 - DEBUG - returns -1
+2017-02-23 14:45:13,982 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 14:45:13,982 - DEBUG - Estimate too low
+2017-02-23 14:45:13,982 - DEBUG - returning MAXT: 22
+2017-02-23 14:45:13,982 - DEBUG - Greedy found result 22 for estimate 23
+2017-02-23 14:45:13,983 - DEBUG - Greedy found this estimate perfect! estimate: 23 result: 22
+2017-02-23 14:46:05,527 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 14:46:05,527 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 14:46:14,022 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 14:46:14,022 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 14:46:14,022 - DEBUG - returns -1
+2017-02-23 14:46:14,023 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:46:14,023 - DEBUG - Estimate too low
+2017-02-23 14:46:14,023 - DEBUG - returning MAXT: 2100
+2017-02-23 14:46:14,023 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 14:46:14,023 - DEBUG - Estimate too high...
+2017-02-23 14:46:14,023 - DEBUG - returns -1
+2017-02-23 14:46:14,023 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 14:46:14,023 - DEBUG - Estimate too low
+2017-02-23 14:46:14,023 - DEBUG - returning MAXT: 1700
+2017-02-23 14:46:14,024 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 14:46:14,024 - DEBUG - Estimate too high...
+2017-02-23 14:46:14,024 - DEBUG - returns -1
+2017-02-23 14:46:14,024 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 14:46:14,024 - DEBUG - Estimate too low
+2017-02-23 14:46:14,024 - DEBUG - returns -1
+2017-02-23 14:46:14,024 - DEBUG - Greedy found result -1 for estimate 1612
+2017-02-23 14:46:14,024 - DEBUG - Estimate too low
+2017-02-23 14:46:14,024 - DEBUG - returns -1
+2017-02-23 14:46:14,024 - DEBUG - Greedy found result -1 for estimate 1681
+2017-02-23 14:46:14,025 - DEBUG - Estimate too low
+2017-02-23 14:46:14,025 - DEBUG - returning MAXT: 1700
+2017-02-23 14:46:14,025 - DEBUG - Greedy found result 1700 for estimate 1715
+2017-02-23 14:46:14,025 - DEBUG - Estimate too high...
+2017-02-23 14:46:14,025 - DEBUG - returns -1
+2017-02-23 14:46:14,025 - DEBUG - Greedy found result -1 for estimate 1698
+2017-02-23 14:46:14,025 - DEBUG - Estimate too low
+2017-02-23 14:46:14,025 - DEBUG - returning MAXT: 1700
+2017-02-23 14:46:14,025 - DEBUG - Greedy found result 1700 for estimate 1706
+2017-02-23 14:46:14,025 - DEBUG - Estimate too high...
+2017-02-23 14:46:14,026 - DEBUG - returning MAXT: 1700
+2017-02-23 14:46:14,026 - DEBUG - Greedy found result 1700 for estimate 1702
+2017-02-23 14:46:14,026 - DEBUG - Estimate too high...
+2017-02-23 14:46:14,026 - DEBUG - returning MAXT: 1700
+2017-02-23 14:46:14,026 - DEBUG - Greedy found result 1700 for estimate 1700
+2017-02-23 14:46:14,026 - DEBUG - Greedy found this estimate perfect! estimate: 1700 result: 1700
+2017-02-23 14:46:14,026 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 14:46:14,026 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 14:46:14,026 - DEBUG - returns -1
+2017-02-23 14:46:14,027 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 14:46:14,027 - DEBUG - Estimate too low
+2017-02-23 14:46:14,027 - DEBUG - returns -2
+2017-02-23 14:46:14,027 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 14:46:14,027 - DEBUG - Estimate too hi
+2017-02-23 14:46:14,027 - DEBUG - returns -2
+2017-02-23 14:46:14,027 - DEBUG - Greedy found result -2 for estimate 200
+2017-02-23 14:46:14,027 - DEBUG - Estimate too hi
+2017-02-23 14:46:14,027 - DEBUG - returns -1
+2017-02-23 14:46:14,027 - DEBUG - Greedy found result -1 for estimate 150
+2017-02-23 14:46:14,027 - DEBUG - Estimate too low
+2017-02-23 14:46:14,027 - DEBUG - returns -1
+2017-02-23 14:46:14,027 - DEBUG - Greedy found result -1 for estimate 175
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,028 - DEBUG - returns -1
+2017-02-23 14:46:14,028 - DEBUG - Greedy found result -1 for estimate 187
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,028 - DEBUG - returns -1
+2017-02-23 14:46:14,028 - DEBUG - Greedy found result -1 for estimate 193
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,028 - DEBUG - returns -1
+2017-02-23 14:46:14,028 - DEBUG - Greedy found result -1 for estimate 196
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,028 - DEBUG - returns -1
+2017-02-23 14:46:14,028 - DEBUG - Greedy found result -1 for estimate 198
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,028 - DEBUG - returns -1
+2017-02-23 14:46:14,028 - DEBUG - Greedy found result -1 for estimate 199
+2017-02-23 14:46:14,028 - DEBUG - Estimate too low
+2017-02-23 14:46:14,029 - INFO - hi : 200, lo: 199, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 14:46:14,029 - DEBUG - result = -1
+2017-02-23 14:46:14,029 - DEBUG - Oops! RuntimeError!
+2017-02-23 15:01:59,100 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:01:59,101 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:02:08,780 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:02:08,780 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:02:08,780 - DEBUG - returning MAXT: 4200
+2017-02-23 15:02:08,781 - DEBUG - Greedy found result 4200 for estimate 100
+2017-02-23 15:02:08,781 - DEBUG - Estimate too high...
+2017-02-23 15:02:08,781 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:02:08,781 - DEBUG - result = 4200
+2017-02-23 15:02:08,781 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 15:02:08,781 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 15:02:08,781 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 15:02:08,781 - DEBUG - returning MAXT: 200
+2017-02-23 15:02:08,781 - DEBUG - Greedy found result 200 for estimate 100
+2017-02-23 15:02:08,782 - DEBUG - Estimate too high...
+2017-02-23 15:02:08,782 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:02:08,782 - DEBUG - result = 200
+2017-02-23 15:02:08,782 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 15:02:08,782 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 15:02:08,782 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 15:02:08,782 - DEBUG - returning MAXT: 36
+2017-02-23 15:02:08,782 - DEBUG - Greedy found result 36 for estimate 1
+2017-02-23 15:02:08,782 - DEBUG - Estimate too high...
+2017-02-23 15:02:08,783 - INFO - hi : 1, lo: 1, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:02:08,783 - DEBUG - result = 36
+2017-02-23 15:02:08,783 - DEBUG - Returning best_estimate from greedy : 1
+2017-02-23 15:05:35,402 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:05:35,402 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:05:44,612 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:05:44,612 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:05:44,612 - DEBUG - returns -1
+2017-02-23 15:05:44,612 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 15:05:44,613 - DEBUG - Estimate too low
+2017-02-23 15:05:44,613 - DEBUG - returning MAXT: 2100
+2017-02-23 15:05:44,613 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 15:05:44,613 - DEBUG - Estimate too high...
+2017-02-23 15:05:44,613 - DEBUG - returns -1
+2017-02-23 15:05:44,613 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 15:05:44,613 - DEBUG - Estimate too low
+2017-02-23 15:05:44,614 - DEBUG - returning MAXT: 1700
+2017-02-23 15:05:44,614 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 15:05:44,614 - DEBUG - Estimate too high...
+2017-02-23 15:05:44,614 - DEBUG - returns -1
+2017-02-23 15:05:44,614 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 15:05:44,614 - DEBUG - Estimate too low
+2017-02-23 15:05:44,614 - DEBUG - returns -1
+2017-02-23 15:05:44,614 - DEBUG - Greedy found result -1 for estimate 1612
+2017-02-23 15:05:44,614 - DEBUG - Estimate too low
+2017-02-23 15:05:44,615 - DEBUG - returns -1
+2017-02-23 15:05:44,615 - DEBUG - Greedy found result -1 for estimate 1681
+2017-02-23 15:05:44,615 - DEBUG - Estimate too low
+2017-02-23 15:05:44,616 - DEBUG - returning MAXT: 1700
+2017-02-23 15:05:44,616 - DEBUG - Greedy found result 1700 for estimate 1715
+2017-02-23 15:05:44,616 - DEBUG - Estimate too high...
+2017-02-23 15:05:44,616 - DEBUG - returns -1
+2017-02-23 15:05:44,616 - DEBUG - Greedy found result -1 for estimate 1698
+2017-02-23 15:05:44,616 - DEBUG - Estimate too low
+2017-02-23 15:05:44,617 - DEBUG - returning MAXT: 1700
+2017-02-23 15:05:44,617 - DEBUG - Greedy found result 1700 for estimate 1706
+2017-02-23 15:05:44,617 - DEBUG - Estimate too high...
+2017-02-23 15:05:44,617 - DEBUG - returning MAXT: 1700
+2017-02-23 15:05:44,617 - DEBUG - Greedy found result 1700 for estimate 1702
+2017-02-23 15:05:44,617 - DEBUG - Estimate too high...
+2017-02-23 15:05:44,617 - DEBUG - returning MAXT: 1700
+2017-02-23 15:05:44,617 - DEBUG - Greedy found result 1700 for estimate 1700
+2017-02-23 15:05:44,617 - DEBUG - Greedy found this estimate perfect! estimate: 1700 result: 1700
+2017-02-23 15:05:44,617 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 15:05:44,617 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 15:05:44,617 - DEBUG - returns -1
+2017-02-23 15:05:44,618 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 15:05:44,618 - DEBUG - Estimate too low
+2017-02-23 15:05:44,618 - DEBUG - returns -2
+2017-02-23 15:05:44,618 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 15:05:44,618 - DEBUG - Estimate too hi
+2017-02-23 15:05:44,618 - DEBUG - returns -2
+2017-02-23 15:05:44,618 - DEBUG - Greedy found result -2 for estimate 200
+2017-02-23 15:05:44,618 - DEBUG - Estimate too hi
+2017-02-23 15:05:44,618 - DEBUG - returns -1
+2017-02-23 15:05:44,618 - DEBUG - Greedy found result -1 for estimate 150
+2017-02-23 15:05:44,618 - DEBUG - Estimate too low
+2017-02-23 15:05:44,618 - DEBUG - returns -1
+2017-02-23 15:05:44,618 - DEBUG - Greedy found result -1 for estimate 175
+2017-02-23 15:05:44,619 - DEBUG - Estimate too low
+2017-02-23 15:05:44,619 - DEBUG - returns -1
+2017-02-23 15:05:44,619 - DEBUG - Greedy found result -1 for estimate 187
+2017-02-23 15:05:44,619 - DEBUG - Estimate too low
+2017-02-23 15:05:44,619 - DEBUG - returns -1
+2017-02-23 15:05:44,619 - DEBUG - Greedy found result -1 for estimate 193
+2017-02-23 15:05:44,619 - DEBUG - Estimate too low
+2017-02-23 15:05:44,619 - DEBUG - returns -1
+2017-02-23 15:05:44,619 - DEBUG - Greedy found result -1 for estimate 196
+2017-02-23 15:05:44,619 - DEBUG - Estimate too low
+2017-02-23 15:05:44,619 - DEBUG - returns -1
+2017-02-23 15:05:44,619 - DEBUG - Greedy found result -1 for estimate 198
+2017-02-23 15:05:44,620 - DEBUG - Estimate too low
+2017-02-23 15:05:44,620 - DEBUG - returns -1
+2017-02-23 15:05:44,620 - DEBUG - Greedy found result -1 for estimate 199
+2017-02-23 15:05:44,620 - DEBUG - Estimate too low
+2017-02-23 15:05:44,620 - INFO - hi : 200, lo: 199, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 15:05:44,620 - DEBUG - result = -1
+2017-02-23 15:05:44,620 - DEBUG - Oops! RuntimeError!
+2017-02-23 15:06:26,948 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:06:26,948 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:06:33,817 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:06:33,818 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:06:33,818 - DEBUG - returning MAXT: 4200
+2017-02-23 15:06:33,818 - DEBUG - Greedy found result 4200 for estimate 100
+2017-02-23 15:06:33,818 - DEBUG - Estimate too high...
+2017-02-23 15:06:33,818 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:06:33,819 - DEBUG - result = 4200
+2017-02-23 15:06:33,819 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 15:06:33,819 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 15:06:33,819 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 15:06:33,819 - DEBUG - returning MAXT: 200
+2017-02-23 15:06:33,819 - DEBUG - Greedy found result 200 for estimate 100
+2017-02-23 15:06:33,820 - DEBUG - Estimate too high...
+2017-02-23 15:06:33,820 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:06:33,820 - DEBUG - result = 200
+2017-02-23 15:06:33,820 - DEBUG - Returning best_estimate from greedy : 100
+2017-02-23 15:06:33,820 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 15:06:33,820 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 15:06:33,821 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 15:06:33,821 - DEBUG - Estimate too low
+2017-02-23 15:06:33,821 - DEBUG - returning MAXT: 22
+2017-02-23 15:06:33,821 - DEBUG - Greedy found result 22 for estimate 23
+2017-02-23 15:06:33,821 - DEBUG - Estimate too high...
+2017-02-23 15:06:33,821 - DEBUG - returning MAXT: 27
+2017-02-23 15:06:33,821 - DEBUG - Greedy found result 27 for estimate 12
+2017-02-23 15:06:33,821 - DEBUG - Estimate too high...
+2017-02-23 15:06:33,822 - DEBUG - Greedy found result -1 for estimate 7
+2017-02-23 15:06:33,822 - DEBUG - Estimate too low
+2017-02-23 15:06:33,822 - DEBUG - returning MAXT: 27
+2017-02-23 15:06:33,822 - DEBUG - Greedy found result 27 for estimate 9
+2017-02-23 15:06:33,822 - DEBUG - Estimate too high...
+2017-02-23 15:06:33,822 - DEBUG - Greedy found result -1 for estimate 8
+2017-02-23 15:06:33,822 - DEBUG - Estimate too low
+2017-02-23 15:06:33,822 - INFO - hi : 9, lo: 8, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 15:06:33,823 - DEBUG - result = -1
+2017-02-23 15:06:33,823 - DEBUG - Returning best_estimate from greedy : 23
+2017-02-23 15:08:12,763 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:08:12,763 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:08:22,511 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:08:22,511 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:08:22,511 - DEBUG - returns -2
+2017-02-23 15:08:22,511 - DEBUG - Greedy found result -2 for estimate 100
+2017-02-23 15:08:22,511 - DEBUG - Estimate too hi
+2017-02-23 15:08:22,511 - INFO - hi : 100, lo: 100, (hi-lo) = 0, (hi-lo)/2 = 0.0, math.floor() = 0
+2017-02-23 15:08:22,511 - DEBUG - result = -2
+2017-02-23 15:08:22,511 - DEBUG - Oops! RuntimeError!
+2017-02-23 15:10:57,429 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:10:57,429 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:11:08,488 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:11:08,488 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:12:12,842 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:12:12,842 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:12:17,963 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:12:17,963 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:12:17,963 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 15:12:17,963 - DEBUG - Estimate too low
+2017-02-23 15:12:17,963 - DEBUG - returning MAXT: 2100
+2017-02-23 15:12:17,963 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 15:12:17,963 - DEBUG - Estimate too high...
+2017-02-23 15:12:17,963 - DEBUG - returns -1
+2017-02-23 15:12:17,963 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 15:12:17,963 - DEBUG - Estimate too low
+2017-02-23 15:12:17,963 - DEBUG - returning MAXT: 1700
+2017-02-23 15:12:17,964 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 15:12:17,964 - DEBUG - Estimate too high...
+2017-02-23 15:12:17,964 - DEBUG - returns -1
+2017-02-23 15:12:17,964 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 15:12:17,964 - DEBUG - Estimate too low
+2017-02-23 15:12:17,964 - DEBUG - returns -1
+2017-02-23 15:12:17,964 - DEBUG - Greedy found result -1 for estimate 1612
+2017-02-23 15:12:17,964 - DEBUG - Estimate too low
+2017-02-23 15:12:17,964 - DEBUG - returns -1
+2017-02-23 15:12:17,964 - DEBUG - Greedy found result -1 for estimate 1681
+2017-02-23 15:12:17,964 - DEBUG - Estimate too low
+2017-02-23 15:12:17,964 - DEBUG - returning MAXT: 1700
+2017-02-23 15:12:17,964 - DEBUG - Greedy found result 1700 for estimate 1715
+2017-02-23 15:12:17,964 - DEBUG - Estimate too high...
+2017-02-23 15:12:17,964 - DEBUG - returns -1
+2017-02-23 15:12:17,965 - DEBUG - Greedy found result -1 for estimate 1698
+2017-02-23 15:12:17,965 - DEBUG - Estimate too low
+2017-02-23 15:12:17,965 - DEBUG - returning MAXT: 1700
+2017-02-23 15:12:17,965 - DEBUG - Greedy found result 1700 for estimate 1706
+2017-02-23 15:12:17,965 - DEBUG - Estimate too high...
+2017-02-23 15:12:17,965 - DEBUG - returning MAXT: 1700
+2017-02-23 15:12:17,965 - DEBUG - Greedy found result 1700 for estimate 1702
+2017-02-23 15:12:17,965 - DEBUG - Estimate too high...
+2017-02-23 15:12:17,965 - DEBUG - returning MAXT: 1700
+2017-02-23 15:12:17,965 - DEBUG - Greedy found result 1700 for estimate 1700
+2017-02-23 15:12:17,965 - DEBUG - Greedy found this estimate perfect! estimate: 1700 result: 1700
+2017-02-23 15:12:17,965 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 15:12:17,965 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 15:12:17,965 - DEBUG - returns -1
+2017-02-23 15:12:17,965 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 15:12:17,966 - DEBUG - Estimate too low
+2017-02-23 15:12:17,966 - DEBUG - returns -2
+2017-02-23 15:12:17,966 - DEBUG - Greedy found result -2 for estimate 300
+2017-02-23 15:12:17,966 - DEBUG - Estimate too hi
+2017-02-23 15:12:17,966 - DEBUG - returns -2
+2017-02-23 15:12:17,966 - DEBUG - Greedy found result -2 for estimate 200
+2017-02-23 15:12:17,966 - DEBUG - Estimate too hi
+2017-02-23 15:12:17,966 - DEBUG - returns -1
+2017-02-23 15:12:17,966 - DEBUG - Greedy found result -1 for estimate 150
+2017-02-23 15:12:17,966 - DEBUG - Estimate too low
+2017-02-23 15:12:17,966 - DEBUG - returns -1
+2017-02-23 15:12:17,966 - DEBUG - Greedy found result -1 for estimate 175
+2017-02-23 15:12:17,966 - DEBUG - Estimate too low
+2017-02-23 15:12:17,966 - DEBUG - returns -1
+2017-02-23 15:12:17,966 - DEBUG - Greedy found result -1 for estimate 187
+2017-02-23 15:12:17,966 - DEBUG - Estimate too low
+2017-02-23 15:12:17,967 - DEBUG - returns -1
+2017-02-23 15:12:17,967 - DEBUG - Greedy found result -1 for estimate 193
+2017-02-23 15:12:17,967 - DEBUG - Estimate too low
+2017-02-23 15:12:17,967 - DEBUG - returns -1
+2017-02-23 15:12:17,967 - DEBUG - Greedy found result -1 for estimate 196
+2017-02-23 15:12:17,967 - DEBUG - Estimate too low
+2017-02-23 15:12:17,967 - DEBUG - returns -1
+2017-02-23 15:12:17,967 - DEBUG - Greedy found result -1 for estimate 198
+2017-02-23 15:12:17,967 - DEBUG - Estimate too low
+2017-02-23 15:12:17,967 - DEBUG - returns -1
+2017-02-23 15:12:17,967 - DEBUG - Greedy found result -1 for estimate 199
+2017-02-23 15:12:17,967 - DEBUG - Estimate too low
+2017-02-23 15:12:17,967 - INFO - hi : 200, lo: 199, (hi-lo) = 1, (hi-lo)/2 = 0.5, math.floor() = 0
+2017-02-23 15:12:17,967 - DEBUG - result = -1
+2017-02-23 15:12:17,967 - DEBUG - Oops! RuntimeError!
+2017-02-23 15:17:09,306 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:17:09,306 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:17:16,431 - DEBUG - time = binarySearch(3, 9, [100, 200, 300, 400, 500, 600, 700, 800, 900])
+2017-02-23 15:17:16,431 - DEBUG - Entering while loop with min_max: 4501, lo: 100, hi: 4500
+2017-02-23 15:17:16,431 - DEBUG - Greedy found result -1 for estimate 100
+2017-02-23 15:17:16,431 - DEBUG - Estimate too low
+2017-02-23 15:17:16,431 - DEBUG - returning MAXT: 2100
+2017-02-23 15:17:16,432 - DEBUG - Greedy found result 2100 for estimate 2300
+2017-02-23 15:17:16,432 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,432 - DEBUG - returns -1
+2017-02-23 15:17:16,432 - DEBUG - Greedy found result -1 for estimate 1200
+2017-02-23 15:17:16,432 - DEBUG - Estimate too low
+2017-02-23 15:17:16,432 - DEBUG - returning MAXT: 1700
+2017-02-23 15:17:16,432 - DEBUG - Greedy found result 1700 for estimate 1750
+2017-02-23 15:17:16,432 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,432 - DEBUG - returns -1
+2017-02-23 15:17:16,433 - DEBUG - Greedy found result -1 for estimate 1475
+2017-02-23 15:17:16,433 - DEBUG - Estimate too low
+2017-02-23 15:17:16,433 - DEBUG - returning MAXT: 1500
+2017-02-23 15:17:16,433 - DEBUG - Greedy found result 1500 for estimate 1612
+2017-02-23 15:17:16,433 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,433 - DEBUG - returning MAXT: 1500
+2017-02-23 15:17:16,433 - DEBUG - Greedy found result 1500 for estimate 1544
+2017-02-23 15:17:16,433 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,433 - DEBUG - returning MAXT: 1500
+2017-02-23 15:17:16,433 - DEBUG - Greedy found result 1500 for estimate 1510
+2017-02-23 15:17:16,434 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,434 - DEBUG - returns -1
+2017-02-23 15:17:16,434 - DEBUG - Greedy found result -1 for estimate 1493
+2017-02-23 15:17:16,434 - DEBUG - Estimate too low
+2017-02-23 15:17:16,434 - DEBUG - returning MAXT: 1500
+2017-02-23 15:17:16,434 - DEBUG - Greedy found result 1500 for estimate 1501
+2017-02-23 15:17:16,434 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,434 - DEBUG - returns -1
+2017-02-23 15:17:16,434 - DEBUG - Greedy found result -1 for estimate 1497
+2017-02-23 15:17:16,435 - DEBUG - Estimate too low
+2017-02-23 15:17:16,435 - DEBUG - returns -1
+2017-02-23 15:17:16,435 - DEBUG - Greedy found result -1 for estimate 1499
+2017-02-23 15:17:16,435 - DEBUG - Estimate too low
+2017-02-23 15:17:16,435 - DEBUG - returning MAXT: 1500
+2017-02-23 15:17:16,435 - DEBUG - Greedy found result 1500 for estimate 1500
+2017-02-23 15:17:16,435 - DEBUG - Greedy found this estimate perfect! estimate: 1500 result: 1500
+2017-02-23 15:17:16,435 - DEBUG - time = binarySearch(4, 5, [100, 100, 100, 100, 100])
+2017-02-23 15:17:16,435 - DEBUG - Entering while loop with min_max: 501, lo: 100, hi: 500
+2017-02-23 15:17:16,436 - DEBUG - returning MAXT: 100
+2017-02-23 15:17:16,436 - DEBUG - Greedy found result 100 for estimate 100
+2017-02-23 15:17:16,436 - DEBUG - Greedy found this estimate perfect! estimate: 100 result: 100
+2017-02-23 15:17:16,436 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 15:17:16,436 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 15:17:16,436 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 15:17:16,436 - DEBUG - Estimate too low
+2017-02-23 15:17:16,436 - DEBUG - returning MAXT: 22
+2017-02-23 15:17:16,436 - DEBUG - Greedy found result 22 for estimate 23
+2017-02-23 15:17:16,437 - DEBUG - Estimate too high...
+2017-02-23 15:17:16,437 - DEBUG - returns -1
+2017-02-23 15:17:16,437 - DEBUG - Greedy found result -1 for estimate 12
+2017-02-23 15:17:16,437 - DEBUG - Estimate too low
+2017-02-23 15:17:16,437 - DEBUG - returning MAXT: 17
+2017-02-23 15:17:16,437 - DEBUG - Greedy found result 17 for estimate 17
+2017-02-23 15:17:16,437 - DEBUG - Greedy found this estimate perfect! estimate: 17 result: 17
+2017-02-23 15:18:38,508 - DEBUG - 
+
+----------------------------------------------------
+2017-02-23 15:18:38,508 - DEBUG - Starting computation
+----------------------------------------------------
+2017-02-23 15:18:41,533 - DEBUG - time = binarySearch(3, 9, [9, 8, 1, 7, 6, 2, 3, 4, 5])
+2017-02-23 15:18:41,533 - DEBUG - Entering while loop with min_max: 46, lo: 1, hi: 45
+2017-02-23 15:18:41,533 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 15:18:41,533 - DEBUG - Estimate too low
+2017-02-23 15:18:41,533 - DEBUG - returning MAXT: 22
+2017-02-23 15:18:41,533 - DEBUG - Greedy found result 22 for estimate 23
+2017-02-23 15:18:41,533 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,533 - DEBUG - returns -1
+2017-02-23 15:18:41,533 - DEBUG - Greedy found result -1 for estimate 12
+2017-02-23 15:18:41,534 - DEBUG - Estimate too low
+2017-02-23 15:18:41,534 - DEBUG - returning MAXT: 17
+2017-02-23 15:18:41,534 - DEBUG - Greedy found result 17 for estimate 17
+2017-02-23 15:18:41,534 - DEBUG - Greedy found this estimate perfect! estimate: 17 result: 17
+2017-02-23 15:18:41,534 - DEBUG - time = binarySearch(2, 3, [1, 2, 1])
+2017-02-23 15:18:41,534 - DEBUG - Entering while loop with min_max: 5, lo: 1, hi: 4
+2017-02-23 15:18:41,534 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 15:18:41,534 - DEBUG - Estimate too low
+2017-02-23 15:18:41,534 - DEBUG - returning MAXT: 2
+2017-02-23 15:18:41,534 - DEBUG - Greedy found result 2 for estimate 2
+2017-02-23 15:18:41,535 - DEBUG - Greedy found this estimate perfect! estimate: 2 result: 2
+2017-02-23 15:18:41,535 - DEBUG - time = binarySearch(4, 8, [10, 2, 10, 2, 15, 20, 1, 30])
+2017-02-23 15:18:41,535 - DEBUG - Entering while loop with min_max: 91, lo: 1, hi: 90
+2017-02-23 15:18:41,535 - DEBUG - Greedy found result -1 for estimate 1
+2017-02-23 15:18:41,535 - DEBUG - Estimate too low
+2017-02-23 15:18:41,535 - DEBUG - returns -2
+2017-02-23 15:18:41,535 - DEBUG - Greedy found result -2 for estimate 45
+2017-02-23 15:18:41,535 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,535 - DEBUG - Greedy found result -1 for estimate 23
+2017-02-23 15:18:41,536 - DEBUG - Estimate too low
+2017-02-23 15:18:41,536 - DEBUG - returning MAXT: 30
+2017-02-23 15:18:41,536 - DEBUG - Greedy found result 30 for estimate 34
+2017-02-23 15:18:41,536 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,536 - DEBUG - Greedy found result -1 for estimate 29
+2017-02-23 15:18:41,536 - DEBUG - Estimate too low
+2017-02-23 15:18:41,536 - DEBUG - returning MAXT: 30
+2017-02-23 15:18:41,536 - DEBUG - Greedy found result 30 for estimate 31
+2017-02-23 15:18:41,536 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,536 - DEBUG - returning MAXT: 30
+2017-02-23 15:18:41,537 - DEBUG - Greedy found result 30 for estimate 30
+2017-02-23 15:18:41,537 - DEBUG - Greedy found this estimate perfect! estimate: 30 result: 30
+2017-02-23 15:18:41,537 - DEBUG - time = binarySearch(8, 30, [46, 18, 71, 6, 35, 59, 35, 52, 83, 62, 85, 71, 72, 88, 46, 100, 8, 5, 89, 85, 61, 80, 59, 43, 39, 51, 31, 100, 90, 40])
+2017-02-23 15:18:41,537 - DEBUG - Entering while loop with min_max: 1711, lo: 5, hi: 1710
+2017-02-23 15:18:41,537 - DEBUG - Greedy found result -1 for estimate 5
+2017-02-23 15:18:41,537 - DEBUG - Estimate too low
+2017-02-23 15:18:41,537 - DEBUG - returns -2
+2017-02-23 15:18:41,537 - DEBUG - Greedy found result -2 for estimate 857
+2017-02-23 15:18:41,537 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,537 - DEBUG - returns -2
+2017-02-23 15:18:41,538 - DEBUG - Greedy found result -2 for estimate 431
+2017-02-23 15:18:41,538 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,538 - DEBUG - returns -1
+2017-02-23 15:18:41,538 - DEBUG - Greedy found result -1 for estimate 218
+2017-02-23 15:18:41,538 - DEBUG - Estimate too low
+2017-02-23 15:18:41,538 - DEBUG - returns -2
+2017-02-23 15:18:41,538 - DEBUG - Greedy found result -2 for estimate 324
+2017-02-23 15:18:41,538 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,538 - DEBUG - returning MAXT: 270
+2017-02-23 15:18:41,538 - DEBUG - Greedy found result 270 for estimate 271
+2017-02-23 15:18:41,539 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,539 - DEBUG - returning MAXT: 242
+2017-02-23 15:18:41,539 - DEBUG - Greedy found result 242 for estimate 245
+2017-02-23 15:18:41,539 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,539 - DEBUG - returning MAXT: 230
+2017-02-23 15:18:41,539 - DEBUG - Greedy found result 230 for estimate 232
+2017-02-23 15:18:41,539 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,539 - DEBUG - returns -1
+2017-02-23 15:18:41,539 - DEBUG - Greedy found result -1 for estimate 225
+2017-02-23 15:18:41,540 - DEBUG - Estimate too low
+2017-02-23 15:18:41,540 - DEBUG - returns -1
+2017-02-23 15:18:41,540 - DEBUG - Greedy found result -1 for estimate 228
+2017-02-23 15:18:41,540 - DEBUG - Estimate too low
+2017-02-23 15:18:41,540 - DEBUG - returning MAXT: 230
+2017-02-23 15:18:41,540 - DEBUG - Greedy found result 230 for estimate 230
+2017-02-23 15:18:41,540 - DEBUG - Greedy found this estimate perfect! estimate: 230 result: 230
+2017-02-23 15:18:41,540 - DEBUG - time = binarySearch(120, 500, [198429, 225879, 591107, 583645, 268500, 151557, 563518, 248740, 722030, 674754, 235494, 165111, 4520, 807760, 7269, 710494, 636769, 334106, 963142, 541561, 171837, 78214, 5965, 883949, 226710, 299323, 900222, 102726, 122447, 163449, 307908, 873977, 702390, 901413, 140877, 843943, 656618, 304012, 907339, 34834, 658439, 148739, 243226, 352932, 473060, 122583, 390594, 545667, 566414, 769880, 54794, 927040, 819584, 300102, 761380, 412128, 566990, 766983, 318949, 691513, 377512, 157581, 131870, 155107, 47900, 261108, 618196, 849399, 78421, 650093, 429882, 664391, 80298, 592935, 628864, 370927, 214123, 492610, 978070, 61186, 297876, 235107, 170694, 414682, 523083, 901046, 437256, 306467, 573591, 359337, 875292, 778025, 470884, 701014, 31795, 345026, 324202, 791498, 696259, 900218, 333581, 770868, 976227, 701569, 204631, 312424, 590689, 135264, 31786, 850965, 100374, 642051, 278100, 311220, 364042, 446340, 711410, 5176, 68123, 756459, 13430, 189598, 323062, 63556, 177330, 535293, 506933, 866114, 302950, 30504, 680091, 868833, 319799, 503602, 319554, 961825, 227936, 774472, 167523, 456540, 768584, 831825, 957276, 292280, 773926, 128255, 881208, 991461, 358430, 762594, 148155, 225787, 23283, 46559, 549856, 505529, 960914, 242559, 755090, 753257, 164380, 608422, 329481, 922946, 179008, 203746, 221602, 476370, 250162, 493750, 721156, 595250, 774471, 135868, 631691, 960930, 134439, 152474, 580281, 869130, 427253, 894328, 852244, 275992, 304562, 228685, 825766, 165977, 337864, 608874, 77083, 83037, 959566, 836837, 791824, 454050, 561105, 776791, 834506, 480150, 966327, 281397, 319832, 395378, 771665, 442373, 970685, 467177, 439158, 159457, 75347, 935617, 539027, 343771, 179989, 418739, 137422, 529877, 141552, 174986, 492927, 177445, 598931, 232239, 377814, 661774, 339044, 361603, 979889, 820655, 568922, 662296, 910813, 894657, 538153, 203560, 333530, 625555, 61562, 510683, 477338, 255431, 166783, 836501, 85264, 83957, 719628, 101784, 281429, 443673, 955446, 780613, 787113, 243172, 892947, 612250, 16267, 419960, 946403, 279025, 965493, 749942, 431565, 409349, 585400, 93642, 618251, 749098, 980731, 685603, 415042, 976746, 475490, 660470, 578759, 487447, 271643, 638432, 393958, 891775, 767131, 676623, 535567, 232413, 700618, 348825, 971863, 445381, 296164, 2629, 59751, 431585, 673073, 864507, 758631, 785422, 325968, 140684, 657034, 355143, 509594, 636610, 950725, 932263, 444819, 516898, 542988, 834674, 865585, 881331, 16093, 963873, 718120, 796405, 553691, 331891, 718001, 51733, 290238, 80315, 459943, 376249, 545094, 433518, 508487, 386036, 683954, 860464, 313346, 120405, 114055, 268164, 594847, 122581, 239915, 658833, 7172, 568797, 215259, 428107, 532799, 55728, 911849, 475560, 240223, 698220, 886813, 455973, 392124, 270443, 224029, 661415, 865820, 739092, 136893, 551824, 692232, 841494, 971008, 280350, 638878, 448007, 741625, 968839, 336399, 302198, 613335, 154362, 808391, 497471, 557747, 847473, 772339, 37606, 286386, 618458, 764286, 777064, 399574, 301393, 437041, 185330, 470170, 129889, 59897, 23952, 20660, 210430, 860125, 593983, 682568, 196016, 590736, 790523, 209102, 302526, 5104, 996233, 920238, 681565, 182650, 683855, 626972, 880027, 830125, 695347, 780381, 201717, 195558, 289103, 735989, 755440, 810417, 701663, 60882, 900789, 127515, 223784, 563781, 937038, 343232, 730319, 325741, 883902, 942707, 297927, 680658, 299050, 753989, 12233, 797143, 604734, 129908, 536677, 324282, 496847, 702928, 452511, 434497, 244819, 571622, 365775, 871803, 115496, 909997, 293049, 16069, 759937, 524808, 447231, 125365, 487528, 298355, 674720, 35886, 750638, 349355, 138458, 311402, 36476, 360745, 668991, 770441, 990497, 353708, 21727, 204313, 330968, 486560, 938009, 427241, 582572, 396421, 52658, 507560, 51008, 205684, 573839, 834945, 411782, 780269, 161774, 355807, 250602, 238580, 637995, 637956, 642036, 968597, 489363, 953260, 910383, 776319, 17240, 566176, 672394, 704016, 928455, 666896, 557124])
+2017-02-23 15:18:41,541 - DEBUG - Entering while loop with min_max: 243670043, lo: 2629, hi: 243670042
+2017-02-23 15:18:41,541 - DEBUG - Greedy found result -1 for estimate 2629
+2017-02-23 15:18:41,541 - DEBUG - Estimate too low
+2017-02-23 15:18:41,541 - DEBUG - returns -2
+2017-02-23 15:18:41,541 - DEBUG - Greedy found result -2 for estimate 121836335
+2017-02-23 15:18:41,541 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,541 - DEBUG - returns -2
+2017-02-23 15:18:41,541 - DEBUG - Greedy found result -2 for estimate 60919482
+2017-02-23 15:18:41,542 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,542 - DEBUG - returns -2
+2017-02-23 15:18:41,542 - DEBUG - Greedy found result -2 for estimate 30461056
+2017-02-23 15:18:41,542 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,542 - DEBUG - returns -2
+2017-02-23 15:18:41,542 - DEBUG - Greedy found result -2 for estimate 15231843
+2017-02-23 15:18:41,542 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,543 - DEBUG - returns -2
+2017-02-23 15:18:41,543 - DEBUG - Greedy found result -2 for estimate 7617236
+2017-02-23 15:18:41,543 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,543 - DEBUG - returns -2
+2017-02-23 15:18:41,543 - DEBUG - Greedy found result -2 for estimate 3809933
+2017-02-23 15:18:41,543 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,544 - DEBUG - returns -1
+2017-02-23 15:18:41,544 - DEBUG - Greedy found result -1 for estimate 1906281
+2017-02-23 15:18:41,544 - DEBUG - Estimate too low
+2017-02-23 15:18:41,544 - DEBUG - returns -2
+2017-02-23 15:18:41,544 - DEBUG - Greedy found result -2 for estimate 2858107
+2017-02-23 15:18:41,544 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,545 - DEBUG - returns -2
+2017-02-23 15:18:41,545 - DEBUG - Greedy found result -2 for estimate 2382194
+2017-02-23 15:18:41,545 - DEBUG - Estimate too hi
+2017-02-23 15:18:41,545 - DEBUG - returns -1
+2017-02-23 15:18:41,545 - DEBUG - Greedy found result -1 for estimate 2144238
+2017-02-23 15:18:41,545 - DEBUG - Estimate too low
+2017-02-23 15:18:41,545 - DEBUG - returns -1
+2017-02-23 15:18:41,545 - DEBUG - Greedy found result -1 for estimate 2263216
+2017-02-23 15:18:41,545 - DEBUG - Estimate too low
+2017-02-23 15:18:41,546 - DEBUG - returns -1
+2017-02-23 15:18:41,546 - DEBUG - Greedy found result -1 for estimate 2322705
+2017-02-23 15:18:41,546 - DEBUG - Estimate too low
+2017-02-23 15:18:41,546 - DEBUG - returning MAXT: 2351129
+2017-02-23 15:18:41,546 - DEBUG - Greedy found result 2351129 for estimate 2352449
+2017-02-23 15:18:41,546 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,546 - DEBUG - returning MAXT: 2332692
+2017-02-23 15:18:41,546 - DEBUG - Greedy found result 2332692 for estimate 2337577
+2017-02-23 15:18:41,546 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,547 - DEBUG - returning MAXT: 2327349
+2017-02-23 15:18:41,547 - DEBUG - Greedy found result 2327349 for estimate 2330141
+2017-02-23 15:18:41,547 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,547 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,547 - DEBUG - Greedy found result 2325852 for estimate 2326423
+2017-02-23 15:18:41,547 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,547 - DEBUG - returns -1
+2017-02-23 15:18:41,547 - DEBUG - Greedy found result -1 for estimate 2324564
+2017-02-23 15:18:41,547 - DEBUG - Estimate too low
+2017-02-23 15:18:41,548 - DEBUG - returns -1
+2017-02-23 15:18:41,548 - DEBUG - Greedy found result -1 for estimate 2325493
+2017-02-23 15:18:41,548 - DEBUG - Estimate too low
+2017-02-23 15:18:41,548 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,548 - DEBUG - Greedy found result 2325852 for estimate 2325958
+2017-02-23 15:18:41,548 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,549 - DEBUG - returns -1
+2017-02-23 15:18:41,549 - DEBUG - Greedy found result -1 for estimate 2325726
+2017-02-23 15:18:41,549 - DEBUG - Estimate too low
+2017-02-23 15:18:41,549 - DEBUG - returns -1
+2017-02-23 15:18:41,549 - DEBUG - Greedy found result -1 for estimate 2325842
+2017-02-23 15:18:41,549 - DEBUG - Estimate too low
+2017-02-23 15:18:41,549 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,550 - DEBUG - Greedy found result 2325852 for estimate 2325900
+2017-02-23 15:18:41,550 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,550 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,550 - DEBUG - Greedy found result 2325852 for estimate 2325871
+2017-02-23 15:18:41,550 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,550 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,550 - DEBUG - Greedy found result 2325852 for estimate 2325857
+2017-02-23 15:18:41,550 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,551 - DEBUG - returns -1
+2017-02-23 15:18:41,551 - DEBUG - Greedy found result -1 for estimate 2325850
+2017-02-23 15:18:41,551 - DEBUG - Estimate too low
+2017-02-23 15:18:41,551 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,551 - DEBUG - Greedy found result 2325852 for estimate 2325853
+2017-02-23 15:18:41,551 - DEBUG - Estimate too high...
+2017-02-23 15:18:41,551 - DEBUG - returning MAXT: 2325852
+2017-02-23 15:18:41,551 - DEBUG - Greedy found result 2325852 for estimate 2325852
+2017-02-23 15:18:41,552 - DEBUG - Greedy found this estimate perfect! estimate: 2325852 result: 2325852
