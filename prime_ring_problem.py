@@ -1,23 +1,21 @@
 #http://stackoverflow.com/questions/104420/how-to-generate-all-permutations-of-a-list-in-python/38793421
+# Result: time limit exceeded
 
 import sys
-
 
 primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31}
 
 
 def grow(ring, new, n):
-	perm = list()
-	perm = ring[:]
-	perm.append(new)
-
-	if len(perm) == n:
-		if perm[-1] + perm[0] in primes:
-			sys.stdout.write(" ".join(str(x) for x in perm) + "\n")
+	ring.append(new)
+	if len(ring) == n:
+		if ring[-1] + ring[0] in primes:
+			sys.stdout.write(" ".join(str(x) for x in ring) + "\n")
 	for i in range(1, n+1):
-		if i not in perm:
-			if ((perm[-1] + i) in primes):
-				grow(perm, i, n)
+		if i not in ring:
+			if ((ring[-1] + i) in primes):
+				grow(ring, i, n)
+	ring.remove(new)
 
 def load_input():
 	n = int(next(sys.stdin))
@@ -38,4 +36,3 @@ for n in load_input():
 			grow(ring, i, n)
 	sys.stdout.write("\n")
 	index = index + 1
-
