@@ -1,4 +1,35 @@
-# 8 Queens Chess Problem */
+# /* UVa problem: 750
+#  * 8 Queen Chess Problem
+#  * Topic: Other (Search)
+#  *
+#  * Level: challenging
+#  * 
+#  * Brief problem description:  
+#  *
+#  *   Given the initial position of a queen, place 7 more
+#  *   Queens on the board, such that no queen can be taken
+#  *    by any other
+#  *
+#  * Solution Summary:
+#  *
+#  *   Complete search: Generate a possible board. Eliminate some
+#  *   possibilities early by realizing no two queens can share a row,
+#  *   nor a diagonal. Then check if one of the queens satisfies the
+#  *   given initial position.
+#  *
+#  * Used Resources:
+#  *
+#  *   Textbook: Competitive Programming 3
+#  *   Python docs
+#  *   StackOverflow for general python implementation issues.
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  *
+#  *
+#  * Tristan Hunt (Your Name)
+#  */
 
 
 import sys

@@ -1,5 +1,5 @@
 # /* UVa problem: 441
-#  *
+#  * Lotto
 #  * Topic: Combinatorics
 #  *
 #  * Level: challenging
@@ -11,11 +11,13 @@
 #  *
 #  * Solution Summary:
 #  *
-#  *	Complete Search
+#  *	Complete Search: Use 6 nested for loops to choose 6 elements from the set.
 #  *
 #  * Used Resources:
 #  *
-#  * 	Textbook: Competitive Programming 
+#  *   Textbook: Competitive Programming 3
+#  *   Python docs
+#  *   StackOverflow for general python implementation issues.
 #  *
 #  * I hereby certify that I have produced the following solution myself
 #  * using only the resources listed above in accordance with the CMPUT

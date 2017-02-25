@@ -10,7 +10,13 @@
 #  *
 #  * Solution Summary:
 #  *
-#  *	Algorithmic idea, data structures ...
+#  *  Notice that easiest case is when p is a power of 2 -> repeated squaring
+#  *  Can easily be implemented by bit shifting right, once.
+#  *  Therefore, if we represent p as a series of powers of 2
+#  *  e.g. 5 = 1*2^2 + 0*2^1 + 1*2^0 = c2*2^2 + c1*c^1 + c0*2^0
+#  *  Then we can use repeated squaring of b to efficiently calculate
+#  *   a^2^i. When c(i) is 1, simply multiply b^2^i into the answer.
+#  *  Keep taking mod on every step to keep the numbers low, and avoid overflow.
 #  *
 #  * Used Resources:
 #  *

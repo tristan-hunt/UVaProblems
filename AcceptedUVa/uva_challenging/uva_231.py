@@ -1,3 +1,32 @@
+ # /* UVa problem: 231
+#  *
+#  * Topic: Dynamic Programming
+#  *
+#  * Level: challenging
+#  * 
+#  * Brief problem description: 
+#  *
+#  *   Find the longest decreasing subsequence of missile heights
+#  *
+#  * Solution Summary:
+#  *
+#  *   Straightforward implementation of LIS algorithm using DP.
+#  *
+#  * Used Resources:
+#  *
+#  *   Textbook: Competitive Programming 3
+#  *   Python docs
+#  *   StackOverflow for general python implementation issues.
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+ # *
+ # *
+ # * Tristan Hunt (Your Name)
+ # */
+
+
 import sys
 
 def memo_int_lds(i, memo = 0):

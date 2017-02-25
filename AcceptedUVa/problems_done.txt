@@ -1,0 +1,73 @@
+# Data Structures:
+uva_10608:  NO
+uva_10815:  NO
+<Extra1>:   NO  
+<Extra2>:   NO  
+
+# Strings:
+uva_11512:  NO
+uva_11837:  NO
+<Extra1>:   NO  
+<Extra2>:   NO  
+
+# Sorting:
+uva_10026:  NO
+uva_10327:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Arithmetic:
+uva_202:    NO
+uva_11955:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Combinatorics:
+uva_11330:  NO
+uva_12492:  NO
+uva_441:    YES
+<Extra2>:   NO
+
+# Number Theory:
+uva_374:    YES
+uva_11327:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Backtracking:
+uva_11195:  NO
+uva_307:    NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Graph Traversal:
+uva_437:    NO
+uva_10672:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Graph Algorithms:
+uva_869:    NO
+uva_10034:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Dynamic Programming:
+uva_674:    NO
+uva_10003:  NO
+uva_231:    YES
+uva_103:    YES
+
+# Geometry:
+uva_811:    NO
+uva_10065:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Other:
+uva_750:    YES
+uva_729:    YES
+uva_10300:  YES
+uva_11547:  YES
+uva_11498:  YES
+uva_12250:  YES

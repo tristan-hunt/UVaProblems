@@ -1,3 +1,42 @@
+# /* UVa problem: 103 
+#  * Stacking Boxes
+#  * Topic: Dynamic Programming
+#  *
+#  * Level: challenging
+#  * 
+#  * Brief problem description: 
+#  *
+#  *   Given n-dimensional boxes, we define a box to be smaller than another
+#  *   if there is a configuration of each of the dimensions in which each dimension of
+#  *    box A is smaller than the corresponding dimension of box B.
+#  *   Given a set of boxes, what is the longest string of boxes which can fit into eachother?
+#  *    i.e. what is the longest increasing subsequence (not necessarily of the original input
+#  *   order)
+#  *
+#  * Solution Summary:
+#  *
+#  *   DP using memoization (implemented with python's dict() class) to find LIS
+#  *   Introduce a class Box to minimize the editing of the orignal algo.
+#  *   Sort box dimensions to make comparing them easier; implement __lt__
+#  *   in order to use the < operator and to be able to sort boxes by size before processing
+#  *   them as a group. 
+#  *
+#  * Used Resources:
+#  *
+#  *   Textbook: Competitive Programming 3
+#  *   Python docs
+#  *   StackOverflow for general python implementation issues.
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  *
+#  *
+#  * Tristan Hunt (Your Name)
+#  */
+
+
+
 import sys
 seq = list()
 
