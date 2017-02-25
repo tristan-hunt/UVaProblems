@@ -52,23 +52,7 @@ def int_lds(i):
 				ans = max(ans, 1+int_lds(j))
 		return(ans)
 
-def memo_int_lis(i, memo = 0):
-	if memo == 0:
-		memo = dict()
 
-	if i == 0:
-		if i not in memo:
-			memo[i] = 1
-		
-	else:
-		ans = 1
-		for j in range(0, i):
-			if seq[i] < seq[j]: # We can add seq[i] after seq[j]
-				if j not in memo:
-					memo[j] = memo_int_lis(j)
-				ans = max(ans, 1+memo[j])
-		memo[i] = ans
-	return(memo[i])
 
 
 def memo_lis(i, memo = 0):
@@ -123,19 +107,62 @@ def memo_int_lds(i, memo = 0):
 	if memo == 0:
 		memo = dict()
 
+	if i in memo:
+		return(memo[i])
+
 	if i == 0:
-		if i not in memo:
-			memo[i] = 1
+		memo[i] = 1
 		
+	else:
+		ans = 1
+		for j in range(0, i):
+			if seq[i] > seq[j]: # We can add seq[i] after seq[j]
+				if j not in memo:
+					memo[j] = memo_int_lds(j)
+				ans = max(ans, 1+memo[j])
+		memo[i] = ans
+	return(memo[i])
+
+def memo_int_lis(i, memo = 0):
+	if memo == 0:
+		memo = dict()
+
+	if i in memo:
+		return(memo[i])
+
+	if i == 0:
+		memo[i] = 1
+
 	else:
 		ans = 1
 		for j in range(0, i):
 			if seq[i] < seq[j]: # We can add seq[i] after seq[j]
 				if j not in memo:
-					memo[j] = memo_int_lds(j)
+					memo[j] = memo_int_lis(j)
 				ans = max(ans, 1+memo[j])
 		memo[i] = ans
-	
 	return(memo[i])
+
+def trainlen(i, mlis=0, mlds=0):
+	if mlis == 0:
+		mlis = dict()
+	if mlds == 0:
+		mlds = dict()
+
+	# Base Case
+	if i == 0:
+		if i not in mlis:
+			mlis[i] = 1
+		if i not in mlds:
+			mlds[i] = 1
+		return(1)
+
+	if i not in mlis:
+		mlis[i] = memo_int_lis(i, mlis)
+	if i not in mlds:
+		mlds[i] = memo_int_lds(i, mlds)
+
+	return(mlis[i] + mlds[i] - 1)		
+
 
 #print(memo_int_lds(0))
