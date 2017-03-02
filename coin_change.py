@@ -1,122 +1,34 @@
 # UVA Problem #674 (Mandatory)
 
 import sys
+memo = dict()
+coinValues = [1, 5, 10, 25, 50]
+def coin_change(i, n):
 
-
-
-
-def coin_change(n):
-	# Base Case:
-	q = n
 	if n == 0:
-		return 1
-	if n == 1:
+		memo[(n)] = 1
 		return 1
 
-	ans = 0
-	if n >= 50:
-		ans = ans + coin_change(n-1) 
-		n = n - 50
-		if n == 0: 
-			ans = ans + 1
-		print("{} ways of making {}".format(ans, q))
-		return ans
+	if n < 0:
+		memo[(n)] = 0
+		return 0
 
-	if n >= 25: 
-		ans = ans + coin_change(n-1)
-		n = n - 25
-		if n == 0: 
-			ans = ans + 1
-		print("{} ways of making {}".format(ans, q))
-		return ans
+	if i <= 0 and n >=1:
+		return 0
 
-	if n >= 10:
-		ans = ans + coin_change(n-1)
-		n = n - 10
-		if n == 0: 
-			ans = ans + 1
-		print("{} ways of making {}".format(ans, q))
-		return ans
+	# First Term
+	if (i-1, n) not in memo:
+		# a = coin_change(i-1, n, memo)
+		memo[(i-1, n)] = coin_change(i-1, n)
 
 
-	if n >= 5:
-		ans = ans + coin_change(n-1)
-		n = n - 5
-		if n == 0: 
-			ans = ans + 1
-		print("{} ways of making {}".format(ans, q))
-		return ans
+	# Second term
+	if (i, n-coinValues[i-1]) not in memo:
+		memo[(i, n-coinValues[i-1])] = coin_change(i, n-coinValues[i-1])
 
-	if n >= 1:
-		ans = ans + coin_change(n-1) 
-		n = n - 1
-		if n == 0: 
-			ans = ans + 1
-		print("{} ways of making {}".format(ans, q))
-		return ans
-
-	print("{} ways of making {}".format(ans, q))
-	return ans
+	return memo[(i-1, n)]+memo[(i, n-coinValues[i-1])]
 
 
-def coin_change2(n, memo=None):
-	"""
-	Return the amount of ways that change that can be made 
-	From 1c, 5c, 10c, 25c and 50c pieces
-	"""
-	sys.stdout.write("Calculating # of ways to make change for {} ...\n".format(n))
-	if memo == None:
-		memo = dict()
-
-	if n in memo:
-		return memo[n]
-
-	# Base Case:
-	if n == 0:
-		memo[n] = 1
-		return memo[n]
-
-	if n == 1:
-		memo[n] = 1
-
-	# if n == 5:
-	# 	memo[n] = 1
-
-	# if n == 10:
-	# 	memo[n] = 1
-
-	# if n == 25:
-	# 	memo[n] = 1
-
-	# if n == 50:
-	# 	memo[n] = 1
-
-
-
-	# coins = [1, 5, 10, 25, 50]
-	# ans = 0
-	# for i in range(0, 5):
-	# 	if n >= coins[i]:
-	# 		ans = ans + coin_change(n-coins[i])
-	# 		n = n - coins[i]
-	
-	# return ans
-	# memo[n] = ans
-
-
-	if n > 50:
-		memo[n] = coin_change(n-50, memo)
-	if n > 25:
-		memo[n] = coin_change(n-25, memo)
-	if n > 10:
-		memo[n] = coin_change(n-10, memo)
-	if n > 5:
-		memo[n] = coin_change(n-5, memo)
-	if n > 1:
-		memo[n] = coin_change(n-1, memo)
-	
-	sys.stdout.write("{} ways to make change for {}\n".format(memo[n], n))
-	return memo[n]
 
 def load():
 	while(1):
@@ -124,6 +36,7 @@ def load():
 		yield(n)
 
 for n in load():
-	memo = dict()
-	sys.stdout.write(str(coin_change(n)))
+	for i in range(0, n):
+		coin_change(5, i)
+	sys.stdout.write(str(coin_change(5, n)))
 	sys.stdout.write("\n")
