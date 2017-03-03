@@ -35,5 +35,7 @@ def load():
 		yield(n)
 
 for n in load():
+	# for i in range(0, n):
+	# 	coin_change(5, i)
 	sys.stdout.write(str(coin_change(5, n)))
 	sys.stdout.write("\n")
