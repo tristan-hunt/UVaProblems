@@ -3,5 +3,3 @@
 # Print the 1500th ugly number. 
 
 # Hint: Priority Queue
-
-print("hello?")
