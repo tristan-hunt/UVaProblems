@@ -3,6 +3,7 @@
 import sys
 memo = dict()
 coinValues = [1, 5, 10, 25, 50]
+
 def coin_change(i, n):
 
 	if n == 0:
@@ -20,7 +21,6 @@ def coin_change(i, n):
 	if (i-1, n) not in memo:
 		# a = coin_change(i-1, n, memo)
 		memo[(i-1, n)] = coin_change(i-1, n)
-
 
 	# Second term
 	if (i, n-coinValues[i-1]) not in memo:

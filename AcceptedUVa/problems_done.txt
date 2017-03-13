@@ -53,7 +53,7 @@ uva_10034:  NO
 <Extra2>:   NO
 
 # Dynamic Programming:
-uva_674:    NO
+uva_674:    YES
 uva_10003:  NO
 uva_231:    YES
 uva_103:    YES
