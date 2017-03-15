@@ -1,11 +1,53 @@
-2
+X  *  X
+XXXXXXX
 
-3
+__________
+XXXXXXX
+X  *  X
+XXXXXXX
 
-1
+__________
 
-1
 
-2
+      XXXX      *XX
+       XXXXXXXXXX
 
-2
+__________
+
+       XXXXXXXXXX
+      XXXX       XX
+      X            X
+     X      X      XXXXXXX
+     XXXXXXXX             XX
+     X      X      XXXXXXX
+      X            X
+      XXXX      *XX
+       XXXXXXXXXX
+
+__________
+
+
+ *    XXXX       XX
+      X#           X
+     X#     X      XXXXXXX
+     XXXXXXXX#            XX
+     X#     X      XXXXXXX
+      X#           X
+      XXXX#      XX
+       XXXXXXXXXX
+
+__________
+
+       XXXXXXXXXX
+ *    XXXX       XX
+      X#           X
+     X#     X      XXXXXXX
+     XXXXXXXX#            XX
+     X#     X      XXXXXXX
+      X#           X
+      XXXX#      XX
+       XXXXXXXXXX
+
+__________
+
+

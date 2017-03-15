@@ -1,34 +1,51 @@
 import time
 
 import sys
-
 class Graph:
 	def __init__(self, map, node_char):
 		"""
-		The dictionary keys are the tuples (i, j), the value
-		is the Node object that is represented.
-	
 		Given a list of strings which represent a grid, 
 		Make a graph. 
 		node_char is the char which represents a node. 
 		"""
-		self.vertices = dict()
-	
-		for i in range(1, len(map)+1):
-			row = map[i-1]
-			for j in range(1, len(row)+1):
-				if row[j-1] == node_char:
-					self.vertices[(i, j)] = Node(i, j)
+		self.vertices = list()
+		for i in range(0, len(map)):
+			row = map[i]
+			for j in range(0, len(row)):
+				if row[j] == node_char:
+					node = Node(i, j)
+					self.vertices.append(node)
 					for v in self.vertices:
-						vm = self.vertices[v].m
-						vn = self.vertices[v].n
-						if abs(vm -i) <2 and abs(vm-j) <2:
-							self.vertices[v].add_neighbour(self.vertices[(i, j)])
-					
+						vm = v.m
+						vn = v.n
+						if (vm == i-1 or vm == i + 1) and vn == j :
+							v.add_neighbour(node)
+						elif (vn == j-1 or vn == j+1) and vm == i:
+							v.add_neighbour(node)
+
+	def find_components(self):
+		num_components = 0
+		sys.stdout.write("Components: ")
+		for vertex in self.vertices:
+			if vertex.visited == False:
+				num_components = num_components + 1
+				vertex.dfs_flood()
+				sys.stdout.write("||")
+		sys.stdout.write("\n")
+		return num_components							
 		
 	def reset_components(self):
 		for v in self.vertices:
 			self.vertices[v].visited = False	
+
+	def print_graph(self):
+		sys.stdout.write("Vertices: ")
+		for v in self.vertices:
+			sys.stdout.write("({},{})".format(v.m, v.n))
+		for v in self.vertices:
+			v.print_neighbours()
+
+		sys.stdout.write("\n")
 
 class Node:
 	def __init__(self, m, n):
@@ -36,30 +53,21 @@ class Node:
 		self.n = n
 		self.neighbours = list()
 		self.visited = False
-		self.size = 1
 	
 	def add_neighbour(self, V):
 		if V is not self and V not in self.neighbours:
 			self.neighbours.append(V)
 			V.add_neighbour(self)	
 
-
-	def find_size(self):
-		self.visited = True
-		size = 1
-		for vertex in self.neighbours:
-			if vertex.visited == False:
-				size = size + vertex.find_size()
-		return(size)
-
-	def dfs(self):
+	def dfs_flood(self):
 		"""
 		Depth-first search algorithm
 		"""
 		self.visited = True
-		for vertex in u.neighbours:
+		sys.stdout.write("({}, {}) ".format(self.m, self.n))
+		for vertex in self.neighbours:
 			if vertex.visited == False:
-				vertex.dfs()	
+				vertex.dfs_flood()	
 		# sys.stdout.write("{}".format(u))
 
 	def __repr__(self):
@@ -69,6 +77,7 @@ class Node:
 		return("({}, {})".format(self.m, self.n))
 
 	def print_neighbours(self):
+		sys.stdout.write("Node ({}, {}) has neighbours: ".format(self.m, self.n))
 		for node in self.neighbours:
 			sys.stdout.write("({},{})".format(node.m, node.n))
 		sys.stdout.write("\n")
