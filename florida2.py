@@ -3,7 +3,7 @@ import sys
 def dfs(i, j, map):
 	neighbours = list()
 	if map[i][j] == 'W':
-		size = 1
+		s = 1
 		map[i][j]= 'w' #mark as visited 
 
 		for x in range(-1, 2):
@@ -11,17 +11,17 @@ def dfs(i, j, map):
 				if i-x >= 0 and j-y >= 0 and i-x < len(map) and j-y < len(map[0]):
 					if map[i-x][j-y] == 'W': # if it's unvisited
 						n_size, n = dfs(i-x, j-y, map)
-						size = size + n_size
+						s = s + n_size
 						neighbours.append((i-x, j-y))
 						for o in n:
 							neighbours.append(o)
-		return(size, neighbours)	
+		return(s, neighbours)	
 	else:
 		return map[i][j], 0
 
 
 def load(num_cases):
-	for case in range(0, num_cases):
+	for case in range(0, num_cases+1):
 		map = list()
 		cells = list()
 		while(1):
@@ -52,10 +52,14 @@ def main():
 		for cell in cells:
 			i = cell[0]-1
 			j = cell[1]-1
-			s, neighbours = dfs(i, j, map)
+			s = 5 #,neighbours = dfs(i, j, map)
+			try:
+				dfs(i,j, map)
+			except RuntimeError:
+				pass
+			except OSError:
+				pass
+
 			map[i][j] = s
-			if neighbours != 0:
-				for (x, y) in neighbours:
-					map[x][y] = s
 			sys.stdout.write("{}\n".format(s))
 main()

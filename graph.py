@@ -75,13 +75,13 @@ class Node:
 
 
 
-def load(num_cases, f):
+def load(num_cases):
 
 	for case in range(0, num_cases+1):
 		map = list()
 		cells = list()
 		while(1):
-			next_line = next(f)
+			next_line = next(sys.stdin)
 			if next_line[0] == 'L' or next_line[0] == 'W':
 				map.append(next_line)
 			else: 
@@ -95,39 +95,17 @@ def load(num_cases, f):
 				break
 			j = int(line[1]) 
 			cells.append((i, j))
-			line = next(f).split()
+			line = next(sys.stdin).split()
 		yield(map, cells)
 
 def main():
-	# sys.stdin instead of f
-	f = open("input.txt")
-	num_cases = int(next(f))
-	next(f)
+	num_cases = int(next(sys.stdin))
+	next(sys.stdin)
 	case = 1
-	for (map, cells) in load(num_cases, f):	
+	for (map, cells) in load(num_cases):	
 		if case == 0:
 			sys.stdout.write("\n")
 		case = 0
-		graph = Graph(map, 'W')
 		for node in cells:
-			size = graph.vertices[node].find_size()
 			sys.stdout.write("{}\n".format(5))
-			graph.reset_components()
 main()
-
-start_time = time.time()
-main()
-print("--- %s seconds ---" % (time.time() - start_time))
-		# self.vertices = list()
-	
-		# for i in range(1, len(map)+1):
-		# 	row = map[i-1]
-		# 	for j in range(1, len(row)+1):
-		# 		if row[j-1] == node_char:
-		# 			self.vertices[(i, j)] = Node(i, j)
-		# 			for v in self.vertices:
-		# 				vm = self.vertices[v].m
-		# 				vn = self.vertices[v].n
-		# 				if vm == i or vm == i-1 or vm == i+1:
-		# 					if vn == j or vn == j-1 or vn == j+1: 
-		# 						self.vertices[v].add_neighbour(self.vertices[(i, j)])
