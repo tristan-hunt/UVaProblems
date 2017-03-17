@@ -1,9 +1,8 @@
 # https://www.youtube.com/watch?v=4IvYaOY8Pxw
 # http://stackoverflow.com/questions/3755136/pythonic-way-to-check-if-a-list-is-sorted-or-not
-# This code should work for UltraQuickSort and Frosh Week
 import sys
 import math
-import time
+
 # def issorted(x):
 #     """Check if x is sorted"""
 #     return (numpy.diff(x) >= 0).all() # is diff between all consecutive entries >= 0?
@@ -45,7 +44,7 @@ def sort_and_count(array, n):
 	"""
 	Use merge-sort to count inversions
 	"""
-	if n == 1:
+	if n == 1 or n == 0:
 		return array, 0
 	else:
 		half = math.floor(n/2)
@@ -59,26 +58,21 @@ def sort_and_count(array, n):
 		return (d_array, x+y+z)
 
 def load():
-	while(1):
+	num_cases = int(next(sys.stdin))
+	for i in range(num_cases):
 		try:
-			len_array = int(next(sys.stdin))
-			if len_array == 0:
-				break
-			array = list()
-			for i in range(0, len_array):
-				array.append(int(next(sys.stdin)))
-			yield(array, len_array)
-		except StopIteration:
+		len_array = int(next(sys.stdin))
+		if len_array == 0:
+			yield([], 0)
 			break
-		except ValueError:
-			break
+
+		array = next(sys.stdin).split()
+		array = [int(a) for a in array]
+		yield(array, len_array)
 
 def main():
 	for (array, length) in load():
 		result, length = sort_and_count(array, length) 
-		sys.stdout.write("{}\n".format(length))
+		sys.stdout.write("Optimal train swapping takes {} swaps.\n".format(length))
 
-start_time = time.time()
 main()
-print("--- %s seconds ---" % (time.time() - start_time))
-
