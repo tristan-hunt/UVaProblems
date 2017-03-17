@@ -35,6 +35,9 @@ class Graph:
 		self.V = V
 		self.E = E
 
+	def deleteVertex(self, v):
+		self.graph.pop(v)
+
 	def addEdge(self, u, v):
 		self.graph[u].append(v)
 		self.graph[v].append(u)
@@ -77,19 +80,57 @@ class Graph:
 def minus(graph, v, flag):
 	if flag: # take away v *and all it's neighbours*
 		for u in graph[v]:
-			graph.pop(u)
-		return graph.pop(v)
+			graph.deleteVertex(u)
+		graph.deleteVertex(v)
+		sys.stdout.write("Found graph minus v and neighbours: ")
+		return graph
 	else: #just return without v
-		return(graph.pop(v))
+		sys.stdout.write("Found graph minus v: {}")
+	graph.deleteVertex(v)
+	sys.stdout.write("{}\n".format(graph))
+	return(graph)
 
 def maxIndSet(graph):
+	sys.stdout.write("Finding maxIndSet of graph: {}\n".format(graph))
 	if len(graph) == 0:
 		return 0
+
 	else:
 		v = next(iter(graph)) #presumably any node in graph
 		with_v = 1 + maxIndSet(minus(graph, v, True))
 		without_v = maxIndSet(minus(graph, v, False))
 		return(max(with_v, without_v))
+
+def min_degree(graph, k):
+	"""
+	Find the vertex of minimal degree
+	"""
+	min_degree = k+1
+	#sys.stdout.write("finding the degrees of: {}; min_degree = {}\n".format(graph, min_degree))
+	for v in graph:
+		#sys.stdout.write(" vertex {} has degree: {}".format(v, len(graph[v])))
+		deg = len(graph[v])
+		if deg < min_degree:
+			#sys.stdout.write(" It's smaller! {} < {}; so vertex {} is minimal \n".format(deg, min_degree, v))
+			min_degree = deg
+			u = v
+	#sys.stdout.write("\t the min degree is vertex {}\n".format(u))
+	return u
+
+def greedy(graph, k):
+	S = list()
+	# degrees = [dict] # containing vertex : degree pairs
+	# for u in graph:
+	# 	degrees[u] = len(graph[u])
+	
+	while(len(graph) > 0):
+		# find u --> vertex of minimal degree
+		u = min_degree(graph, k)
+		S.append(u)
+		for neighbour in graph[u]:
+			graph.pop(neighbour, None)
+		graph.pop(u)
+	return S
 
 def load():
 	num_cases = int(sys.stdin.readline())
@@ -104,16 +145,14 @@ def load():
 		try:
 			assert(len(g.graph) == num_nodes)
 		except AssertionError:
-			for u in range(0, n):
+			for u in range(0, num_nodes):
 				if u not in g.graph:
 					g.graph[u] = list()
-		yield(g)
+		yield(g, num_edges)
 		next(sys.stdin)
 
-for g in load():
-
-	max_ind_set = maxIndSet(g.graph)
-	print("order: ")
+for g, k in load():
+	max_ind_set = greedy(g.graph, k)
 	sys.stdout.write("{}\n".format(len(max_ind_set)))
 	for element in max_ind_set:
 		sys.stdout.write("{} ".format(element))
