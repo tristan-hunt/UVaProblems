@@ -1,3 +1,10 @@
+
+import logging
+logging.basicConfig(filename='11456_log_file.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.debug('\n\n----------------------------------------------------')
+logging.debug('Starting computation\n----------------------------------------------------')
+
+
 import sys
 
 def lis(i, memo = 0):
