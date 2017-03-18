@@ -26,80 +26,17 @@
 #  *
 import sys
 from collections import defaultdict
-import itertools
 
-sys.stdin = open('input.txt') # For testing on Windows
+#sys.stdin = open('input.txt') # For testing on Windows
 class Graph:
 	def __init__(self, V, E):
 		self.graph = defaultdict(list)
 		self.V = V
 		self.E = E
 
-	def deleteVertex(self, v):
-		self.graph.pop(v)
-
 	def addEdge(self, u, v):
 		self.graph[u].append(v)
 		self.graph[v].append(u)
-
-	def find_independent_set(self, order):
-		"""
-		Given an order of vertices, find an independent set. 
-		"""
-		l = list() #initialize l to an empty set
-		order = list(order)
-		while (len(order) > 0): # while v is not empty:
-			u = order.pop()
-			l.append(u)
-			for v in self.graph[u]:
-				try:
-					order.remove(v) # remove from list by value
-				except ValueError:
-					pass
-		return l
-
-	#def find_independent_set(self, order):
-
-	def find_max(self):
-		"""
-		Sequential Algorithm as described on wikipedia
-		"""
-		self.vertices = [v for v in self.graph]
-
-		# now find all permutations 
-		max_size = 0
-		max_set = list()
-		for order in itertools.permutations(self.vertices):
-			new_set = self.find_independent_set(order) 
-			if len(max_set) > max_size:
-				print('found solution')
-				max_set = new_set
-				max_size = len(max_set)
-		return (max_set)
-
-def minus(graph, v, flag):
-	if flag: # take away v *and all it's neighbours*
-		for u in graph[v]:
-			graph.deleteVertex(u)
-		graph.deleteVertex(v)
-		sys.stdout.write("Found graph minus v and neighbours: ")
-		return graph
-	else: #just return without v
-		sys.stdout.write("Found graph minus v: {}")
-	graph.deleteVertex(v)
-	sys.stdout.write("{}\n".format(graph))
-	return(graph)
-
-def maxIndSet(graph):
-	sys.stdout.write("Finding maxIndSet of graph: {}\n".format(graph))
-	if len(graph) == 0:
-		return 0
-
-	else:
-		v = next(iter(graph)) #presumably any node in graph
-		with_v = 1 + maxIndSet(minus(graph, v, True))
-		without_v = maxIndSet(minus(graph, v, False))
-		return(max(with_v, without_v))
 
 def min_degree(graph, k):
 	"""
@@ -119,9 +56,6 @@ def min_degree(graph, k):
 
 def greedy(graph, k):
 	S = list()
-	# degrees = [dict] # containing vertex : degree pairs
-	# for u in graph:
-	# 	degrees[u] = len(graph[u])
 	
 	while(len(graph) > 0):
 		# find u --> vertex of minimal degree

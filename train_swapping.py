@@ -60,7 +60,6 @@ def sort_and_count(array, n):
 def load():
 	num_cases = int(next(sys.stdin))
 	for i in range(num_cases):
-		try:
 		len_array = int(next(sys.stdin))
 		if len_array == 0:
 			yield([], 0)
