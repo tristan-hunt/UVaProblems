@@ -14,7 +14,9 @@
 #  *  the answer is simply e * s
 #  *  
 #  * Used Resources:
+#  *
 #  * 
+#  *
 #  * I hereby certify that I have produced the following solution myself
 #  * using only the resources listed above in accordance with the CMPUT
 #  * 403 collaboration policy.

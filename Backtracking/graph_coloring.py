@@ -10,7 +10,8 @@
 #  *
 #  * Solution Summary:
 #  *
-#  *   Sequential Algorithm - runs in O(n) time. 
+#  *   Sequential Algorithm - runs in O(n) time (for finding ANY independent set)
+#  *   Find all independent sets, then choose one of the largest ones. 
 #  *
 #  * Used Resources:
 #  *
@@ -26,6 +27,7 @@
 import sys
 from collections import defaultdict
 
+#sys.stdin = open('input.txt') # For testing on Windows
 class Graph:
 	def __init__(self, V, E):
 		self.graph = defaultdict(list)
@@ -36,20 +38,33 @@ class Graph:
 		self.graph[u].append(v)
 		self.graph[v].append(u)
 
-	def find_max(self):
-		"""
-		Sequential Algorithm as described on wikipedia
-		"""
-		self.l = list() #initialize l to an empty set
-		self.vertices = [v for v in self.graph]
-		while (len(self.vertices) > 0): # while v is not empty:
-			u = self.vertices.pop()
-			self.l.append(u)
-			for v in self.graph[u]:
-				try:
-					self.vertices.remove(u) # remove from list by value
-				except ValueError:
-					pass
+def min_degree(graph, k):
+	"""
+	Find the vertex of minimal degree
+	"""
+	min_degree = k+1
+	#sys.stdout.write("finding the degrees of: {}; min_degree = {}\n".format(graph, min_degree))
+	for v in graph:
+		#sys.stdout.write(" vertex {} has degree: {}".format(v, len(graph[v])))
+		deg = len(graph[v])
+		if deg < min_degree:
+			#sys.stdout.write(" It's smaller! {} < {}; so vertex {} is minimal \n".format(deg, min_degree, v))
+			min_degree = deg
+			u = v
+	#sys.stdout.write("\t the min degree is vertex {}\n".format(u))
+	return u
+
+def greedy(graph, k):
+	S = list()
+	
+	while(len(graph) > 0):
+		# find u --> vertex of minimal degree
+		u = min_degree(graph, k)
+		S.append(u)
+		for neighbour in graph[u]:
+			graph.pop(neighbour, None)
+		graph.pop(u)
+	return S
 
 def load():
 	num_cases = int(sys.stdin.readline())
@@ -64,13 +79,14 @@ def load():
 		try:
 			assert(len(g.graph) == num_nodes)
 		except AssertionError:
-			for u in range(0, n):
+			for u in range(0, num_nodes):
 				if u not in g.graph:
 					g.graph[u] = list()
-		yield(g)
+		yield(g, num_edges)
 		next(sys.stdin)
 
-for g in load():
-	g.find_max()
-	for element in g.l:
+for g, k in load():
+	max_ind_set = greedy(g.graph, k)
+	sys.stdout.write("{}\n".format(len(max_ind_set)))
+	for element in max_ind_set:
 		sys.stdout.write("{} ".format(element))

@@ -1,4 +1,24 @@
-# UVA Problem #674 (Mandatory)
+# /* UVa problem: 674 
+#  *  Coin Change
+#  * Topic: Other 
+#  *
+#  * Level: easy
+#  * 
+#  * Brief problem description: 
+#  *	Given an amount (in coins), output the amount of ways one can 
+#  *     make change from the coins. 
+#  *   
+#  * Solution Summary:
+#  *  Simple application of dynamic programming.
+#  *  
+#  * Used Resources:
+#  * 	Competitive Programming 3 - Textbook
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  * --------------------- Tristan Hunt
+#  */
 
 import sys
 memo = dict()

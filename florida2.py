@@ -52,14 +52,8 @@ def main():
 		for cell in cells:
 			i = cell[0]-1
 			j = cell[1]-1
-			s = 5 #,neighbours = dfs(i, j, map)
-			try:
-				dfs(i,j, map)
-			except RuntimeError:
-				pass
-			except OSError:
-				pass
-
+			s, neighbours = dfs(i, j, map)
+			dfs(i,j, map)
 			map[i][j] = s
 			sys.stdout.write("{}\n".format(s))
 main()
