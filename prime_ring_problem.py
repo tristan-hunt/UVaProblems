@@ -28,11 +28,15 @@ def load_input():
 
 index = 1
 for n in load_input():
+	if index != 1:
+		sys.stdout.write('\n')
 	sys.stdout.write("Case " + str(index) + ":\n")
+	if n == 1:
+		sys.stdout.write("1\n")
+	
 	ring = list()
 	ring.append(1)
 	for i in range(2, n+1):
 		if ((1+i) in primes):
 			grow(ring, i, n)
-	sys.stdout.write("\n")
 	index = index + 1

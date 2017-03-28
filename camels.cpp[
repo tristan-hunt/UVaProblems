@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, a, b) for(int i = (a); i <= (b); i++)
+#define red(i, a, b) for(int i = (a); i >= (b); i--)
+#define ll long long
+
+inline int read() {
+    int x = 0, f = 1; char c = getchar();
+    while(!isdigit(c)) { if (c == '-') f = -1; c = getchar(); }
+    while(isdigit(c)) { x = x * 10 + c - '0'; c = getchar(); }
+    return x * f;
+}
+template<typename tn> void cmax(tn& a, tn b) { if (b > a) a = b; }
+template<typename tn> void cmin(tn& a, tn b) { if (b < a) a = b; }
+
+const int N = 333333;
+int p1[N], p2[N], p3[N], pos[N], n;
+ll c[N];
+
+int lowbit(int x) { return x & (-x); }
+int query(int x) { int ret = 0; while(x <= n) ret += c[x], x += lowbit(x); return ret; }
+void update(int x) { while(x > 0) ++c[x], x -= lowbit(x); }
+int main() {
+    freopen("G.in", "r", stdin);
+    freopen("G.out", "w", stdout);
+    n = read();
+    rep(i, 1, n) p1[i] = read();
+    rep(i, 1, n) p2[i] = read();
+    rep(i, 1, n) p3[i] = read();
+    memset(pos, 0, sizeof(pos));
+    ll ans = 0;
+    rep(i, 1, n) pos[p1[i]] = i;
+    rep(i, 1, n) ans += query(pos[p2[i]] + 1), update(pos[p2[i]]);
+    memset(c, 0, sizeof(c));
+    rep(i, 1, n) ans += query(pos[p3[i]] + 1), update(pos[p3[i]]);
+    memset(c, 0, sizeof(c));
+    rep(i, 1, n) pos[p2[i]] = i;
+    rep(i, 1, n) ans += query(pos[p3[i]] + 1), update(pos[p3[i]]);
+    printf("%lld\n", ((ll)n * (ll)(n - 1) - ans) / 2);
+    return 0;

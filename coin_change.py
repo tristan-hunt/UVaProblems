@@ -1,5 +1,3 @@
-# UVA Problem #674 (Mandatory)
-
 import sys
 memo = dict()
 coinValues = [1, 5, 10, 25, 50]

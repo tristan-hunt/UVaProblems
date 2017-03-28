@@ -1,0 +1,6 @@
+
+Question : Integer Lists
+Kattis-
+Copy Ques-https://open.kattis.com/problems/integerlists
+Solution:
+http://www.cs.yorku.ca/acm/Problems/2012-10-31/solutions/I/

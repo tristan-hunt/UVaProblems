@@ -128,21 +128,26 @@ def cont(new_line):
 		return False		
 
 def get_line(lines):
-	new_line = list(next(sys.stdin).strip('\n'))
+	try:
+		new_line = list(next(sys.stdin).strip('\n'))
+	except EOFError:
+		return None
+	except StopIteration:
+		return None	
 	new_line.append(' ')
 	lines.append(new_line)		
-	if '*' in new_line:
-		 return True, new_line
-	else:
-		return False, new_line
+	return (new_line)
 
 def load(num_cases):
 	for i in range(0, num_cases):
 		lines = list()
-		star_found, new_line = get_line(lines)
+		new_line = get_line(lines)
+		if new_line == None:
+			yield(lines)
+			break 
 		contin = cont(new_line)
 		while (contin):
-			star_found, new_line = get_line(lines)
+			new_line = get_line(lines)
 			contin=cont(new_line)
 		yield(lines)
 
@@ -158,5 +163,4 @@ for (grid) in load(num_cases):
 	for g in grid:
 		gridline_str = "".join([str(i) for i in g]).rstrip()
 		sys.stdout.write(gridline_str+"\n")
-	sys.stdout.write("\n")
 
