@@ -48,18 +48,18 @@ for n in load():
 	lcm = 1
 	for a, p, n in find_prime_powers(n):
 		lcm = lcm * pow(p, a) # CORRECT CODE
-		# if lcm % 10 == 0:
-		# 	lcm = lcm/10
+		if lcm % 10 == 0:
+			lcm = lcm/10
 
-		#sys.stdout.write("{0}^{1}<{2}; lcm = {3}\n".format(p, a, n, lcm))
+		sys.stdout.write("{0}^{1}<{2}; lcm = {3}\n".format(p, a, n, lcm))
 		p = p + 1
 	
 	lcm_str = str(lcm).replace('0', '')[-1]
 	sys.stdout.write("{}\n".format(lcm_str))
 	
-	#sys.stdout.write("FINAL ANSWER: {}: {}\n".format(n, lcm_str))
+	sys.stdout.write("FINAL ANSWER: {}: {}\n".format(n, lcm_str))
 
-	# if n == 1: sys.stdout.write("1\n")
-	# lcmm = compute_lcmm([i for i in range(1, n+1)])
-	# lcmm_last_digit = str(lcmm).replace('0','')[-1]
-	#sys.stdout.write("{} {} {}\n".format(n, lcmm, lcmm_last_digit))
+	if n == 1: sys.stdout.write("1\n")
+	lcmm = compute_lcmm([i for i in range(1, n+1)])
+	lcmm_last_digit = str(lcmm).replace('0','')[-1]
+	sys.stdout.write("{} {} {}\n".format(n, lcmm, lcmm_last_digit))

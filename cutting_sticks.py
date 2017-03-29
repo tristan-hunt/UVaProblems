@@ -2,7 +2,6 @@ import sys
 
 memo = dict()
 
-
 def cut(left, right, coord):
 	if (left, right) in memo:
 		return memo[(left, right)]
