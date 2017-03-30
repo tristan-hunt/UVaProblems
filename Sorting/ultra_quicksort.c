@@ -1,4 +1,4 @@
-/* UVA 11858 - Frosh Week
+/* UVA Ultra-Quicksort
  * Use Merge-Sort to count inversions. 
  * Compile with: gcc -o frosh frosh_week.c -lm -lcrypt -O2 -pipe -ansi -DONLINE_JUDGE
  NOTE - Merging favors rhs , not lhs 
@@ -65,6 +65,12 @@ int merge(int *lhs, int len_left, int *rhs, int len_right, int n, long *inv, int
 		merge[i] = rhs[r];
 		r = r + 1;
 		i = i + 1;
+	}
+
+	
+	/* Debugging*/
+	if (*inv < 0){
+		printf("overflow detected!\n");
 	}
 
 	/*Debugging: 
@@ -163,7 +169,6 @@ int split_and_count(int *students, int n, long *inv){
 	*/
 
 	*inv = x + y + z;
-
 	return 0;
 }
 
@@ -172,25 +177,32 @@ int split_and_count(int *students, int n, long *inv){
 int main(int argc, char** argv){
 	/* Get the input*/
 	/* First line: n, the number of students*/
+	int line_num = 0;
+	int start_line = line_num;
 	int i, n, student_num;
 	int rc;
 	while(1){
 		if((rc = scanf("%d", &n)) != 1){
 			return 0;
 		}
+		if (n==0){
+			return 0;
+		}
+		line_num++;
+		start_line = line_num;
 		int students[n];
 		for (i = 0; i < n; i++){
 			/* Following lines: The number of each student*/
 			if((rc=scanf("%d", &student_num)) != 1){
 				return(1);
 			}
+			line_num++;
 			students[i]= student_num;
 		}
 
 		/*Now compute the number of swaps necessary*/
 		long inv;
 		split_and_count(students, n, &inv);
-
 		printf("%ld\n", inv);
 	}
 	return(0);
