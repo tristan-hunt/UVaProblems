@@ -86,13 +86,13 @@ void split_and_count(int *students, int n, int *inv){
 
 	int i;
 
-	/* DEBUGGING
-	printf("STUDENTS: ");
+	/*DEBUGGING*/
+	/*printf("STUDENTS: ");*/
 	for (i=0; i < n; i++){
 		printf(" %d", students[i]);
 	}
 	printf("\n");
-	*/
+	
 
 	/* Don't forget the base case!*/
 	if (n == 1){
@@ -115,26 +115,26 @@ void split_and_count(int *students, int n, int *inv){
 	/* Fill up the left-hand side and rhs*/
 	int right_hand[h];
 	int left_hand[g];
+	
 	for (i = 0; i < g; i++){
 		left_hand[i] = students[i];
 		right_hand[i] = students[g+i];
 	}
 	if (n%2 == 1){
-		left_hand[g] = students[n-1];
+		right_hand[g] = students[n-1];
 	}
 
 
-	/* DEBUGGING
-	printf("LHS:");
+	/*DEBUGGING*/
 	for (i = 0; i < g; i++){
 		printf(" %d", left_hand[i]);
 	}
-	printf("\nRHS: ");
+	printf("\t ");
 	for (i= 0; i< h; i++){
 		printf(" %d", right_hand[i]);
 	}
-	printf("\n");	
-	*/
+	printf("\n\n");	
+	
 
 	int x, y, z; /* Number of inversions to left, right, and across of the centre*/
 	z = 0;
