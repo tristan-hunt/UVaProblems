@@ -1,0 +1,35 @@
+Graph: V=3; E=2
+Edges:
+Edge 0 from 0 to 1
+Edge 1 from 1 to 2
+v: 0 has rank 1 and parent 0 and has find value: 0
+v: 1 has rank 0 and parent 0 and has find value: 0
+v: 2 has rank 0 and parent 0 and has find value: 0
+The largest group of friends in g0 is 0
+
+Graph: V=10; E=12
+Edges:
+Edge 0 from 0 to 1
+Edge 1 from 2 to 0
+Edge 2 from 2 to 3
+Edge 3 from 4 to 3
+Edge 4 from 2 to 4
+Edge 5 from 3 to 5
+Edge 6 from 4 to 1
+Edge 7 from 1 to 0
+Edge 8 from 6 to 0
+Edge 9 from 0 to 1
+Edge 10 from 8 to 9
+Edge 11 from 7 to 8
+v: 0 has rank 5 and parent 0 and has find value: 0
+v: 1 has rank 0 and parent 0 and has find value: 0
+v: 2 has rank 0 and parent 0 and has find value: 0
+v: 3 has rank 0 and parent 0 and has find value: 0
+v: 4 has rank 0 and parent 0 and has find value: 0
+v: 5 has rank 0 and parent 0 and has find value: 0
+v: 6 has rank 0 and parent 0 and has find value: 0
+v: 7 has rank 0 and parent 8 and has find value: 8
+v: 8 has rank 1 and parent 8 and has find value: 8
+v: 9 has rank 0 and parent 8 and has find value: 8
+The largest group of friends in g1 is 0
+
