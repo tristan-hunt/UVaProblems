@@ -16,36 +16,19 @@ def load():
 			fines.append(int(line[1]))
 		yield(times, fines, num_jobs)
 
+case = 0
 for (times, fines, num_jobs) in load():
+	if case == 1:
+		sys.stdout.write("\n")
+	case = 1
+
 	# Hint: Sort by ratios??
-	sum_fines = sum(fines)
-	min_fine = sum_fines * max(times)
-	min_idx = -1
-	jobs = num_jobs
-
-
-	while(jobs):
-		# Find the minimum cost job
-		for i in range(0, jobs):
-			time = times[i]
-			fine = fines[i]
-			cost = time * (sum_fines-fine)
-			#sys.stdout.write("Job {} has time {}, fine {}, cost {}".format(i, time, fine, cost))
-			if cost < min_fine:
-				min_fine = cost
-				min_idx = i
-				#sys.stdout.write(" and is minimal. ")
-			#sys.stdout.write("\n")
-
-		# Complete that job:
-		t = times.pop(min_idx)
-		f = fines.pop(min_idx)
-		sum_fines = sum_fines - f
-		jobs = jobs-1
-		#sys.stdout.write("Completing job {} which had a fine of {}\n".format(t, f))
-
-		sys.stdout.write("{}".format(t))
-		if jobs != 0:
-			sys.stdout.write(" ")
+	ratios = list()
+	for i in range(0, num_jobs):
+		ratios.append((times[i]/fines[i], i+1))
+	
+	result = sorted(ratios, key = lambda x: x[0])
+	sys.stdout.write("{}".format(result[0][1]))
+	for i in range(1, len(result)):
+		sys.stdout.write(" {}".format(result[i][1]))
 	sys.stdout.write("\n")
-
