@@ -1,0 +1,2 @@
+// Naive algorithm for building suffix array of a given text
+#include <iostream>
