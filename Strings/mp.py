@@ -73,12 +73,13 @@ def bad_character_table(S):
         return [[] for a in range(26)]
     R = [[-1] for a in range(26)]
     alpha = [-1 for a in range(26)]
-    #sys.stdout.write("Generate R for S:{}\n".format(S))
+    #sys.stdout.write("Generate R for S:{} ".format(S))
 
     for i, c in enumerate(S):
         alpha[alphabet_index(c)] = i
         for j, a in enumerate(alpha):
             R[j].append(a)
+    #sys.stdout.write("R: {}\n".format(R))
     return R
 
 def good_suffix_table(S):
@@ -170,33 +171,22 @@ def intervalize(notes, strlen):
 
 	# Step 1: Convert each note to its semitone:
     semitones = {"A": 1, "A#": 2, "Bb": 2, "B": 3, "B#": 4, "Cb": 3, "C": 4, "C#": 5, "Db": 5, "D": 6, "D#": 7, "Eb": 7, "E": 8, "E#": 9, "Fb": 8, "F": 9, "F#": 10, "Gb": 10, "G":11, "G#": 12, "Ab": 12}	 
-	
+    #sys.stdout.write("{}\n".format([x for x in notes]))
+
     for i in range(0, strlen-1):
         n1 =semitones[notes[i]]
         n2 = semitones[notes[i+1]]
         dist = n2-n1
-        if (abs(dist)>6):
-            dist = 0
-            if n1<6:
-                dist = dist + n1
-            if n2 < 6:
-                dist = dist + n2
-            if n1 > 6: 
-                dist = dist + (12-n1)
-            if n2 > 6:
-                dist = dist + (12-n2)
-            dist = -dist
-
-
+        if dist < 0:
+            dist = dist + 12
+        #sys.stdout.write("{}:{}--> {}:{}= {}\n".format(notes[i], n1, notes[i+1], n2, dist))
         notes[i] = dist
-    sys.stdout.write("{}".format([x for x in notes]))
-
-
+    
     notes.pop()
-	# Fun fact: In French, musical notes are relative
-    notes = [chr(i+115) for i in notes] 
-    sys.stdout.write("{}\n".format([x for x in notes]))
+    #sys.stdout.write("{}\n".format([x for x in notes]))
 
+    # Fun fact: In French, musical notes are relative
+    notes = [chr(i+97) for i in notes] 
     notes = "".join([str(note) for note in notes])
     return notes
 
