@@ -1,21 +1,6 @@
-Song: ['D', 'G', 'A', 'B', 'C', 'D', 'G', 'G', 'G', 'C', 'D', 'E', 'F#', 'G', 'C', 'C']
-Interval of Song: fccbcfaafcccbfa
-Snippet: ['G', 'G', 'C', 'D']
-interval of snippet: afc
-Generate R for S:afc
-7Song: ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
-Interval of Song: bbbbbbbbbbb
-Snippet: ['C', 'D']
-interval of snippet: c
-Generate R for S:c
-Song: ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
-Interval of Song: bbbbbbbbbbb
-Snippet: ['C', 'D']
-interval of snippet: c
-Generate R for S:c
-Song: ['C', 'E', 'G', 'Bb']
-Interval of Song: edd
-Snippet: ['D', 'F#', 'A']
-interval of snippet: ed
-Generate R for S:ed
-0
+[0, 2, -4, -2, 1, 1, 5, -4, -3, -4, -3, -4, -3, 
+[0, 2, -4, -2, -1, 1, 5, -4, -3, -4, -3, 5, -4, 
+Comparing:
+suoqttxopopop
+suoqrtxopopxo
+N

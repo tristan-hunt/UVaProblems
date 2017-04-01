@@ -172,21 +172,37 @@ def intervalize(notes, strlen):
     semitones = {"A": 1, "A#": 2, "Bb": 2, "B": 3, "B#": 4, "Cb": 3, "C": 4, "C#": 5, "Db": 5, "D": 6, "D#": 7, "Eb": 7, "E": 8, "E#": 9, "Fb": 8, "F": 9, "F#": 10, "Gb": 10, "G":11, "G#": 12, "Ab": 12}	 
 	
     for i in range(0, strlen-1):
-        up = (semitones[notes[i+1]] - semitones[notes[i]])
-        down = 12-abs(up)
+        n1 =semitones[notes[i]]
+        n2 = semitones[notes[i+1]]
+        dist = n2-n1
+        if (abs(dist)>6):
+            dist = 0
+            if n1<6:
+                dist = dist + n1
+            if n2 < 6:
+                dist = dist + n2
+            if n1 > 6: 
+                dist = dist + (12-n1)
+            if n2 > 6:
+                dist = dist + (12-n2)
+            dist = -dist
 
-        n = min(abs(up), abs(down))
-        if n == abs(up):
-            notes[i] = up
-        else:
-            notes[i] = down
+
+        notes[i] = dist
+    sys.stdout.write("{}".format([x for x in notes]))
+
 
     notes.pop()
 	# Fun fact: In French, musical notes are relative
-    notes = [chr(i+97) for i in notes] 
+    notes = [chr(i+115) for i in notes] 
+    sys.stdout.write("{}\n".format([x for x in notes]))
 
     notes = "".join([str(note) for note in notes])
     return notes
+
+def ltoi(letters):
+    letters = [ord(c)-115 for c in letters]
+    return letters
 
 
 def load():
@@ -211,6 +227,9 @@ def load():
         line = next(sys.stdin).split()
 
 for (pattern, text) in load():
+    sys.stdout.write("Comparing:\n")
+    sys.stdout.write("{}\n".format(text))
+    sys.stdout.write("{}\n".format(pattern))
     match = string_search(pattern, text)
     if len(match) > 0:
         sys.stdout.write("S\n")
