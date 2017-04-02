@@ -1,167 +1,243 @@
+#include <stdint.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
-/*Returns index of the given character in English, counting from 0*/
-int alphabet_index(char c){
-    int i = tolower(c);
-    i = i - 97; /* 97 is ASCII for a*/
-}
+#define ALPHABET_LEN 256
+#define NOT_FOUND patlen
+#define max(a, b) ((a < b) ? b : a)
 
-/*Returns the length of the match of the substrings of S beginning at idx
- and idx2*/
-int match_length(char * S, int s_len, int idx1, int idx2){
-    if (idx1 == idx2){
-        return (s_len) - idx1;
-    }
-    int match_count = 0;
-    while((idx1 < s_len) && (idx2 < s_len) && (S[idx1] == S[idx2])){
-        match_count = match_count + 1;
-        idx1++;
-        idx2++;
-    }
-    return match_count;
-
-}
-
-/* Fills Z, the fundamental preprocessing of S. Z[i] is the length of the 
-beginning at i which is also a prefix of S. This pre-processing is done
-in O(n) time, where n is the length of S*/
-void fundamental_preprocess(char *S, int len_s, int* z, int len_z){
-    if (len_s == 0){
-        len_z = 0; /* Harmless case of empty string*/
-
-    }
-    if (len_s == 1){ /* Harmless case of single-character string*/
-        len_z = 1;
-        z[1] = 1;
-    }
-    z[0] = len_s;
-    z[1] = match_length(S, len_s, 0, 1);
+/* delta1 table: delta1[c] contains the distance between the last
+// character of pat and the rightmost occurrence of c in pat.
+// If c does not occur in pat, then delta1[c] = patlen.
+// If c is at string[i] and c != pat[patlen-1], we can
+// safely shift i over by delta1[c], which is the minimum distance
+// needed to shift pat forward to get string[i] lined up 
+// with some character in pat.
+// this algorithm runs in alphabet_len+patlen time.*/
+void make_delta1(int *delta1, uint8_t *pat, int32_t patlen) {
     int i;
-    for(i=2; i< 1+z[1]; i++){ /* Optimization*/
-        z[i] = z[1] -i + 1;
+    for (i=0; i < ALPHABET_LEN; i++) {
+        delta1[i] = NOT_FOUND;
+    }
+    for (i=0; i < patlen-1; i++) {
+        delta1[pat[i]] = patlen-1 - i;
+    }
+}
+
+/* true if the suffix of word starting from word[pos] is a prefix 
+// of word*/
+int is_prefix(uint8_t *word, int wordlen, int pos) {
+    int i;
+    int suffixlen = wordlen - pos;
+    /* could also use the strncmp() library function here*/
+    for (i = 0; i < suffixlen; i++) {
+        if (word[i] != word[pos+i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+/* length of the longest suffix of word ending on word[pos].*/
+/* suffix_length("dddbcabc", 8, 4) = 2*/
+int suffix_length(uint8_t *word, int wordlen, int pos) {
+    int i;
+    /* increment suffix length i to the first mismatch or beginning*/
+    /* of the word*/
+    for (i = 0; (word[pos-i] == word[wordlen-1-i]) && (i < pos); i++);
+    return i;
+}
+
+/* delta2 table: given a mismatch at pat[pos], we want to align 
+// with the next possible full match could be based on what we
+// know about pat[pos+1] to pat[patlen-1].
+//
+// In case 1:
+// pat[pos+1] to pat[patlen-1] does not occur elsewhere in pat,
+// the next plausible match starts at or after the mismatch.
+// If, within the substring pat[pos+1 .. patlen-1], lies a prefix
+// of pat, the next plausible match is here (if there are multiple
+// prefixes in the substring, pick the longest). Otherwise, the
+// next plausible match starts past the character aligned with 
+// pat[patlen-1].
+// 
+// In case 2:
+// pat[pos+1] to pat[patlen-1] does occur elsewhere in pat. The
+// mismatch tells us that we are not looking at the end of a match.
+// We may, however, be looking at the middle of a match.
+// 
+// The first loop, which takes care of case 1, is analogous to
+// the KMP table, adapted for a 'backwards' scan order with the
+// additional restriction that the substrings it considers as 
+// potential prefixes are all suffixes. In the worst case scenario
+// pat consists of the same letter repeated, so every suffix is
+// a prefix. This loop alone is not sufficient, however:
+// Suppose that pat is "ABYXCDBYX", and text is ".....ABYXCDEYX".
+// We will match X, Y, and find B != E. There is no prefix of pat
+// in the suffix "YX", so the first loop tells us to skip forward
+// by 9 characters.
+// Although superficially similar to the KMP table, the KMP table
+// relies on information about the beginning of the partial match
+// that the BM algorithm does not have.
+//
+// The second loop addresses case 2. Since suffix_length may not be
+// unique, we want to take the minimum value, which will tell us
+// how far away the closest potential match is.
+*/
+void make_delta2(int *delta2, uint8_t *pat, int32_t patlen) {
+    int p;
+    int last_prefix_index = patlen-1;
+
+    /* first loop*/
+    for (p=patlen-1; p>=0; p--) {
+        if (is_prefix(pat, patlen, p+1)) {
+            last_prefix_index = p+1;
+        }
+        delta2[p] = last_prefix_index + (patlen-1 - p);
     }
 
-    /* Define upper, lower limits of the z-box*/
-    int l = 0;
-    int r = 0;
-    int k, b, a;
-    for(i=2+z[1]; i< len_s; i++){
-        if (i <= r){ /* i falls withint existing z-box*/
-            k = i-l;
-            b = z[k];
-            a = r-i+1;
-            if ( b < a){/*b ends within existing z-box*/
-                z[i] = b;
-            }
-            else{ /* b ends at or after the end of the z-box, we need to do*/
-                z[i] = a+match_length(S, len_s, a, r+1); /*an exlpicit match to the right of the z-box*/
-                l = i;
-                r = i + z[i] -1;
-            }            
+    /* second loop*/
+    for (p=0; p < patlen-1; p++) {
+        int slen = suffix_length(pat, patlen, p);
+        if (pat[p - slen] != pat[patlen-1 - slen]) {
+            delta2[patlen-1 - slen] = patlen-1 - p + slen;
         }
-        else{
-            z[i] = match_length(S, len_s, 0, i);
-            if (z[i] > 0){
-                l = i;
-                r = i + z[i] - 1;
-            }
+    }
+}
+
+uint8_t* boyer_moore (uint8_t *string, uint32_t stringlen, uint8_t *pat, uint32_t patlen) {
+    int i;
+    int delta1[ALPHABET_LEN];
+    int *delta2 = (int *)malloc(patlen * sizeof(int));
+    make_delta1(delta1, pat, patlen);
+    make_delta2(delta2, pat, patlen);
+
+    /*The empty pattern must be considered specially*/
+    if (patlen == 0) {
+        free(delta2);
+        return string;
+    }
+
+    i = patlen-1;
+    while (i < stringlen) {
+        int j = patlen-1;
+        while (j >= 0 && (string[i] == pat[j])) {
+            --i;
+            --j;
         }
+        if (j < 0) {
+            free(delta2);
+            return (string + i+1);
+        }
+
+        i += max(delta1[string[i]], delta2[j]);
+    }
+    free(delta2);
+    return NULL;
+}
+
+void intervalize(char* notes, int strlen, char* text,int text_len){
+    int i=0;
+    int k = 0; /* length of 'intervals'*/
+
+    /* Convert string of notes to semitones*/
+    int a;
+    int indexes[k+1];
+    while (i<strlen){
+        if (notes[i] == ' '){
+            k = k + 1;
+        }
+        /*Convert char to int:*/
+        a = notes[i];
+        a = notes[i] -65; /*65 is ASCII uppercase A*/
+        
+        /* Now convert to semitones*/
+        if (a == 0){
+            indexes[i] = 1;
+        }
+        if (a == 1){
+            indexes[i] = 3;
+        }
+        if (a > 1){
+            indexes[i] = a*2;
+        }
+        if (a > 4){
+            indexes[i] = indexes[i] -1;
+        }
+
+
+        /* Account for accidendals*/
+        if (notes[i+1] == '#' || notes[i+1] == 'b'){
+            if (notes[i+1] == '#'){
+                indexes[i] = indexes[i] + 1;
+            }
+            if (notes[i+1] == 'b'){
+                indexes[i] = indexes[i] - 1;
+            }
+            i = i + 1;
+        }
+        
+        /* And go to the next note.*/
+        i = i + 1;    
+    }
+
+    /* Now convert semitones to intervals*/
+    int intervals[k];
+    int dist;
+    for (i = 0; i < k; i++){
+        dist = indexes[i+1] - indexes[i];
+        if (dist < 0){
+            dist = dist + 12;
+        }
+        intervals[i] = dist; 
+    }
+
+    /* Finally make a string of ascii characters*/
+    for (i=0; i < k; i++){
+        text[i] = (char)(intervals[i] +97);/*Convert to string*/
     }
     return;
 }
 
-/*
-Generates F for S, an array used in a special case of the good suffix rule in the Boyer-Moore
-string search algorithm. F[i] is the length of the longest suffix of S[i:] that is also a
-prefix of S. In the cases it is used, the shift magnitude of the pattern P relative to the
-text T is len(P) - F[i] for a mismatch occurring at i-1.
-*/
-void full_shift_table(char* S, int len_s, int* F, int len_f){
-    int i, zv, j;
-    int Z[len_s];
-    int len_z = len_s;
-    for(i = 0; i < len_s; i++){
-        Z[i] = 0;
-    }
-    fundamental_preprocess(S, len_s, Z, len_z);
-    int longest = 0;
-    for (i = 0; i< len_z; i++){
-        for(j = len_z-1; j > -1; j--){
-            zv = Z[j];
-
-        }
-    }
-
-}
-/*  Generates R for S, which is an array indexed by the position of some character c in the 
-    English alphabet. At that index in R is an array of length |S|+1, specifying for each
-    index i in S (plus the index after S) the next location of character c encountered when
-    traversing S from right to left starting at i. This is used for a constant-time lookup
-    for the bad character rule in the Boyer-Moore string search algorithm, although it has
-    a much larger size than non-constant-time solutions.
-*/
-    bad_character_table(P, len_p, R, len_r);
-
-
-
-/*
-Implementation of the Boyer-Moore string search algorithm. This finds all occurrences of P
-in T, and incorporates numerous ways of pre-processing the pattern to determine the optimal 
-amount to shift the string and skip comparisons. In practice it runs in O(m) (and even 
-sublinear) time, where m is the length of T. This implementation performs a case-insensitive
-search on ASCII alphabetic characters, spaces not included.
-*/
-int string_search(char* P, int len_p, char* T, int len_t){
-    int i;
-    if (len_p == 0 || len_t == 0 || len_t < len_p){
-        return 0;
-    }
-    char* matches;
-
-    /*Preprocessing*/
-    
-    int R[len_p]; 
-    int L[len_p];
-    int F[len_p];
-    for (i = 0; i < len_p; i++){
-        R[i] = 0;
-        L[i] = 0;
-        F[i] = 0;
-    }
-    int len_r = len_p, len_l =len_p, len_f=len_p;
-
-    bad_character_table(P, len_p, R, len_r);
-    good_suffix_table(P, len_p, L, len_l);
-    full_shift_table(P, len_p, F, len_f); 
-    /*...*/
-
-
-}
-
 int main(int argc, char** argv){
     /* Get the input from stdin*/
-    int rc;
+    int rc, i;
     int N; /* Song length*/
     int M; /* Snippet length*/
     if ((rc=scanf("%d %d", &N, &M)) != 2){
         return(1);
     }
+    printf("Starting while loop\n");
     while((N != 0) &&(M != 0)){
-        char* song;
-        char* snippet;
+        char song[N];
+        char snippet[M;
         if ((rc=scanf("%s", song))!= 1){
+            printf("rc = %d\n", rc);
             return(1);
         }
         if ((rc = scanf("%s", snippet)) != 1){
             return(1);
         }
         /* Process the song, snippet, and check for a match*/
-
+        printf("Converting song to intervals\n");
         /* Convert the sequence of notes into a sequence of intervals*/
+        char text[N-1];
+        char pattern[M-1];
+        int song_len = strlen(song);
+        int snippet_len = strlen(snippet);
+        intervalize(song, song_len, text, N-1);
+        intervalize(snippet, snippet_len, pattern, M-1);
+
 
         /* Use fast pattern-matching algorithm to test for match*/
+        uint8_t *match = boyer_moore(text, N-1, pattern, M-1);
+        if ((*match == 0)||(match==NULL)){
+            printf("N\n");
+        }
+        else{
+            printf("S\n");
+        }
 
         /* Scan for next input*/
         if ((rc=scanf("%d %d", &N, &M)) != 2){
