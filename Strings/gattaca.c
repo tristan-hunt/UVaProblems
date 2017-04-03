@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 /* Struct to store information about the suffix*/
 struct suffix{
     int index; /* Stores the original index*/
@@ -12,11 +13,25 @@ struct suffix{
     char* suff;
 };
 
+struct entry {
+    int nr[2], p;
+};
+
+int cmp(const void * x, const void * y){
+    struct entry *i;
+    i = (struct entry*)x;
+    struct entry *j;
+    j = (struct entry*)y;
+    struct entry a = *i;
+    struct entry b = *j;
+    return a.nr[0] == b.nr[0] ? (a.nr[1] < b.nr[1] ? 1:0) : (a.nr[0] < b.nr[0] ? 1: 0);
+
+}
 
 
 /* Comparison function used by sort() to compare two suffixes*/
 /* Compares two pairs - returns 1 if first pair is smaller*/
-int cmp(const void * x, const void * y){
+int cmp2(const void * x, const void * y){
     struct suffix *i;
     i = (struct suffix*)x;
     struct suffix *j;
@@ -28,6 +43,29 @@ int cmp(const void * x, const void * y){
 }
 
 void create_suff_arr(char* text, int* suffArr, int n){
+    int logn = (int)log2(n);
+    struct entry L[n];
+    int P[logn][n];
+    int i;
+    for (i = 0; i<n; i++){
+        P[0][i] =text[i] - 'A';
+    }
+    int stp, cnt;
+    for (stp = 1, cnt = 1; cnt >> 1 <n; stp++, cnt <<= 1){
+        for (i=0; i < n; i++){
+            L[i].nr[0] = P[stp-1][i];
+            L[i].nr[1] = i + cnt < n ? P[stp -1][i + cnt] : -1;
+            L[i].p = 1;
+        }
+        qsort(L, sizeof(struct entry), n, cmp);
+        for (i = 0; i < n; i++){
+            P[stp][L[i].p] = i > 0 && L[i].nr[0] == L[i-1].nr[0] && L[i].nr[1] == L[i-1].nr[1] ?P[stp][L[i-1].p] : i;
+        }
+    }                                             
+}
+
+
+void create_suff_arr3(char* text, int* suffArr, int n){
     /*printf("create suff arr: %s, mem&:%d, len:%d\n", text, *suffArr, n);*/
     struct suffix suffixes[n];
 
