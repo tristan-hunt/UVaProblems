@@ -8,7 +8,8 @@
 
 void kmp_table(char* W, int len_w, int* T,int len_t){
     /*  Note that len_t == len_w*/
-    printf("kmp table\n");
+    len_t = len_w;
+    /*printf("kmp table for w of len: %d\n", len_w);*/
     int pos = 2;
     int cnd = 0;
 
@@ -16,42 +17,60 @@ void kmp_table(char* W, int len_w, int* T,int len_t){
     T[0] = -1;
     T[1] = 0;
 
+    /*printf("Before filling t: ");
     for(i=0; i < len_t; i++){
         printf("%d ", T[i]);
-    }
-    printf("\n");
-    printf("len_w: %d\n", len_w);
+    }printf("\n");
+    printf("W:: ");
+    for(i=0; i < len_w; i++){
+        printf("%c ", W[i]);
+    }printf("\n");*/
+    
+
+
+    /*printf("Calculating T: while: pos<len_w=%d\n", len_w);*/
     while (pos < len_w){
         /*# first case - substring continues*/
+        /*printf("pos: %d W[%d]= %c, W[%d]= %c ", pos, pos-1, W[pos-1], cnd, W[cnd]);*/
         if (W[pos-1] == W[cnd]){
+            /*printf("if: W[%d] == W[%d] ", pos-1, cnd);*/
             T[pos] = cnd + 1;
+            /*printf("--> T[%d] = %d ", pos, T[pos]);*/
             cnd = cnd + 1;
             pos = pos + 1;
+            /*printf("cnd: %d, pos: %d\n", pos, cnd);*/
         }
         /*# second case: it doesn't, but we can fall back*/
         else if (cnd > 0){
+            /*printf("else if: %d>0 ", cnd);*/
             cnd = T[cnd];
+            /*printf("cnd = T[cnd] = %d \n", cnd);*/
         }
         /*# third case: we have run out of candidates. */
         else {
+            /*printf("else: T[%d] = 0; pos = %d \n", pos, pos+1);*/
             T[pos] = 0;
             pos = pos + 1;
         }
     }
-    
+    /*
+    printf("W: ");
+    for(i=0; i < len_w; i++){
+        printf("%c ", W[i]);
+    }printf("\nT: ");
     for(i=0; i < len_t; i++){
         printf("%d ", T[i]);
     }
-    printf("\n");
+    printf("\n");*/
     return;
 
 }
 
 int kmp_search(char* S, int len_s, char* W, int len_w){
-    printf("kmp search\n");
+    /*printf("kmp search\n");*/
     int m = 0;
     int i = 0;
-    int len_t = len_s;
+    int len_t = len_w;
     int T[len_t];
     
     for(i=0; i < len_t; i++){
@@ -59,20 +78,21 @@ int kmp_search(char* S, int len_s, char* W, int len_w){
     }
 
     kmp_table(W, len_w, T, len_t);
-    printf("S: %s, len_s: %d, W: %s, len_w: %d, len_t: %d\n",S, len_s, W, len_w, len_t);
+    /*printf("S: %s, len_s: %d, W: %s, len_w: %d, len_t: %d\n",S, len_s, W, len_w, len_t);*/
     i = 0;
-    while(m+1 < len_s){
-        /*printf("W: %s, i: %d, S:%s, m+1:%d\n", W, i, S, m+1);*/
-        if (W[i] == S[m+1]) {
+
+    while(m+i < len_s){
+        /*printf("m: %d; i=%d W[%d]=%c, S[%d]=%c ", m, i, i, W[i], m+1, S[m+i]);*/
+        if (W[i] == S[m+i]) {
+            /*printf("match: W[%d] == S[%d] = %c = %c \n", i, m+i, W[i], S[m+i]);*/
             if (i == (len_w - 1)) {
-                return m;
+                return m; /* Index of the match in s, plus 1*/
             }
             i = i + 1;
         }
         else{
             if (T[i] > -1){
-                /*printf("3: i: %d, T[i] = %d\n", i, T[i]);*/
-                m= m+1 - T[i];
+                m= m+i - T[i];
                 i = T[i];
             }
             else{
@@ -213,12 +233,12 @@ int main(int argc, char** argv){
 
 
         /* Use fast pattern-matching algorithm to test for match*/
-        printf("Searching for a match\n");
-        printf("%s\n", text);
-        printf("%s\n", pattern);
-        int match = kmp_search(pattern, M-1, text, N-1);
-        /*printf("back!\n");*/
-        if (match==0){
+        /*printf("Searching for a match\n");*/
+        /*printf("%s\n", text);*/
+        /*printf("%s\n", pattern);*/
+        int match = kmp_search(text, N-1, pattern, M-1);
+        /*printf("back! Match = %d\n", match);*/
+        if (match==N-1){
             printf("N\n");
         }
         else{
