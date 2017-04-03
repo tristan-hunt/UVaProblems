@@ -1,81 +1,12 @@
-100 14
-Ab Cb A# A# Eb B# Cb B# F F# F# A# Cb B# A D A# G Ab F# B# Db A# G Fb Cb F# Ab A G Fb Cb F# F Ab Db Fb Eb Eb Cb F# D# D Ab B# A Ab A D Ab Cb F G B# F# Ab Fb A# G Fb Eb A# F# A D# A# A# F# G Ab G Cb F# Eb Cb D D Fb B# A# Cb B# F  Db A# F#  Eb Cb Ab B# Eb D# D# A Eb F# F Eb Cb Cb
-C C D  Bb G# A  Bb Eb B  G# E   Db A  Gb
-100 13
-Ab Cb A# A# Eb B# Cb B# F F# F# A# Cb B# A D A# G Ab F# B# Db A# G Fb Cb F# Ab A G Fb Cb F# F Ab Db Fb Eb Eb Cb F# D# D Ab B# A Ab A D Ab Cb F G B# F# Ab Fb A# G Fb Eb A# F# A D# A# A# F# G Ab G Cb F# Eb Cb D D Fb B# A# Cb B# F  Db A# F#  Eb Cb Ab B# Eb D# D# A Eb F# F Eb Cb Cb
-C C D  Bb G# A  Bb Eb B  G# E   Db A  
-15 14 
-D D Fb B# A# Cb B# F  Db A# F#  Eb Cb Ab B#
-C C D  Bb G# A  Bb Eb B  G# E   Db A  Gb
-0 0
-100 4
-Ab Cb A# A# Eb B# Cb B# F F# F# A# Cb B# A D A# G Ab F# B# Db A# G Fb Cb F# Ab A G Fb Cb F# F Ab Db Fb Eb Eb Cb F# D# D Ab B# A Ab A D Ab Cb F G B# F# Ab Fb A# G Fb Eb A# F# A D# A# A# F# G Ab G Cb F# Eb Cb D D Fb B# A# Cb B# F Db A# F# Eb Cb Ab B# Eb D# D# A Eb F# F Eb Cb Cb
-C C D A# 
-100 3
-Ab Cb A# A# Eb B# Cb B# F F# F# A# Cb B# A D A# G Ab F# B# Db A# G Fb Cb F# Ab A G Fb Cb F# F Ab Db Fb Eb Eb Cb F# D# D Ab B# A Ab A D Ab Cb F G B# F# Ab Fb A# G Fb Eb A# F# A D# A# A# F# G Ab G Cb F# Eb Cb D D Fb B# A# Cb B# F Db A# F# Eb Cb Ab B# Eb D# D# A Eb F# F Eb Cb Cb
-C C D 
-100 2
-Ab Cb A# A# Eb B# Cb B# F F# F# A# Cb B# A D A# G Ab F# B# Db A# G Fb Cb F# Ab A G Fb Cb F# F Ab Db Fb Eb Eb Cb F# D# D Ab B# A Ab A D Ab Cb F G B# F# Ab Fb A# G Fb Eb A# F# A D# A# A# F# G Ab G Cb F# Eb Cb D D Fb B# A# Cb B# F Db A# F# Eb Cb Ab B# Eb D# D# A Eb F# F Eb Cb Cb
-C C
-0 0 
-24 24
-A A# A B A C A C# A D A D# A E A F A F# A G A G# A A
-B C B C# B D B D# B E B F B F# B G B G# B A B A# B B
-24 24
-C C# C D C D# C E C F C F# C G C G# C A C A# C B C C
-D D# D E D F D F# D G D G# D A D A# D B D C D C# D D
-24 24
-E F E F# E G E G# E A E A# E B E C E C# E D E D# E E
-F F# F G F G# F A F A# F B F C F C# F D F D# F E F F
-24 24
-G G# G A G A# G B G C G C# G D G D# G E G F G F# G G
-A A# A B A C A C# A D A D# A E A F A F# A G A G# A A 
-24 24
-A Bb A B A C A Db A D A Eb A E A F A Gb A G A Ab A A
-B C B C# B D B D# B E B F B F# B G B G# B A B A# B B
-24 24
-C Db C D C Eb C E C F C Gb C G C Ab C A C Bb C B C C
-D Eb D E D F D Gb D G D Ab D A D Bb D B D C D Db D D
-24 24
-E F E Gb E G E Ab E A E Bb E B E C E Db E D E Eb E E
-F Gb F G F Ab F A F Bb F B F C F Db F D F Eb F E F F
-24 24
-G Ab G A G Gb G B G C G Db G D G Eb G E G F G Gb G G
-A Bb A B A C A Db A D A Eb A E A F A Gb A G A Ab A A 
-24 24 
-24 24
-B# C# B# D B# D# B# E B# F B# F# B# G B# G# B# A B# A# B# B B# C
-D D# D E D F D F# D G D G# D A D A# D B D C D C# D D
-24 24
-C C# C D C D# C E C F C F# C G C G# C A C A# C B C C
-D D# D E D F D F# D G D G# D A D A# D B D C D C# D D
-0 0
-
-24 24
-A A# A B A C A C# A D A D# A E A F A F# A G A G# A A
-B C B C# B D B D# B E B F B F# B G B G# B A B A# B B
-24 24
-C C# C D C D# C E C F C F# C G C G# C A C A# C B C C
-D D# D E D F D F# D G D G# D A D A# D B D C D C# D D
-24 24
-E F E F# E G E G# E A E A# E B E C E C# E D E D# E E
-F F# F G F G# F A F A# F B F C F C# F D F D# F E F F
-24 24
-G G# G A G A# G B G C G C# G D G D# G E G F G F# G G
-A A# A B A C A C# A D A D# A E A F A F# A G A G# A A 
-24 24
-A Bb A B A C A Db A D A Eb A E A F A Gb A G A Ab A A
-B C B C# B D B D# B E B F B F# B G B G# B A B A# B B
-24 24
-C Db C D C Eb C E C F C Gb C G C Ab C A C Bb C B C C
-D Eb D E D F D Gb D G D Ab D A D Bb D B D C D Db D D
-24 24
-E F E Gb E G E Ab E A E Bb E B E C E Db E D E Eb E E
-F Gb F G F Ab F A F Bb F B F C F Db F D F Eb F E F F
-24 24
-G Ab G A G Bb G B G C G Db G D G Eb G E G F G Gb G G
-A Bb A B A C A Db A D A Eb A E A F A Gb A G A Ab A A 
-24 24
-A A# A B A C A C# A D A D# A E A F A F# A G A G# A A
-Cb C Cb C# Cb D Cb D# Cb E Cb F Cb F# Cb G Cb G# Cb A Cb A# Cb B
-0 0
+11
+GATTACA
+GAGAGAG
+GATTACAGATTACA
+TGAC
+TGTAC
+TTGGAACC
+BANANA
+ABAC
+MISSISSIPPI
+PARALLEL
+ABABAB

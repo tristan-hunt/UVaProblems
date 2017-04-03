@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cstring>
 #include <algorithm>
-using namespace std;
  
 /* Structure to store information of a suffix*/
 struct suffix
