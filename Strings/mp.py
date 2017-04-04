@@ -1,68 +1,29 @@
-# Uses python implementation of string-matching alg. found here:
-# https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string_search_algorithm
+# /* UVa problem: 11837.py
+#  * Musical Plagiarism
+#  * Topic: Strings
+#  *
+#  * Level: easy
+#  * 
+#  * Brief problem description: 
+#  *   Given two melodies, decide if the second melody can be found,
+#  *   in any key, in the first
+#  * Solution Summary:
+#  *  Step 1- Translate notes to intervals, convert to strings. 
+#  *  Use KMP pattern-matching algorithm to quickly compare the strings
+#  *  
+#  * Used Resources:
+#  * Uses python implementation of string-matching alg. found here:
+#  * http://www.geeksforgeeks.org/searching-for-patterns-set-2-kmp-algorithm/
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  * --------------------- Tristan Hunt
+#  */
 
 import sys
 
-sys.stdin = open("input.txt") #Remove before submitting
-
-# def kmp_table(W):
-#     pos = 2
-#     cnd = 0
-
-#     T = [None] * len(W)
-#     T[0] = -1
-#     T[1] = 0
-
-#     # for t in T:
-#     #     sys.stdout.write("{} ".format(t))
-#     # sys.stdout.write("\n")
-#     while (pos < len(W)):
-#         # first case - substring continues
-#         if W[pos-1] == W[cnd]:
-#             T[pos] = cnd + 1
-#             cnd = cnd + 1
-#             pos = pos + 1
-#         # second case: it doesn't, but we can fall back
-#         elif cnd > 0:
-#             cnd = T[cnd]
-#         # third case: we have run out of candidates. 
-#         else:
-#             T[pos] = 0
-#             pos = pos + 1
-#     # for t in T:
-#     #     sys.stdout.write("{} ".format(t))
-#     # sys.stdout.write("\n")
-#     return T
-
-# def kmp_search(S, W):
-#     # sys.stdout.write("Comparing:\n")
-#     # sys.stdout.write("{}\n".format(S))
-#     # sys.stdout.write("{}\n".format(W))
-#     m = 0
-#     i = 0
-#     T = kmp_table(W)
-#     #print("S: {}, len_s: {}, W: {}, len_w: {}, len_t: {}".format(S, len(S), W, len(W), len(T)));
-
-#     while(m+1 < len(S)):
-#         if W[i] == S[m+1]:
-#             if i == len(W) - 1:
-#                 return m
-#             i = i + 1
-#         else:
-#             if T[i] > -1:
-#                 m= m+1 - T[i]
-#                 i = T[i]
-#             else:
-#                 m = m + 1
-#                 i = 0
-#     return len(S)
-
 def intervalize(notes, strlen):
-    """
-    We want the shortest of the distance between note[i] and note[i+1] going
-    both up and down the keyboard.
-    """
-
     if str(type(notes)) == "<class 'str'>":
         notes = notes.split()
     assert(str(type(notes)) == "<class 'list'>")
@@ -88,9 +49,6 @@ def intervalize(notes, strlen):
     notes = "".join([str(note) for note in notes])
     return notes
 
-# def ltoi(letters):
-#     letters = [ord(c)-115 for c in letters]
-#     return letters
 # Python program for KMP Algorithm
 def KMPSearch(pat, txt):
     M = len(pat)

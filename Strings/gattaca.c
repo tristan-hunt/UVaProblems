@@ -17,7 +17,7 @@ struct entry {
     int nr[2], p;
 };
 
-int cmp(const void * x, const void * y){
+int cmp2(const void * x, const void * y){
     struct entry *i;
     i = (struct entry*)x;
     struct entry *j;
@@ -28,21 +28,7 @@ int cmp(const void * x, const void * y){
 
 }
 
-
-/* Comparison function used by sort() to compare two suffixes*/
-/* Compares two pairs - returns 1 if first pair is smaller*/
-int cmp2(const void * x, const void * y){
-    struct suffix *i;
-    i = (struct suffix*)x;
-    struct suffix *j;
-    j = (struct suffix*)y;
-    struct suffix a = *i;
-    struct suffix b = *j;
-    return (a.rank[0] == b.rank[0])? (a.rank[1] < b.rank[1] ?1: 0):
-        (a.rank[0] < b.rank[0] ?1: 0);
-}
-
-void create_suff_arr(char* text, int* suffArr, int n){
+/*void create_suff_arr(char* text, int* suffArr, int n){
     int logn = (int)log2(n);
     struct entry L[n];
     int P[logn][n];
@@ -62,7 +48,36 @@ void create_suff_arr(char* text, int* suffArr, int n){
             P[stp][L[i].p] = i > 0 && L[i].nr[0] == L[i-1].nr[0] && L[i].nr[1] == L[i-1].nr[1] ?P[stp][L[i-1].p] : i;
         }
     }                                             
+}*/
+
+
+
+
+/* Comparison function used by sort() to compare two suffixes*/
+/* Compares two pairs - returns 1 if first pair is smaller*/
+int cmp(const void * x, const void * y){
+    struct suffix *i;
+    i = (struct suffix*)x;
+    struct suffix *j;
+    j = (struct suffix*)y;
+    struct suffix a = *i;
+    struct suffix b = *j;
+    if (a.rank[0] < b.rank[0]){
+        return 1;
+    }
+    if (a.rank[0] == b.rank[0]){
+        if (a.rank[1] < b.rank[1]){
+            return(1);
+        }else{
+            return 0;
+        }
+    }else{
+        return 0;
+    }
+    /*return (a.rank[0] == b.rank[0])? (a.rank[1] < b.rank[1] ?1: 0):
+        (a.rank[0] < b.rank[0] ?1: 0);*/
 }
+
 
 
 void create_suff_arr3(char* text, int* suffArr, int n){
@@ -70,7 +85,7 @@ void create_suff_arr3(char* text, int* suffArr, int n){
     struct suffix suffixes[n];
 
 
-    int i;
+    int i,j;
 
     /*printf("Finding rank 0 and 1...\n");*/
     for (i = 0; i < n; i++){
@@ -78,11 +93,31 @@ void create_suff_arr3(char* text, int* suffArr, int n){
         suffixes[i].rank[0] = text[i] - 'A';
         suffixes[i].rank[1] = ((i+1) < n)? (text[i+1] - 'A'): -1;
     }
-    /*printf("Sorting suffixes by rank... \n");*/
+
+    printf("Suffixes: \n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d: ",suffixes[i].index);
+        printf("%d ",suffixes[i].rank[0]);
+        printf("%d \n",suffixes[i].rank[1]);
+    }
+
+    printf("Sorting suffixes by rank... \n");
     /* Sort suffixes using comparison function defined above*/
     qsort(suffixes, n, sizeof(struct suffix), cmp);
-    /*for(i=0; i < n; i++){ printf("suffix: %d, rank[0]:%d, rank[1]: %d\n", suffixes[i].index, suffixes[i].rank[0], suffixes[i].rank[1]);}*/
 
+    printf("Suffixes: \n");
+    for (i = 0; i < n; i++)
+    {
+        for (j=i; j<n; j++){
+            printf("%c", text[j]);
+        }
+        printf(" %d: ",suffixes[i].index);
+        printf("%d ",suffixes[i].rank[0]);
+        printf("%d \n",suffixes[i].rank[1]);
+    }
+
+    printf("done printing suffixes\n");
 
     /* So far, they are sorted according to first 2 characters*/
     /* Now we can sort them according to first 4, 8, ... characters*/
@@ -205,12 +240,12 @@ void search(char* pat, char* text, int *suffArr, int n){
 }*/
 
 void longest_substring(char* DNA, int dna_len){
-    /*printf("LSS: %s, %d\n", DNA, dna_len);  */ 
+    printf("LSS: %s, %d\n", DNA, dna_len);  
     int i;
     int suff_arr[dna_len];
     
     /* Step 1: Create the Suffix Array*/
-    create_suff_arr(DNA, suff_arr, dna_len);
+    create_suff_arr3(DNA, suff_arr, dna_len);
     printf("Suff_arr: ");
     for(i=0; i<dna_len;i++){
         printf("%d ", suff_arr[i]);
@@ -287,7 +322,7 @@ int main(int argc, char** argv){
             return(1);
         }
         DNA[strcspn(DNA, "\n\r")]= '\0';
-        /*printf("DNA: %s\n", DNA);*/
+        printf("DNA: %s\n", DNA);
         dna_len = strlen(DNA);
         longest_substring(DNA, dna_len);
 
