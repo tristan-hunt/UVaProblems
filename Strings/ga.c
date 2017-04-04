@@ -300,7 +300,7 @@ int main(int argc, char** argv){
         DNA[strcspn(DNA, "\n\r")]= '\0';
         dna_len = strlen(DNA);
         if (dna_len == 1){
-            printf("No repetitons found!\n");
+            printf("No repetitions found!\n");
         }
         else{
             /*printf("DNA: %s %d\n", DNA, dna_len);*/
