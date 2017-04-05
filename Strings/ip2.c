@@ -386,6 +386,7 @@ void findLCS(char * str1, char *str2, int len1, int len2, int K){
     }
 
 
+
     /* Print every LCS found:
     for (i=0; i< n; i++){
         if ((lcp[i-1]==max_lcp)&&(isValid(i, suffArr[i], suffArr[i-1], len1))){
