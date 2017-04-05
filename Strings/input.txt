@@ -1,4 +1,4 @@
-3
+20
 BEGIN TDP CODEBASE
 the quick brown fox
 jumps over the lazy dog.
@@ -10,6 +10,7 @@ good men to come to the aid
 of the party.
 so there!
 END JCN CODEBASE
+0
 100
 BEGIN TDP CODEBASE
 xyzzy

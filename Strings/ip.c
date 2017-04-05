@@ -248,26 +248,27 @@ void printLCP(int *lcp, int lcp_len){
 }
 
 void removeLCP(char *str1, char* lcs, int len1, int max_lcp){
-                        /* Remove lcs (len = max_lcp) from str1*/
-                        char *result = strstr(str1, lcs); /* pointer to pos of lcs in str1*/
-                        int pos = result - str1; /* int representing offset of lcs from start of str1*/
-                        char buffer1[60000];
-                        /*printf("Result: %s, pos: %d\n", result, pos);*/
-                        /*printf("str1: %s\n", str1);*/
-                        strncpy(buffer1, str1, pos); /* copy first 'pos' chars from start of string to end*/
-                        /*printf("buffer1: %s\n", buffer1);*/
-                        buffer1[pos] = '\0';
+    /* Remove lcs (len = max_lcp) from str1*/
+    char *result = strstr(str1, lcs); /* pointer to pos of lcs in str1*/
+    int pos = result - str1; /* int representing offset of lcs from start of str1*/
+    char buffer1[60000];
+    /*printf("Result: %s, pos: %d\n", result, pos);*/
+    /*printf("str1: %s\n", str1);*/
+    strncpy(buffer1, str1, pos); /* copy first 'pos' chars from start of string to end*/
+    /*printf("buffer1: %s\n", buffer1);*/
+    buffer1[pos] = '#'; /* So it doesn't accidentally become part of a new lcs*/
+    buffer1[pos+1] = '\0';
 
-                        /* Now copy the end of the string into 2nd buffer*/
-                        char buffer2[60000];
-                        result = result + max_lcp;
-                        strncpy(buffer2, result, len1);
-                        /*printf("buffer2: %s\n", buffer2);*/
-                        buffer2[len1-pos+max_lcp] = '\0';
+    /* Now copy the end of the string into 2nd buffer*/
+    char buffer2[60000];
+    result = result + max_lcp;
+    strncpy(buffer2, result, len1);
+    /*printf("buffer2: %s\n", buffer2);*/
+    buffer2[len1-pos+max_lcp] = '\0';
 
-                        /* Finally, concatenate to form a new str1*/
-                        strcpy(str1, buffer1);
-                        strcat(str1, buffer2);
+    /* Finally, concatenate to form a new str1*/
+    strcpy(str1, buffer1);
+    strcat(str1, buffer2);
 
 }
 
@@ -287,6 +288,11 @@ void findLCS(char * str1, char *str2, int len1, int len2, int K){
     int jnc_len = len2;
 
     int k =0;
+    int old_pos[K];
+    for(i=0;i<K;i++){
+        old_pos[i] = -1;
+    }
+
     while(k < K){
         /* Once LCS has been found, remove it from str1 and str2, and find the next largest LCS
         Until we've printed out K LCSs*/
@@ -322,46 +328,49 @@ void findLCS(char * str1, char *str2, int len1, int len2, int K){
                     max_i = i;}}
         }
 
-        if (max_lcp == 0){ int z;}
-        else{ /* Print lcs without duplicates*/
-            int jnc_pos = 0;
-            char lcs[max_lcp+1];
-            char prev[max_lcp+1];
-            char tmp[2];
+        if ((max_lcp == 0) || (max_lcp == 1)){k=k+1;}
+        else{ /* Print all lcs of length max_lcp */
+
+            char lcs[max_lcp+10];
+
+
+            /*Print every LCS found:*/
             for (i=0; i< n; i++){
                 if ((lcp[i-1]==max_lcp)&&(isValid(i, suffArr[i], suffArr[i-1], len1))){
-                    sprintf(lcs, "%c", text[suffArr[i-1]]);
+                    char tmp[2];
+                    sprintf(lcs, "%c",text[suffArr[i-1]]);
+
                     for (j=suffArr[i-1]+1; j < suffArr[i-1]+max_lcp; j++){
-                        sprintf(tmp, "%c", text[j]);
-                        strcat(lcs,tmp);
+                        sprintf(tmp, "%c",text[j]);
+                        strcat(lcs, tmp);
                     }
-                    /* Compare lcs, prev. Print lcs if different and then store it in prev.*/
-                    if (strcmp(prev, lcs)!=0){
-                        char *result = strstr(jnc, lcs);
-                        int pos = result - jnc;
-                        jnc_pos = pos;
-                        printf("INFRINGING SEGMENT %d LENGTH %d POSITION %d\n", k+1, max_lcp, jnc_pos);
-                        printf("%s\n", lcs);
-                        
-                        /* Remove lcp from both str1 and str2*/
-                        /* This is okay to do here because str1, str2 only needed again at top of while loop*/
-                        /*removeLCP(str1, lcs, len1, max_lcp);*/
-                        removeLCP(str2, lcs, len2, max_lcp);
-                        /*printf("new str1: %s\n", str1);
-                        printf("new str2: %s\n", str2);*/
 
-                        len1 = len1 - max_lcp;
-                        len2 = len2 - max_lcp;
-
-                        sprintf(prev, "%s", lcs);
+                    char *result = strstr(jnc, lcs);
+                    int pos = result - jnc;
                     
+                    int new = 1; /* flag to see if we've visited this position already*/
+                    int m;
+                    for(m=0; m<K;m++){
+                        if (old_pos[m] == pos){
+                            result = result + max_lcp;
+                            result = strstr(result, lcs);
+                            pos = result - jnc;
+                            printf("pos: %d\n", pos);
+                        }
+                    }
+
+                    if (new == 1){
+                        printf("INFRINGING SEGMENT %d LENGTH %d POSITION %d\n", k+1, max_lcp, pos);
+                        printf("%s\n", lcs);
+                        old_pos[k] = pos;
+                        k=k+1;
+                        removeLCP(str2, lcs, len2, max_lcp);
+                        len2 = len2 - max_lcp;                       
                     }
                 }
             }
         }
-    
-        /* Finished printing lcp #k*/
-        k = k + 1;
+        k=k+1;
     }
 
 
