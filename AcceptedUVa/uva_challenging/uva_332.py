@@ -1,4 +1,4 @@
-# /* UVa problem: 223 
+# /* UVa problem: 332 
 #  * Rational Numbers from Repeating Fractions
 #  * Topic: Arithmetic
 #  *
@@ -12,7 +12,7 @@
 #  *    Use of the formula provided on the question. 
 #  *    Manipulate decimal number as a string rather than multiplying
 #  *        by powers of 10 (so as not to risk imprecision with
-#  *         floatin-point arithmetic)
+#  *         floating-point arithmetic)
 #  *    
 #  * Used Resources:
 #  *
