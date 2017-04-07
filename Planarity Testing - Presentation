@@ -1,0 +1,19 @@
+Planarity Testing - Presentation
+
+1. Introduction
+    a. What is Planarity?
+        Recall - Biconnected graph.
+        Faces of a graph, 
+        Definition of a vertex on an external face. 
+        game -> demonstration of planarity
+
+2. UVa Problem - Given a graph, is it planar?
+3. Theory -  Kurowtowski Subgraph --> Graph is planar iff 
+    there is a kurotowski subgraph homeomorphic to it.
+4. O(n) Algorithms: Path Addition, Vertex Addition, Edge Addition, Construction Sequence Method
+5. Edge Addition Algorithm --> "can be implemented in only a few weeks" --> but, is available online. 
+    defn: We say that w is externally active if there is a
+path from w to a DFS ancestor u of v consisting of a back edge plus zero or 
+more DFS descendants of w, none of which are in B
+
+https://www.emis.de/journals/JGAA/accepted/2004/BoyerMyrvold2004.8.3.pdf

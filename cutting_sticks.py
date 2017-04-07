@@ -1,6 +1,15 @@
+# http://www.python-course.eu/python3_memoization.php
 import sys
+import time
 
 memo = dict()
+def memoize(f):
+    memo = {}
+    def helper(x):
+        if x not in memo:
+            memo[x] = f(x)
+        return memo[x]
+    return helper
 
 def cut(left, right, coord):
 	if (left, right) in memo:
@@ -37,7 +46,11 @@ def load():
 			coord.append(l)
 			yield(l, n, coord)
 
+start = time.time()
 for (l, n, coord) in load():
-	memo = dict()
-	cost = cut(0, n+1, coord)
-	sys.stdout.write("The minimum cutting is {}.\n".format(cost))
+    print(coord)
+    memo = dict()
+    cost = cut(0, n+1, coord)
+    sys.stdout.write("The minimum cutting is {}.\n".format(cost))
+end = time.time()
+print(end - start)

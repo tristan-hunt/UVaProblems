@@ -7,10 +7,6 @@ from collections import defaultdict
   
 #This class represents an undirected graph 
 #using adjacency list representation
-
-#possible optimizations:
-# modify graph to deal with strings as vertices directly, instead of converting before/after processing.
-
 class Graph:
   
 	def __init__(self,vertices):
