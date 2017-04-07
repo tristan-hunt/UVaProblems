@@ -39,6 +39,17 @@ class Graph:
 		self.V = self.V - 1
 		self.graph.pop(v)
 
+	def shrinkEdge(self, u, v):
+		"""
+		Shrink an edge, as per Wagner's Theorem
+		"""
+		for w in self.graph[u]:
+			self.graph[w].remove(u)
+			self.addEdge(w, v)
+		self.V = self.V - 1
+		self.graph.pop(v)
+
+
 
 	def addEdge(self,u,v):
 		"""
@@ -109,6 +120,7 @@ def load():
 		yield(g)
 
 for (g) in load():   			
+	print(g)
 	while(1):
 		r1 = g.rule1()
 		r2 = g.rule2()
@@ -121,4 +133,5 @@ for (g) in load():
 	elif g.isK33() == True:
 		sys.stdout.write("NO\n")
 	else:
+		print(g)
 		sys.stdout.write("YES\n")
