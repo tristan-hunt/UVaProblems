@@ -1,96 +1,130 @@
 import sys
-
+from collections import defaultdict
 #This class represents an undirected graph 
 #using adjacency list representation
+
+sys.stdin = open("input.txt") #dont forget to remove before submitting
+
 class Graph:
   
-    def __init__(self,vertices):
-        self.V= vertices #No. of vertices
-        self.graph = defaultdict(list) # default dictionary to store graph
-        self.Time = 0
+	def __init__(self,vertices):
+		self.V= vertices #No. of vertices
+		self.graph = defaultdict(list) # default dictionary to store graph
 
-    def addEdge(self,u,v):
-        """
-        function to add an edge to graph
-        """
-        self.graph[u].append(v)
-        self.graph[v].append(u)
+	def __str__(self):
+		string = ""
+		for u in self.graph:
+			string = string + "{}: ".format(u)
+			for v in self.graph[u]:
+				string = string + "{} ".format(v)
+			string = string + "\n"
+		return string
 
-    def APUtil(self,u, visited, ap, parent, low, disc):
-        """
-        A recursive function that find articulation points 
-        using DFS traversal
-        u --> The vertex to be visited next
-        visited[] --> keeps tract of visited vertices
-        disc[] --> Stores discovery times of visited vertices
-        parent[] --> Stores parent vertices in DFS tree
-        ap[] --> Store articulation points
-        """
-        #Count of children in current node 
-        children = 0
- 
-        # Mark the current node as visited and print it
-        visited[u]= True
- 
-        # Initialize discovery time and low value
-        disc[u] = self.Time
-        low[u] = self.Time
-        self.Time += 1
- 
-        #Recur for all the vertices adjacent to this vertex
-        for v in self.graph[u]:
-            # If v is not visited yet, then make it a child of u
-            # in DFS tree and recur for it
-            if visited[v] == False :
-                parent[v] = u
-                children += 1
-                self.APUtil(v, visited, ap, parent, low, disc)
- 
-                # Check if the subtree rooted with v has a connection to
-                # one of the ancestors of u
-                low[u] = min(low[u], low[v])
- 
-                # u is an articulation point in following cases
-                # (1) u is root of DFS tree and has two or more chilren.
-                if parent[u] == -1 and children > 1:
-                    ap[u] = True
- 
-                #(2) If u is not root and low value of one of its child is more
-                # than discovery value of u.
-                if parent[u] != -1 and low[v] >= disc[u]:
-                    ap[u] = True   
-                     
-                # Update low value of u for parent function calls   
-            elif v != parent[u]: 
-                low[u] = min(low[u], disc[v])
- 
- 
-    #The function to do DFS traversal. It uses recursive APUtil()
-    def AP(self):
-  
-        # Mark all the vertices as not visited 
-        # and Initialize parent and visited, 
-        # and ap(articulation point) arrays
-        cameras = list()
-        visited = [False] * (self.V)
-        disc = [float("Inf")] * (self.V)
-        low = [float("Inf")] * (self.V)
-        parent = [-1] * (self.V)
-        ap = [False] * (self.V) #To store articulation points
- 
-        # Call the recursive helper function
-        # to find articulation points
-        # in DFS tree rooted with vertex 'i'
-        for i in range(self.V):
-            if visited[i] == False:
-                self.APUtil(i, visited, ap, parent, low, disc)
- 
-        for index, value in enumerate (ap):
-            if value == True: 
-                cameras.append(index)
-        return(cameras)
+	def removeVertex(self, v):
+		"""
+		function to remove a vertex v from the graph
+		"""
+		for u in self.graph[v]:
+			self.graph[u].remove(v)
+			self.graph.pop(v)
+		self.V = self.V - 1
+
+	def removeAndJoin(self, v):
+		"""
+		function to remove a vertex and join its two neighbours, instead
+		"""
+		n1 = self.graph[v][0]
+		n2 = self.graph[v][1]
+		self.graph[n1].remove(v)
+		self.graph[n2].remove(v)
+		self.addEdge(n1, n2)
+		self.V = self.V - 1
+		self.graph.pop(v)
+
+
+	def addEdge(self,u,v):
+		"""
+		function to add an edge to graph
+		"""
+		self.graph[u].append(v)
+		self.graph[v].append(u)
+    
+	def isK33(self):
+		"""
+		Checks if it is K33
+		"""
+		if self.V != 6:
+			return False
+		for v in self.graph:
+			if len(self.graph[v]) != 3:
+				return False
+		return True
+
+	def isK5(self):
+		"""
+		A very introspective method. Am I non-planar?
+		"""
+		if self.V != 5:
+			return False
+		for v in self.graph:
+			if len(self.graph[v]) != 4:
+
+				return False
+		return True
+
+	def rule1(self):
+		"""
+		Attempts to remove a vertex of degree 1 and its incident edge
+		Returns 1 on success, 0 otherwise
+		"""
+		for u in self.graph:
+			if len(self.graph[u]) == 1:
+				self.removeVertex(u)
+				return 1
+		return 0
+
+	def rule2(self):
+		"""
+		Attempts to remove a vertex of degree 2 and its incident edge, and 
+		replace with a new edge that joins the two nodes adj. to v. 
+		Returns 1 on success, 0 otherwise
+		"""
+		for u in self.graph:
+			if len(self.graph[u]) == 2:
+				self.removeAndJoin(u)
+				return 1
+		return 0
 
 
 
 def load():
+	while(1):
+		try:
+			line = next(sys.stdin).split()
+		except StopIteration:
+			break
 
+		n = int(line[0])
+		m = int(line[1])
+		g = Graph(n)
+		for i in range(0, m):
+			edge = next(sys.stdin).split()
+			v1 = int(edge[0])
+			v2 = int(edge[1])
+			g.addEdge(v1, v2)
+		yield(g)
+
+for (g) in load():   			
+	while(1):
+		r1 = g.rule1()
+		r2 = g.rule2()
+		if (r1 == 0) and (r2 == 0):
+			break
+
+	if g.isK5() == True:
+		sys.stdout.write("NO\n")
+	
+	elif g.isK33() == True:
+		sys.stdout.write("NO\n")
+	else:
+		sys.stdout.write("YES\n")
