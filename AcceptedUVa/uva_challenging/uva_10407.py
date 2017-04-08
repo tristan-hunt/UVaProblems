@@ -5,34 +5,22 @@
 #  * Level: challenging
 #  * 
 #  * Brief problem description: 
-#  *
-#  *   Given n-dimensional boxes, we define a box to be smaller than another
-#  *   if there is a configuration of each of the dimensions in which each dimension of
-#  *    box A is smaller than the corresponding dimension of box B.
-#  *   Given a set of boxes, what is the longest string of boxes which can fit into eachother?
-#  *    i.e. what is the longest increasing subsequence (not necessarily of the original input
-#  *   order)
-#  *
+#  *	Given a list of numbers, a1, a2, a3.... an compute a number m such that 
+#  *   ai mod m = x for some arbitrary x for all ai. 
+#  *	In other words, find a congruence class modulo m to which each number belongs
 #  * Solution Summary:
-#  *
-#  *   DP using memoization (implemented with python's dict() class) to find LIS
-#  *   Introduce a class Box to minimize the editing of the orignal algo.
-#  *   Sort box dimensions to make comparing them easier; implement __lt__
-#  *   in order to use the < operator and to be able to sort boxes by size before processing
-#  *   them as a group. 
-#  *
+#  *	Compute the differences of each of the numbers, then find the gcd
+#  *		of all of the differences. 
 #  * Used Resources:
 #  *
 #  *   Textbook: Competitive Programming 3
-#  *   Python docs
-#  *   StackOverflow for general python implementation issues.
+#  *   Hints given on 'Spanish Problem Archive'
 #  *
 #  * I hereby certify that I have produced the following solution myself
 #  * using only the resources listed above in accordance with the CMPUT
 #  * 403 collaboration policy.
 #  *
-#  *
-#  * Tristan Hunt (Your Name)
+#  * Tristan Hunt
 #  */
 
 import sys
