@@ -1,7 +1,7 @@
 # Find the least common ancestor
 # Result - TLE
-	# Improvements - 1. Write in c
-	# 2. Use different algorithm. 
+# Improvements: Write a better alg.
+
 
 
 import sys
@@ -128,10 +128,11 @@ for (g, q) in load():
 	#for v in range(0, len(g.ancestors)):
 	#	sys.stdout.write("v: {}: {}\n".format(v, g.ancestors[v]))
 
-	i = 1
-	for (q1, q2) in q:
-		sys.stdout.write("{} ".format(g.lca(q1, q2, i)))
-		i = i + 1
+	
+	sys.stdout.write("{}".format(g.lca(q[0][0], q[0][1], 1)))
+	for i in range(1, len(q)):
+		q1, q2 = q[i]
+		sys.stdout.write(" {}".format(g.lca(q1, q2, i)))
 	sys.stdout.write("\n")
 
 
