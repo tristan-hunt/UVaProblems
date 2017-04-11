@@ -1,5 +1,7 @@
 # Least common ancestor Problem
 #http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf
+# http://code.activestate.com/recipes/498243-finding-eulerian-path-in-undirected-graph/
+# http://codereview.stackexchange.com/questions/104074/eulerian-tour-in-python
 # Store Arrays: Parents: P[i] is the parent of i
 #               Weights: W[i] is the length of tunnel i
 #  Linearize the tree:
@@ -10,7 +12,7 @@ from collections import defaultdict
 import sys
 
 
-#sys.stdin = open("input.txt") # DONT FORGET TO REMOVE BEFORE SUBMITTING!!
+sys.stdin = open("input.txt") # DONT FORGET TO REMOVE BEFORE SUBMITTING!!
 
 class Graph:
     def __init__(self,vertices):
@@ -18,41 +20,39 @@ class Graph:
         self.weight = [0] * self.V # An array. length[i] = length of tunnel from node i to its parent
         self.parent = [0] * self.V # Another array.  Parent[i] = parent hill of hill i.
         self.children = defaultdict(list)
+        self.level = [-1]*self.V # Distance from the node to the root
         self.E = list() # nodes visited on the Eulerian tour of the tree
-        self.L = list() # Distance from the node to the root
+        self.L = list()
         self.R = list() # First visit of i on the Eulerian tour
         self.RMQ = dict()
         self.depth = 0
+        self.graph = defaultdict(list)
 
 
-    def eulerTour2(self, node):
-        """
-        To be called once weight, parent are created, to create eulerTour.
-        """
-        self.E.append(node)
-        self.L.append(self.depth)
-        for c in self.children[node]:
-            self.depth += 1
-            self.eulerTour1(c)
+    def addEdge(self, u, v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)
 
-            self.depth -= 1
-            self.E.append(node)
-            self.L.append(self.depth)
-    
+    def eulerTour(self, current):
+        queue = [current]
+        self.E = [current]
+        current = self.graph[current].pop()
+        while(queue):
+            if self.graph[current]:
+                queue.append(current)
+                current = self.graph[current].pop()
+            else:
+                current = queue.pop()
+                self.E.append(current)
+        #print(self.E)
 
-    def eulerTour(self, node):
-        """
-        To be called once weight, parent are created, to create eulerTour.
-        """
-        self.E.append(node)
-        self.L.append(self.depth)
-        for c in self.children[node]:
-            self.depth += 1
-            self.eulerTour(c)
 
-            self.depth -= 1
-            self.E.append(node)
-            self.L.append(self.depth)
+    def findDepth(self, curr, level):
+        self.level[curr] = level
+        for v in self.children[curr]:
+            if self.level[v] == -1 :
+                self.findDepth(v, level+1)
+        self.level
 
     def makeR(self):
         """
@@ -103,43 +103,6 @@ class Graph:
         i = self.rmq(self.L, j, k)
         return i
 
-
-        # sys.stdout.write("E: ")
-        # for i in range(j, k+1):
-        #     sys.stdout.write("{} ".format(self.E[i]))
-        # sys.stdout.write("\nL: ") 
-        # for i in range(j, k+1):
-        #     sys.stdout.write("{} ".format(self.L[i]))
-        # sys.stdout.write("\n") 
-        #print(i)
-        #print(self.L[i])
-        #print(self.E[i])
-
-    def slow_lca(self, node1, node2, q):
-        """
-        Find the lcs of node1, node2
-        q - index of the query
-        """
-        if node1 == 0: node1, node2 = node2, node1
-        if node2 == 0:
-            path = self.ancestors[node1]
-            path_length = 0
-            for v in path:
-                path_length = path_length + g.weight[v]
-            return path_length
-        path1, path2 = self.ancestors[node1], self.ancestors[node2]
-        i, j = 0, 0
-        while((i < len(path1)) and (j < len(path2)) and (path1[i] == path2[j])):
-            i += 1
-            j += 1
-        path_length = 0
-        while (i < len(path1)):
-            path_length = path_length + self.weight[path1[i]]
-            i += 1
-        while (j < len(path2)):
-            path_length = path_length + self.weight[path2[j]]
-            j += 1
-        return path_length
 
     def WStr(self):
         string = "W:"
@@ -194,6 +157,7 @@ def load():
             line = next(sys.stdin).split()
             parent = int(line[0])
             weight = int(line[1])
+            g.addEdge(i, parent)
             g.parent[i] = parent
             g.children[parent].append(i)
             g.weight[i] = weight
@@ -214,21 +178,19 @@ def load():
         i = 1
 
 for (g, q) in load():
-	#print(g.parentsStr())
-	#print(g.childrenStr())
     g.eulerTour(0)
+    try:
+        g.findDepth(0, 0)
+    except Exception:
+        quit()
+
+    for e in g.E:
+            g.L.append(g.level[e])
     g.makeR()
-	#print(g.EulerStr())
-	#print(g.LevelStr())
-	#print(g.RStr())
-	#print(g.WStr())
 
-
-	#print("Q: " + str(q))
     for i in range(0, g.V-1):
         for j in range(1, g.V):
             g.lca(j, i)
-
 
     first = 0 
     for i in range(0, len(q)):
@@ -244,10 +206,7 @@ for (g, q) in load():
             child = curr
             parent = g.parent[curr]
             parent_level = g.L[g.R[parent]]
-
-			#sys.stdout.write("Parent {} has level: {} adding length {}\n".format(parent, parent_level, g.weight[curr]))
             path_length = path_length + g.weight[curr]
-			#sys.stdout.write("Path length is now: {}\n".format(path_length))
             curr = parent
 
 
@@ -256,10 +215,7 @@ for (g, q) in load():
             child = curr
             parent = g.parent[curr]
             parent_level = g.L[g.R[parent]]
-
-			#sys.stdout.write("Parent {} has level: {} adding length {}\n".format(parent, parent_level, g.weight[curr]))
             path_length = path_length + g.weight[curr]
-			#sys.stdout.write("Path length is now: {}\n".format(path_length))
             curr = parent
 
         if first == 0:
@@ -269,30 +225,3 @@ for (g, q) in load():
             sys.stdout.write(" {}".format(path_length))
 
     sys.stdout.write("\n")
-
-
-
-
-# for (g, q) in load():
-#     for v in range(0, g.V):
-#         if v == 0:
-#             g.ancestors[0] = [0]            
-#         if v != 0:      
-#             path = [v]
-#             parent = g.parent[v]
-#             path.append(parent)
-#             while parent != 0: #while we're not yet at the root
-#                 parent = g.parent[parent]
-#                 path.append(parent)
-#             path = path[::-1]
-#             g.ancestors[v] = path
-
-#     #for v in range(0, len(g.ancestors)):
-#     #   sys.stdout.write("v: {}: {}\n".format(v, g.ancestors[v]))
-
-#     i = 1
-#     for (q1, q2) in q:
-#         sys.stdout.write("{} ".format(g.lca(q1, q2, i)))
-#         i = i + 1
-#     sys.stdout.write("\n")
-
