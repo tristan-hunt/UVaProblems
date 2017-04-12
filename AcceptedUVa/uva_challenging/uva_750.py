@@ -28,7 +28,7 @@
 #  * 403 collaboration policy.
 #  *
 #  *
-#  * Tristan Hunt (Your Name)
+#  * Tristan Hunt 
 #  */
 
 

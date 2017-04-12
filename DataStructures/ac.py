@@ -11,9 +11,6 @@
 from collections import defaultdict
 import sys
 
-
-sys.stdin = open("input.txt") # DONT FORGET TO REMOVE BEFORE SUBMITTING!!
-
 class Graph:
     def __init__(self,vertices):
         self.V = vertices #No. of vertices
