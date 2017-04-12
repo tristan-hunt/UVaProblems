@@ -1,6 +1,7 @@
 
 import sys
 
+sys.stdin = open("input.txt") #DELETE BEFORE SUBMITTING
 
 def load():
 	num_cases = int(next(sys.stdin))

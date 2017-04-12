@@ -4,9 +4,10 @@
 #include <stdlib.h>
 
 long long lineCounter;
+//int board;
 
-int place(int queen, int col, int dim, int *x, int bad[]){
-
+int place(int queen, int col, int dim, int *x, int bad[], int board[]){
+	int maxX = 1 << dim;
 	int i, j;
 	//
 	//printf("Bad Squares:");
@@ -21,29 +22,33 @@ int place(int queen, int col, int dim, int *x, int bad[]){
 		return 0;
 	}
 
-	
-	/* Verify badx, bady*//*
-	printf("Bad squares \n");
-	for (i = 0; i < bad_len; i++){
-		printf(" (%d, %d)", badx[i], bady[i]);
-	}printf("\n");*/
-	
-
+	/* Okay, lets try this a different way:*/
 	int prev;
-	for (prev = 1; prev < queen; prev++){
-		if ((x[prev] == col) || ((abs(x[prev]-col) == abs(prev-queen)))){			
-			if (x[prev] == col){
-				//printf("x:");
-				//for (i=0; i< queen+1; i++){
-				//	printf(" %d", x[i]);
-				//}printf("\n"); 	
+	int bitCol = maxX >> col ;
+	int total =0;
 
-				//printf("Placing queen %d on col %d...", queen, col);
-				//printf("Failed! x[%d]:%d == %d\n\n", prev, x[prev], col);
-			}
-			//else{
-				//printf("failed on diagonal\n");
-			//}
+	for (i = 1; i < queen; i ++ ){
+		total = total + board[i] ;
+	}
+	if (bitCol&total){
+		return 0;
+	}
+
+	//printf("board: %d\n", this_board);
+	//printf("x:");
+	//for (i=1; i< queen; i++){
+	//	printf(" %d", x[i]);
+	//}printf("\n\n"); 	
+	
+	for (prev = 1; prev < queen; prev++){
+		if ((abs(x[prev]-col) == abs(prev-queen))){			
+			printf("x:");
+			for (i = 1; i<queen; i++){
+				printf(" %d", x[i]);
+			} printf("\n");
+			printf("q: %d; col: %d\n", queen, col);
+
+
 			return 0;
 		}
 	}
@@ -51,20 +56,20 @@ int place(int queen, int col, int dim, int *x, int bad[]){
 	return 1;	
 }
 
-int NQueens(int queen, int dim, int *x, int bad[]){
+int NQueens(int queen, int dim, int *x, int bad[], int *board){
 	int i, j, row;
+	int maxX = 1 << dim -1 ;
 	for (row = 1; row < dim+1; row++){
-		if((place(queen, row, dim, x, bad)== 1)){
+		if((place(queen, row, dim, x, bad, board)== 1)){
+			//printf("x[%d] = %d\n", queen, row);
 			x[queen] = row;
+			board[queen] = maxX >> row - 1;
+
 			if (queen == dim){				
-				/*printf("x:");
-				for (i=0; i< queen+1; i++){
-					printf(" %d", x[i]);
-				}printf("\n");*/
 				lineCounter = lineCounter + 1;
 			}
-			else{				
-				NQueens(queen + 1, dim, x, bad); /*recursively try next position*/
+			else{
+				NQueens(queen + 1, dim, x, bad, board); /*recursively try next position*/
 			}
 		}
 	}
@@ -118,7 +123,9 @@ int main(int argc, char** argv){
 		}
 		else{
 			int total;
-			total = NQueens(1, dim, x, bad);
+			//board = 0;
+			int board[dim];
+			total = NQueens(1, dim, x, bad, board);
 			printf("Case %d: %d\n", case_num, total);
 		}
 		rc = scanf("%d", &dim);

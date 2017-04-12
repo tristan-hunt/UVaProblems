@@ -1,26 +1,26 @@
 # Data Structures:
-uva_10608:  NO
-uva_10815:  NO
-<Extra1>:   NO  
+uva_10608:  YES
+uva_10815:  YES
+uva_725:   	YES  
 <Extra2>:   NO  
 
 # Strings:
-uva_11512:  NO
-uva_11837:  NO
-<Extra1>:   NO  
-<Extra2>:   NO  
+uva_11512: 	YES
+uva_11837:  YES
+uva_760:   	YES  
+uva_10679:  YES  
 
 # Sorting:
-uva_10026:  NO
-uva_10327:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_10026:  YES
+uva_10327:  YES
+uva_10810:  YES
+uva_11858:  YES
 
 # Arithmetic:
-uva_202:    NO
-uva_11955:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_202:    YES
+uva_11955:  YES
+uva_322:    YES
+uva_355:    YES
 
 # Combinatorics:
 uva_11330:  NO
@@ -30,9 +30,9 @@ uva_441:    YES
 
 # Number Theory:
 uva_374:    YES
-uva_11327:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_11327:  YES
+uva_756:    YES
+uva_10407:  YES
 
 # Backtracking:
 uva_11195:  NO
@@ -50,29 +50,32 @@ uva_10672:  NO
 uva_869:    NO
 uva_10034:  NO
 uva_459:    YES
-uva_10199:  YES
+uva_572:    YES
 
 # Dynamic Programming:
 uva_674:    YES
-uva_10003:  NO
+uva_10003:  YES
 uva_231:    YES
 uva_103:    YES
 
 # Geometry:
 uva_811:    NO
-uva_10065:  NO
+uva_10065:  YES
 <Extra1>:   NO
 <Extra2>:   NO
 
 # Other:
-uva_750:    YES
-uva_729:    YES
-uva_10300:  YES
-uva_11547:  YES
-uva_11498:  YES
 uva_12250:  YES
-uva_572:	YES
+uva_12289:  YES
+uva_11547:  YES
+uva_10300:  YES
+uva_11498:  YES
 uva_11727:	YES
 uva_12279:  YES
-uva_12281:  YES
+uva_729:    YES
+uva_750:    YES
+uva_10199:	YES
+uva_524:	YES
+uva_763:	YES
 kattis_integerlist: YES
+kattis_adjoin: 	YES

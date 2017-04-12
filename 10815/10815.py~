@@ -3,7 +3,7 @@ import string
 import sys
 
 first_dict = set()	
-
+sys.stdin = open("sample-input.txt") # REMOVE BEFORE SUBMITTING
 
 lines = sys.stdin.read().splitlines()
 for line in lines:	
