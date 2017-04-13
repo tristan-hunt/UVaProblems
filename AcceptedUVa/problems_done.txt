@@ -79,3 +79,4 @@ uva_524:	YES
 uva_763:	YES
 kattis_integerlist: YES
 kattis_adjoin: 	YES
+uva_12577	YES
