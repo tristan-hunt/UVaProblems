@@ -11,12 +11,11 @@ using namespace std;
 
 #define foreach BOOST_FOREACH
 
-struct Point
+class Point
 {
     int x, y;
     int v, l;
 };
-
 
 // A globle point needed for  sorting points with reference
 // to  the first point Used in compare function of qsort()
@@ -193,13 +192,14 @@ int main(){
     // Set to hold a subset of points
     int set_size = N;
     stack<Point> cut_trees;
+    //std::set<Point> remaining_trees;
     int cut_trees_len = 0;
     int remaining_trees_len = 0;
     Point set[N];
-    int cut_indexes[N];
     for (i = 0; i < N; i++){
         set[i]= points[i];  
-    	
+    	//remaining_trees.insert(set[i]); // Initially, all trees remain
+    	//remaining_trees_len = remaining_trees_len + 1;
     } 
 
 

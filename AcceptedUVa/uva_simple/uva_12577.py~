@@ -1,0 +1,14 @@
+import sys
+
+def load():
+	line = next(sys.stdin).strip()
+	while(line[0] != '*'):
+		yield(line)
+		line = next(sys.stdin).strip()
+case_num = 1
+for line in load():
+	if line == "Hajj":
+		sys.stdout.write("Case {}: Hajj-e-Akbar\n".format(case_num))
+	else:
+		sys.stdout.write("Case {}: Hajj-e-Asghar\n".format(case_num))
+	case_num = case_num + 1

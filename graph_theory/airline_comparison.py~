@@ -21,7 +21,8 @@ class Graph:
      
     # Prints transitive closure of graph[][] using Floyd Warshall algorithm
     def transitiveClosure(self,graph):
-        '''reach[][] will be the output matrix that will finally
+        """
+        reach[][] will be the output matrix that will finally
         have reachability values.
         Initialize the solution matrix same as input graph matrix'''
         reach =[i[:] for i in graph]
@@ -33,7 +34,8 @@ class Graph:
         {0, 1, 2, .. k-1} as intermediate vertices.
         ----> After the end of an iteration, vertex no. k is
         added to the set of intermediate vertices and the 
-        set becomes {0, 1, 2, .. k}'''
+        set becomes {0, 1, 2, .. k}
+        """
         for k in range(self.V):
              
             # Pick all vertices as source one by one

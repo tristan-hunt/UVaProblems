@@ -3,6 +3,7 @@
 # http://www.geeksforgeeks.org/transitive-closure-of-a-graph/
  
 from collections import defaultdict
+import sys
  
 #Class to represent a graph
 class Graph:
@@ -15,8 +16,8 @@ class Graph:
         print ("Following matrix transitive closure of the given graph ")   
         for i in range(self.V):
             for j in range(self.V):
-                print "%7d\t" %(reach[i][j]),
-            print ""
+                sys.stdout.write("%7d\t" %(reach[i][j]))
+            sys.stdout.write("\n")
      
      
     # Prints transitive closure of graph[][] using Floyd Warshall algorithm

@@ -2,8 +2,7 @@ import sys
 import math
 from itertools import chain, combinations
 
-
-
+ 
 class Point:
 	def __init__(self, x, y):
 		self.x = x
@@ -15,7 +14,20 @@ class Point:
 	def __str__(self):
 		return "P:({}, {})".format(self.x, self.y)
 		
-class Tree:
+
+
+#def powerSet(soFar, rest):
+#	"""
+#	soFar, rest currently strings
+#	"""
+#	if (rest.empty())
+#		cout << soFar << endl;
+#		
+#	else 
+#		RecSubsets(soFar + rest[0], rest.substr(1)); // include first char
+#		RecSubsets(soFar, rest.substr(1)); // exclude first char
+	
+
 
 def powerset(iterable):
     """
@@ -47,7 +59,10 @@ def convexHull(points, n):
 	n - length of points
 	Prints convex hull of a set of n points.
 	"""
-	if (n < 3): return None
+	if (n < 3): return points
+		
+
+
 	hull = list() #list of Points
 	l = 0
 	for i in range(1, n):
@@ -100,9 +115,13 @@ def poly_perim(points, n=-1):
 	"""
 	if n == -1:
 		n = len(points)
-		
+	if n == 2: 
+		return 2*dist(points[0], points[1])
+	if n == 1:
+		return 0	
+
 	perimeter = 0
-	for i in range(0, n-2):
+	for i in range(0, n-1):
 		perimeter = perimeter + dist(points[i], points[i+1])
 	perimeter = perimeter + dist(points[0], points[n-1])
 	return perimeter
@@ -114,21 +133,65 @@ def find_min_subset(n, points, values, lengths):
 	as well as the length of the hull given those trees being cut
 	"""
 	# Try all possible subsets
-	tree_powerset = powerset(points)
-	for cut in list(tree_powerset):
+	min_val = float('inf')
+	min_cuts = list() # hold the indexes of minimum cuts
+	min_length = float('inf')
+	min_hull_length = math.inf
 
-		remaining = list(set(points) - set(cut))	
+	tree_powerset_indexes = powerset([i for i in range(0, n)])
+	# print("Points: " + str(points))
+	# print("Powerset: " + str(tree_powerset_indexes))
+	for cut_indexes in list(tree_powerset_indexes):
+
+		cut_trees = [points[i] for i in list(cut_indexes)]
+		remaining = list(set(points) - set(cut_trees))	
+
+
 		
 		# See if the convex hull of the remaining trees can be surrounded
 		hull = convexHull(remaining, len(remaining))
-		if hull != None:
-			hull_length = poly_perim(hull, len(hull))
-			value = 0 
-			for tree in cut:
-				
-		# Find the value of the subset; minimize it	
-	
-	return {0}, 0
+		if hull != None and len(hull) > 0:
+			# Find the length of the hull
+
+
+			hull_length = poly_perim(hull)
+
+			# Find the length of the perimeter that can be built
+			perim = 0
+			for i in cut_indexes:
+				perim = perim + lengths[i]
+			if (perim >= hull_length):
+
+				# Find the value of the subset - minimize it	
+				value = 0 
+				for i in cut_indexes:
+					value = value + values[i]
+
+				if (value < min_val) or (value == min_val and len(cut_indexes) < min_trees):
+
+
+					#debugging - print:
+					#print("Cut i's:" + str(cut_indexes))
+					#print("Lengths: " + str(lengths))
+					#print("Values: " + str(values))
+					#print("Cut trees: " + str(cut_trees))
+					#print("Remaining trees: " + str(remaining))
+					#print("Hull" + str(hull))
+					#print("Hull length: " + str(hull_length))
+					#print("Value: " + str(value))
+					#print("Perim: " + str(perim))
+
+
+
+					min_val = value
+					min_cuts = cut_indexes
+					min_hull_length = hull_length
+					min_trees = len(cut_indexes)
+					min_fence_length = perim
+					#print("Value is minimal!")
+				#print("")
+
+	return min_cuts, min_hull_length, min_fence_length
 
 
 def load():
@@ -156,15 +219,16 @@ for (n, points, values, lengths) in load():
 	hull_area = poly_area(hull, hull_len)
 	wasted = abs((((area - hull_area)/hull_area))*100)
 
-	cut_trees, hull_length = find_min_subset(n, points, values, lengths)	
-	fence_length = 0
-	for i in range(0, len(cut_trees)):
-		fence_length = fence_length + lengths[i]
+	cut_trees, hull_length, fence_length = find_min_subset(n, points, values, lengths)	
 	
 	extra_wood = fence_length-hull_length
+	if forest_num > 1: 
+		sys.stdout.write("\n")
 	sys.stdout.write("Forest {}\n".format(forest_num))
-	sys.stdout.write("Cut these trees: ")
-	sys.stdout.write("Extra wood = {:.2f} %\n\n".format(extra_wood))
+	sys.stdout.write("Cut these trees:")
+	for i in cut_trees:
+		sys.stdout.write(" {}".format(i+1))
+	sys.stdout.write("\nExtra wood : {:.2f}\n".format(extra_wood))
 	forest_num += 1
 
 

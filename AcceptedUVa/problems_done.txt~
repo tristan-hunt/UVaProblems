@@ -1,7 +1,7 @@
 # Data Structures:
 uva_10608:  YES
 uva_10815:  YES
-uva_725:   	YES  
+<Extra1>:   NO  
 <Extra2>:   NO  
 
 # Strings:
@@ -79,3 +79,4 @@ uva_524:	YES
 uva_763:	YES
 kattis_integerlist: YES
 kattis_adjoin: 	YES
+uva_12577	YES

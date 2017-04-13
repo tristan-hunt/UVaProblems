@@ -2,7 +2,6 @@ import sys
 import math
 from itertools import chain, combinations
 
-sys.stdin = open("input.txt") #REMOVE BEFORE SUBMITTING
  
 class Point:
 	def __init__(self, x, y):
@@ -17,16 +16,16 @@ class Point:
 		
 
 
-def powerSet(soFar, rest)
-	"""
-	soFar, rest currently strings
-	"""
-	if (rest.empty())
-		cout << soFar << endl;
-		
-	else 
-		RecSubsets(soFar + rest[0], rest.substr(1)); // include first char
-		RecSubsets(soFar, rest.substr(1)); // exclude first char
+#def powerSet(soFar, rest):
+#	"""
+#	soFar, rest currently strings
+#	"""
+#	if (rest.empty())
+#		cout << soFar << endl;
+#		
+#	else 
+#		RecSubsets(soFar + rest[0], rest.substr(1)); // include first char
+#		RecSubsets(soFar, rest.substr(1)); // exclude first char
 	
 
 
@@ -134,10 +133,10 @@ def find_min_subset(n, points, values, lengths):
 	as well as the length of the hull given those trees being cut
 	"""
 	# Try all possible subsets
-	min_val = math.inf 
+	min_val = float('inf')
 	min_cuts = list() # hold the indexes of minimum cuts
-	min_length = math.inf
-	min_hull_length = math.inf
+	min_length = float('inf')
+	min_hull_length = float('inf')
 
 	tree_powerset_indexes = powerset([i for i in range(0, n)])
 	# print("Points: " + str(points))

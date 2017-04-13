@@ -5,14 +5,19 @@
 #  * Level: challenging
 #  * 
 #  * Brief problem description: 
-#  *       Find all permutations P1, P2... PN of size N of numbers 1-N for which every
-#  *    Pi, Pj with j = i + 1, pi+pj is a prime number, as well as 
-#  *   p1 + pn.
+#  *       Find and display all pairs of 5-digit numbers that between them
+#  *   use the digits 0 through 9 once each, such that the first divided by
+#  *   the second is equal to N. 
 #  *   
 #  * Solution Summary:
-#  *	Backtracking to grow the prime ring. Since n is limited to a fairly
-#  *   low number, we can hardcode in the answer to isPrime, as we know 
-#  *   that it will never exceed maxN+maxN.
+#  *
+#  * Problem Strategies: Iterative Complete Search
+#  * Find and display all pairs of 5-digit numbers which between them use the digits
+#  * 0 through 9 one each, such that the first divided by the second
+#  * is equal to an integer N, where 2 <= N<=79
+#  *
+#  * Algorithm: For each fghij, get abcde from fghij*N
+#  * Check if every digit is different
 #  *
 #  *    
 #  * Used Resources:

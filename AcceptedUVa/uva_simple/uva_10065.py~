@@ -1,20 +1,19 @@
-# /* UVa problem: 10065 
-#  * Useless Tile Packers
-#  * Topic: Geometry
+# /* UVa problem: 12281 
+#  * One-Two-Three
+#  * Topic: Other (Straightforward)
 #  *
 #  * Level: easy
 #  * 
 #  * Brief problem description: 
-#  *	Given a shape, find the convex hull, then the ratio of the
-#  *      area of the shape to the area of the convex hull 
+#  *	Given inputs that are possible mispellings of
+#  *     'one', 'two', or 'three' (with max. one character incorrect)
+#  *     Print what the original word was. 
 #  * 
 #  * Solution Summary:
-#  *	Use of gift-wrapping algorithm to find the convex hull   
-#  *
+#  *  Check if the length is the same as three 
+#  *    otherwise, check if it has two characters matching with 'two'
+#  *    or two characters matching with 'one'
 #  * Used Resources:
-#  *  https://en.wikipedia.org/wiki/Gift_wrapping_algorithm
-#  *   http://www.algorithmist.com/index.php/Gift_Wrapping
-#  *    http://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/
 #  * 
 #  * I hereby certify that I have produced the following solution myself
 #  * using only the resources listed above in accordance with the CMPUT
@@ -23,7 +22,9 @@
 #  */
 
 
-
+#https://en.wikipedia.org/wiki/Gift_wrapping_algorithm
+# http://www.algorithmist.com/index.php/Gift_Wrapping
+# http://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/
 import sys
 import math
 

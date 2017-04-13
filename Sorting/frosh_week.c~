@@ -1,29 +1,19 @@
-# /* UVa problem: 10327
-#  * Flip Sort
-#  * Topic: Sorting
-#  *
-#  * Level: easy
-#  * 
-#  * Brief problem description: 
-#  *
-#  *   Count number of inversions
-#  *
-#  * Solution Summary:
-#  *	Use of merge-sort like algorithm to count number of inversions
-#  *  
-#  *
-#  * Used Resources:
-#  *	See: Frosh Week; Ultra-Quicksort
-#  * 	
-#  *
-#  * I hereby certify that I have produced the following solution myself
-#  * using only the resources listed above in accordance with the CMPUT
-#  * 403 collaboration policy.
-#  * --------------------- Tristan Hunt
-#  */
+/* UVA 11858 - Frosh Week
+ * Use Merge-Sort to count inversions. 
+ * Compile with: gcc -o frosh frosh_week.c -lm -lcrypt -O2 -pipe -ansi -DONLINE_JUDGE
+ NOTE - Merging favors rhs , not lhs 
+ Q - does that make a difference?
 
+ Q - Am I keeping track of inversions correctly?
 
+ Trace through carefully this case, print after 
+ Every step. 
+ 1. Trace through by hand until correct algo. (see animation)
+ 2. Print every step of split / merge until correct. 
 
+ ... if it can work for this case, it will *probably* be correct. 
+
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,6 +24,16 @@
 int merge(int *lhs, int len_left, int *rhs, int len_right, int n, long *inv, int *merge){
 	/*Given two sorted lists, merge them*/
 	int i;
+	/* Debugging: Is Merge Working?
+	printf("LHS:");
+	for (i=0; i < len_left; i++){
+		printf(" %d", lhs[i]);
+	}
+	printf("   RHS:");
+	for (i=0; i < len_right; i++){
+		printf(" %d", rhs[i]);
+	}printf("\n");*/
+
 
 	/*n is the length of the full array*/
 	/* Positional counters for lhs, rhs, and merge*/
@@ -67,22 +67,32 @@ int merge(int *lhs, int len_left, int *rhs, int len_right, int n, long *inv, int
 		i = i + 1;
 	}
 
-	
-	/* Debugging*/
-	if (*inv < 0){
-		printf("overflow detected!\n");
+	/*Debugging: 
+	printf("students: ");
+	for (i=0; i < n; i++){
+		printf(" %d", merge[i]);
 	}
-
+	printf("\n\n");*/
 	return 0;
 }
 
 
 /* Step 1: Split, count inversions*/
-int split_and_count(int *items, int n, long *inv){
+int split_and_count(int *students, int n, long *inv){
 	/* Number of swaps = number of swaps to left 
 	* + Number of swaps to the right
 	* + Number of swaps which go across
 	*/
+
+	int i;
+
+	/*DEBUGGING
+	/*printf("STUDENTS: ");
+	for (i=0; i < n; i++){
+		printf(" %d", students[i]);
+	}
+	printf("\n");*/
+	
 
 	/* Don't forget the base case!*/
 	if (n == 1){
@@ -93,7 +103,7 @@ int split_and_count(int *items, int n, long *inv){
 	
 	/* Split the array into 2*/
 	/* g, h contain lengths of lhs, rhs*/
-	int i, g, h; /* ASCII value of g is half that of n*/
+	int g, h; /* ASCII value of g is half that of n*/
 	g = (int)floor(n/2); /*Convert to an int!*/
 	h = g;
 
@@ -108,47 +118,81 @@ int split_and_count(int *items, int n, long *inv){
 	
 
 	for (i = 0; i < h; i++){
-		left_hand[i] = items[i];
-		right_hand[i] = items[h+i];
+		left_hand[i] = students[i];
+		right_hand[i] = students[h+i];
+		
+		/*Debugging the split
+		int j;
+		for (j=0; j<i; j++){
+			printf("%d ", left_hand[j]);
+		}
+		printf("\t");
+		for (j=0; j<i; j++){
+			printf("%d ", right_hand[j]);
+		}
+		printf("\n");*/
+
+	
 	}
 	
 	if (n%2 == 1){
-		left_hand[h] = items[h];
+		left_hand[h] = students[h];
 	}
+
+
+	/*DEBUGGING
+	for (i = 0; i < h; i++){
+		printf(" %d", left_hand[i]);
+	}
+	printf("\t ");
+	for (i= 0; i< g; i++){
+		printf(" %d", right_hand[i]);
+	}
+	printf("\n\n");	*/
+	
 
 	long x, y, z; /* Number of inversions to left, right, and across of the centre*/
 	z = 0;
 	split_and_count(left_hand, h, &x); /* left-hand is now sorted; x contains the number of inversions it took*/
 	split_and_count(right_hand, g, &y); /* right-hand is now sorted; y contains the number of inversions it took*/
-	merge(left_hand, h, right_hand, g, n, &z, items); /* z = number of splits between a and b */
+	merge(left_hand, h, right_hand, g, n, &z, students); /* z = number of splits between a and b */
+
+	/* Questions: 1) why are we passing pointers to ints to fill but trying to return arrays?
+	*	Ans - now with no return values!			
+	*			2) Do we want merge() to work in-place? Answer: Yes. 
+	*/
 
 	*inv = x + y + z;
+
 	return 0;
 }
+
+
 
 int main(int argc, char** argv){
 	/* Get the input*/
 	/* First line: n, the number of students*/
-	int i, n, item_num;
+	int i, n, student_num;
 	int rc;
 	while(1){
 		if((rc = scanf("%d", &n)) != 1){
 			return 0;
 		}
-		int items[n];
+		int students[n];
 		for (i = 0; i < n; i++){
 			/* Following lines: The number of each student*/
-			if((rc=scanf("%d", &item_num)) != 1){
+			if((rc=scanf("%d", &student_num)) != 1){
 				return(1);
 			}
-			items[i]= item_num;
+			students[i]= student_num;
 		}
 
 		/*Now compute the number of swaps necessary*/
 		long inv;
-		split_and_count(items, n, &inv);
-		printf("Minimum exchange operations : %ld\n", inv);
-	}
+		split_and_count(students, n, &inv);
 
+		printf("%ld\n", inv);
+	}
 	return(0);
 }
+

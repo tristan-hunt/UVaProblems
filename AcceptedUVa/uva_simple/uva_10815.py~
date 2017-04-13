@@ -5,8 +5,7 @@
 #  * Level: easy
 #  * 
 #  * Brief problem description: 
-#  *	 Given a string, take all the words present, 
-#  *    and sort them (without repetition)
+#  *	 
 #  *
 #  * Solution Summary:
 #  *	Use a set to store words to ensure none get repeated
